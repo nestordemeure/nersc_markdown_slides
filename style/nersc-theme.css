@@ -133,7 +133,7 @@ section.title {
   background-position: left, left center;
   padding: 0;
   color: var(--color-white);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Use ::before for LBNL Logo, removing need for a div */
