@@ -2,6 +2,14 @@
     "name": "nersc-slides",
     "version": "0.0.1",
     "marp": {
-        "themeSet": "./style/nersc-theme.css"
+        "themeSet": [
+            "./style/nersc-theme.css"
+        ],
+        "allowLocalFiles": true,
+        "baseUrl": "./style"
+    },
+    "dependencies": {
+        "@marp-team/marp-cli": "^4.2.3",
+        "@marp-team/marp-core": "^4.1.0"
     }
 }

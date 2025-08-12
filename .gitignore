@@ -1,2 +1,7 @@
+# Marp outputs
 *.pdf
 *.html
+
+# node things
+/node_modules
+package-lock.json

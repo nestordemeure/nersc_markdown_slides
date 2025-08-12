@@ -2,30 +2,6 @@
 
 This repository contains the style information, as well as a number of demo slide decks, for NERSC's Markdown-based slides.
 
-## Instalation
-
-Install `marp` as follows:
-
-```sh
-npm install -g @marp-team/marp-cli @marp-team/marp-core
-```
-
-## Usage
-
-The following commands will build a given deck to HTML / PDF (picking up on our style via `package.json`):
-
-```sh
-# Convert a specific deck to HTML
-marp "slide decks/demo/slides.md" --allow-local-files
-
-# Convert to PDF
-marp "slide decks/demo/slides.md" --allow-local-files --pdf
-```
-
-Note the use of `--allow-local-files` to load local images (as part of our theme).
-
-Also, you might want to use the `--debug` flag to debug warning and error messages.
-
 ## Repository Structure
 
 We are using [marp](https://marp.app/) as our Markdown-to-slides engine.
@@ -40,14 +16,7 @@ The corresponding project files are organized as follows:
 │   └── ...                          # Other slide decks
 └── style/                           # Slide styling and themes
     ├── specification.md             # Reference spec for slide style
-    ├── nersc-theme.css              # Main theme file; imports all other CSS
-    ├── css/                         # Folder for partial CSS files
-    │   ├── base.css                 # Base styling rules for all slides
-    │   ├── content-slide.css        # CSS for standard content slides
-    │   ├── question-slide.css       # CSS for "leading question" slide type
-    │   ├── section-title.css        # CSS for section title slides
-    │   ├── thanks-slide.css         # CSS for "thank you" slide type
-    │   └── title-slide.css          # CSS for main title slide
+    ├── nersc-theme.css              # Theme file
     ├── images/                      # Branding images for styling
     │   ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
     │   ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
@@ -55,6 +24,27 @@ The corresponding project files are organized as follows:
     │   └── nersc-building.jpg       # NERSC building photo for slides
     └── example slides/              # Example images for each slide type
 ```
+
+## Usage
+
+Install `marp` as follows:
+
+```sh
+npm install -g @marp-team/marp-core @marp-team/marp-cli
+```
+
+The following commands will build a given deck to HTML / PDF (picking up on our style via `package.json`):
+
+```sh
+# Convert a specific deck to HTML
+marp "slide decks/demo/slides.md"
+
+# Convert to PDF
+marp "slide decks/demo/slides.md" --pdf
+```
+
+Also, you might want to use the `--debug` flag to debug warning and error messages.
+
 
 ## Marp Documentation
 
@@ -72,6 +62,6 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 ## TODO
 
 * fix file file paths issues when building
+  * point at github urls of our images instead of using local ones
 
 * have the github page for this repo link to the demo deck
-* point at github urls of our images instead of using local ones?

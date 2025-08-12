@@ -15,14 +15,7 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
 │   └── ...                          # Other slide decks
 └── style/                           # Slide styling and themes
     ├── specification.md             # Reference spec for slide style
-    ├── nersc-theme.css              # Main theme file; imports all other CSS
-    ├── css/                         # Folder for partial CSS files
-    │   ├── base.css                 # Base styling rules for all slides
-    │   ├── content-slide.css        # CSS for standard content slides
-    │   ├── question-slide.css       # CSS for "leading question" slide type
-    │   ├── section-title.css        # CSS for section title slides
-    │   ├── thanks-slide.css         # CSS for "thank you" slide type
-    │   └── title-slide.css          # CSS for main title slide
+    ├── nersc-theme.css              # Theme file
     ├── images/                      # Branding images for styling
     │   ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
     │   ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
@@ -37,13 +30,11 @@ The following commands will build a given deck to HTML / PDF, picking up on our 
 
 ```sh
 # Convert a specific deck to HTML
-marp "slide decks/demo/slides.md" --allow-local-files
+marp "slide decks/demo/slides.md"
 
 # Convert to PDF
-marp "slide decks/demo/slides.md" --allow-local-files --pdf
+marp "slide decks/demo/slides.md" --pdf
 ```
-
-Note the use of `--allow-local-files` to load local images (as part of our theme).
 
 Marp has a `--debug` flag you can use to get fine grained details on the build process and error messages.
 Use it whenever you debug a Marp warning or error message.
