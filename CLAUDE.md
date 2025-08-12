@@ -79,6 +79,32 @@ Logo files in `style/images/`:
 
 Reference examples in `style/example slides/` show proper implementation of each slide type.
 
+## Theme Development Workflow
+
+**IMPORTANT: Use this workflow when developing/testing the NERSC theme:**
+
+1. **Build debug output for visual comparison:**
+   ```sh
+   ./build-debug.sh
+   ```
+   This script will:
+   - Build the demo slide deck (`slide decks/demo/demo-slides.md`) to PDF
+   - Convert each PDF page to individual PNG files in `debug/` folder
+   - Generate files: `debug/slide-1.png`, `debug/slide-2.png`, etc.
+
+2. **Compare generated slides with specification:**
+   - Generated PNGs: `debug/slide-*.png`
+   - Reference examples: `style/example slides/*.png`
+   - Visual specification: `style/specification.md`
+
+3. **Iterate on theme:**
+   - Edit `style/nersc-theme.css`
+   - Run `./build-debug.sh` to regenerate debug PNGs
+   - Compare against reference examples
+   - Repeat until theme matches specification
+
+**Note:** The `debug/` folder is git-ignored and used only for development.
+
 ## Development Notes
 
 - The project is in early development stage (README shows TODO items)

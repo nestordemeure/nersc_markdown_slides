@@ -1,0 +1,38 @@
+/* Basic content slide styling */
+
+/* Default basic content slide styling */
+section {
+  background-image: linear-gradient(to bottom, var(--color-dark-blue) 0%, var(--color-dark-blue) 20%, var(--color-white) 20%, var(--color-white) 100%);
+  padding-top: 160px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+}
+
+/* Header logo positioning for basic content slides */
+section::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 120px;
+  height: 60px;
+  background-image: url('../images/LBNL-logo-horizontal.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* Slide titles */
+section h1 {
+  position: absolute;
+  top: 30px;
+  left: 180px;
+  right: 30px;
+  color: var(--color-white);
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 60px;
+  text-align: left;
+}

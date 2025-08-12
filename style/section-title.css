@@ -1,0 +1,53 @@
+/* Section title slide styling */
+
+section.section-title {
+  background: linear-gradient(to right, var(--color-white) 33.33%, var(--color-dark-blue) 33.33%);
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+section.section-title::before {
+  display: none;
+}
+
+section.section-title h1 {
+  position: absolute;
+  top: 250px;
+  left: 490px;
+  width: 780px;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--color-orange);
+  text-align: left;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+section.section-title h2 {
+  position: absolute;
+  top: 320px;
+  left: 490px;
+  width: 780px;
+  font-size: 32px;
+  font-weight: normal;
+  color: var(--color-white);
+  text-align: left;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Hide page numbers on section title slide */
+section.section-title::after {
+  display: none;
+}
+
+/* Override default background for section title slide */
+section.section-title {
+  background: linear-gradient(to right, var(--color-white) 33.33%, var(--color-dark-blue) 33.33%) !important;
+  padding: 0;
+}

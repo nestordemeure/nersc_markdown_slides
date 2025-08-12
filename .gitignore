@@ -1,2 +1,5 @@
 *.pdf
 *.html
+
+# Debug output folder for slide development
+debug/
