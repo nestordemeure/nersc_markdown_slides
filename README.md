@@ -65,5 +65,7 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 
 * improve style
 
+* slides are incredibly heavy ?!
+
 * write docs slides
 * port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
