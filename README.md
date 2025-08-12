@@ -65,7 +65,7 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * improve style to fit reference:
   * title:
     * fix vertical spacing of titles
-    * fix NERSC logo positions
+    * fix logo widths
   * base:
     * text is way too small
     * text zone appear small too?
