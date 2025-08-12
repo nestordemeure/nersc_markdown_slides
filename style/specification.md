@@ -24,13 +24,13 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
   - HTML: #007681
 
 - **LIGHT GRAY**
-  - RGB: 177, 179, 179
-  - HTML: #B1B3B3
+  - RGB: 89, 89, 89
+  - HTML: #595959
   - Used for subtext and secondary information
 
 - **DARK GRAY**
-  - RGB: 99, 102, 106
-  - HTML: #63666A
+  - RGB: 67, 67, 67
+  - HTML: #434343
   - Used for main body text
 
 **Secondary Palette:**

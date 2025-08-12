@@ -21,8 +21,8 @@
   --color-dark-blue: #00313C;
   --color-teal: #007681;
   --color-orange: #D57800;
-  --color-dark-gray: #63666A;
-  --color-light-gray: #B1B3B3;
+  --color-dark-gray: #434343;
+  --color-light-gray: #595959;
   --color-white: #FFFFFF;
 }
 
@@ -265,7 +265,6 @@ section.thanks {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 66.67%;
   box-sizing: border-box;
 }
 
@@ -279,7 +278,8 @@ section.thanks h2,
 section.thanks p {
   position: static;
   text-align: center;
-  width: 100%;
+  width: 60%;
+  max-width: 60%;
 }
 
 section.thanks h1 {

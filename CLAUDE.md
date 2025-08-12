@@ -40,3 +40,5 @@ marp "slide decks/docs/slides.md" --pdf
 
 Marp has a `--debug` flag you can use to get fine grained details on the build process and error messages.
 Use it whenever you debug a Marp warning or error message.
+
+Do not test your visual fixes. Instead, invite the human user to build and check the result manually.
