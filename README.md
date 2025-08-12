@@ -15,14 +15,49 @@ npm install -g @marp-team/marp-cli
 
 ## Usage
 
-Building the slides into a PDF (for example our demo deck):
+The NERSC theme (`nersc`) is now available and implements the Berkeley Lab visual identity. All slide decks should use this theme in their frontmatter:
 
-```sh
-TODO
+```yaml
+---
+marp: true
+theme: nersc
+paginate: true
+---
 ```
 
-## TODO
+### Build Commands
 
-* install marp
-* create a nersc style
-* create a demo set of slides
+To build a slide deck to PDF (for example our demo deck):
+
+```sh
+cd "slide decks/demo"
+marp demo-slides.md --pdf --theme ../../style/nersc-theme.css --allow-local-files
+```
+
+To build slides for web presentation:
+
+```sh
+cd "slide decks/demo"
+marp demo-slides.md --html --theme ../../style/nersc-theme.css --allow-local-files
+```
+
+For live (in-browser) preview during development:
+
+```sh
+cd "slide decks/demo"
+marp demo-slides.md --watch --theme ../../style/nersc-theme.css --allow-local-files
+```
+
+The `--allow-local-files` flag is required to access local images and assets referenced in the slides.
+
+### Slide Types
+
+The NERSC theme provides 5 slide types that follow Berkeley Lab visual identity guidelines:
+
+1. **Title Slide** (`<!-- _class: title -->`): Dark blue sidebar with Berkeley Lab and NERSC logos, NERSC building background
+2. **Section Title** (`<!-- _class: section-title -->`): Split layout with orange section title on dark blue background  
+3. **Basic Content** (default): Dark blue header with Berkeley Lab logo, white body with orange square bullets
+4. **Question Slide** (`<!-- _class: question -->`): Centered large question text
+5. **Thanks Slide** (`<!-- _class: thanks -->`): Split layout with contact information
+
+See the demo deck (`slide decks/demo/demo-slides.md`) for examples of each slide type.
