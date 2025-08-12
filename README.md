@@ -47,6 +47,13 @@ marp "slide decks/docs/slides.md" --pdf
 
 You might want to use the `--debug` flag when debugging warning and error messages.
 
+For development purposes, you can use the watch mode to automatically rebuild slides when the source files change:
+
+```sh
+# Watch a specific slide deck and rebuild on changes with preview window
+marp --watch --preview "slide decks/docs/slides.md"
+```
+
 ## Marp Documentation
 
 Here are some useful links on using `marp`:
@@ -61,8 +68,6 @@ Marp was picked as it emphasizes writing slides in straight Markdown once we hav
 However, if we ever find it too limiting for our needs, [sli.dev](https://sli.dev/) might be a solid alternative.
 
 ## TODO
-
-* add doc on file watching for devlopment purposes
 
 * improve style to fit reference:
   * base:
