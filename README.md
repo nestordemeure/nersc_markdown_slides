@@ -64,11 +64,12 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * improve style to fit reference:
   * title:
-    * center shadows on letters
     * fix vertical spacing of titles
     * fix NERSC logo positions
-    * fix background image (crop right, not left)
+    * remove page number
   * base:
+    * text is way too small
+    * text zone appear small too?
   * section title:
   * question: DONE!
   * thanks:

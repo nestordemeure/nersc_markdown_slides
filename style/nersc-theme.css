@@ -130,7 +130,7 @@ section::before {
 section.title {
   background: linear-gradient(to right, var(--color-dark-blue) 25%, transparent 25%), url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/nersc-building.jpg');
   background-size: auto, cover;
-  background-position: left, left center;
+  background-position: left, 320px center;
   padding: 0;
   color: var(--color-white);
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
