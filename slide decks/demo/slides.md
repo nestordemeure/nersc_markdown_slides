@@ -23,7 +23,6 @@ Lawrence Berkeley National Laboratory
 ---
 
 <!-- _class: section-title -->
-<!-- _paginate: false -->
 
 # Introduction
 
@@ -69,7 +68,6 @@ marp demo-slides.md --pdf --theme ../../style/nersc-theme.css
 ---
 
 <!-- _class: thanks -->
-<!-- _paginate: false -->
 
 <div class="content">
 

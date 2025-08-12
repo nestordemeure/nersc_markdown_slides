@@ -17,7 +17,7 @@ section::before {
   left: 30px;
   width: 120px;
   height: 60px;
-  background-image: url('../../style/images/LBNL-logo-horizontal.png');
+  background-image: url('../images/LBNL-logo-horizontal.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;

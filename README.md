@@ -2,8 +2,6 @@
 
 This repository contains the style information, as well as a number of demo slide decks, for NERSC's Markdown-based slides.
 
-We are using [marp](https://marp.app/) as our engine.
-
 ## Instalation
 
 Install `marp` as follows:
@@ -14,82 +12,47 @@ npm install -g @marp-team/marp-cli
 
 ## Usage
 
-The NERSC theme (`nersc`) is now available and implements the Berkeley Lab visual identity. All slide decks should use this theme in their frontmatter:
-
-```yaml
----
-marp: true
-theme: nersc
-paginate: true
----
-```
-
-### Build Commands
-
-Run these commands from the repository root directory:
-
-**Build slide deck to PDF:**
-```sh
-marp "slide decks/demo/demo-slides.md" --pdf --theme "style/nersc-theme.css" --allow-local-files
-```
-
-**Build slides for web presentation:**
-```sh
-marp "slide decks/demo/demo-slides.md" --html --theme "style/nersc-theme.css" --allow-local-files
-```
-
-**Live preview during development:**
-```sh
-marp "slide decks/demo/demo-slides.md" --watch --theme "style/nersc-theme.css" --allow-local-files
-```
-
-**For other slide decks**, replace the path accordingly:
-```sh
-marp "slide decks/your-deck/slides.md" --pdf --theme "style/nersc-theme.css" --allow-local-files
-```
-
-The `--allow-local-files` flag is required to access local images and assets referenced in the slides.
-
-## Development and Testing
-
-### Debug Build Process
-
-For theme development and testing, use the provided debug build script:
+The following commands will build a given deck to HTML / PDF, picking up on our style via `package.json`:
 
 ```sh
-./build-debug.sh
+# Convert a specific deck to HTML
+marp "slide decks/demo/slides.md" --allow-local-files
+
+# Convert to PDF
+marp "slide decks/demo/slides.md" --allow-local-files --pdf
 ```
 
-This script will:
-1. Build the demo slide deck to PDF
-2. Convert each PDF page to individual PNG files in the `debug/` folder
-3. Generate comparison files: `debug/slide-1.png`, `debug/slide-2.png`, etc.
+Note the use of `--allow-local-files` to load local images (as part of our theme).
 
-**Prerequisites:**
-- Marp CLI installed (`npm install -g @marp-team/marp-cli`)
-- Either `pdftoppm` (poppler-utils) or `convert` (ImageMagick) for PDF to PNG conversion:
-  - Ubuntu/Debian: `sudo apt install poppler-utils`
-  - macOS: `brew install poppler`
+## Repository Structure
 
-**Development Workflow:**
-1. Edit theme files in `style/`
-2. Run `./build-debug.sh` to regenerate test output
-3. Compare generated PNGs (`debug/slide-*.png`) with reference examples (`style/example slides/*.png`)
-4. Iterate until theme matches specification
+We are using [marp](https://marp.app/) as our Markdown-to-slides engine.
+The corresponding project files are organized as follows:
 
-The `debug/` folder is git-ignored and used only for development testing.
-
-### Slide Types
-
-The NERSC theme provides 5 slide types that follow Berkeley Lab visual identity guidelines:
-
-1. **Title Slide** (`<!-- _class: title -->`): Dark blue sidebar with Berkeley Lab and NERSC logos, NERSC building background
-2. **Section Title** (`<!-- _class: section-title -->`): Split layout with orange section title on dark blue background  
-3. **Basic Content** (default): Dark blue header with Berkeley Lab logo, white body with orange square bullets
-4. **Question Slide** (`<!-- _class: question -->`): Centered large question text
-5. **Thanks Slide** (`<!-- _class: thanks -->`): Split layout with contact information
-
-See the demo deck (`slide decks/demo/demo-slides.md`) for examples of each slide type.
+```
+/
+├── README.md                        # Project overview, installation, and usage instructions
+├── package.json                     # Project configuration for Marp CLI
+├── slide decks/                     # Slide decks
+│   ├── demo/                        # Demo presentation
+│   └── ...                          # Other slide decks
+└── style/                           # Slide styling and themes
+    ├── specification.md             # Reference spec for slide style
+    ├── nersc-theme.css              # Main theme file; imports all other CSS
+    ├── css/                         # Folder for partial CSS files
+    │   ├── base.css                 # Base styling rules for all slides
+    │   ├── content-slide.css        # CSS for standard content slides
+    │   ├── question-slide.css       # CSS for "leading question" slide type
+    │   ├── section-title.css        # CSS for section title slides
+    │   ├── thanks-slide.css         # CSS for "thank you" slide type
+    │   └── title-slide.css          # CSS for main title slide
+    ├── images/                      # Branding images for styling
+    │   ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
+    │   ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
+    │   ├── nersc-logo.png           # NERSC logo
+    │   └── nersc-building.jpg       # NERSC building photo for slides
+    └── example slides/              # Example images for each slide type
+```
 
 ## Marp Documentation
 
@@ -106,10 +69,7 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 
 ## TODO
 
-* simplify debug script
-  * use marp --images option for images output for debug purposes
-* file file paths issues
-* add page numbers to pages
-* improve readme
-  * streamline
-  * clean up demos
+* fix file file paths issues when building
+
+* have the github page for this repo link to the demo deck
+* point at github urls of our images instead of using local ones?

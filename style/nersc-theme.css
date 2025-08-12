@@ -1,16 +1,13 @@
 /*
  * @theme nersc
- * @author NERSC Team
- * @url https://github.com/NERSC/nersc-markdown-slides
- * @size 16:9 1280px 720px
+ * @author Nestor Demeure
+ * @url https://github.com/nestordemeure/nersc_markdown_slides
  */
 
-/* @import 'default'; */
-
 /* Import modular stylesheets for each slide type */
-@import 'base.css';
-@import 'content-slide.css';
-@import 'title-slide.css';
-@import 'section-title.css';
-@import 'question-slide.css';
-@import 'thanks-slide.css';
+@import 'css/base.css';
+@import 'css/content-slide.css';
+@import 'css/title-slide.css';
+@import 'css/section-title.css';
+@import 'css/question-slide.css';
+@import 'css/thanks-slide.css';

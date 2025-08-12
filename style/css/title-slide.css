@@ -2,7 +2,7 @@
 
 section.title {
   background: linear-gradient(to right, var(--color-dark-blue) 25%, transparent 25%),
-              url('../../style/images/nersc-building.jpg');
+    url('../images/nersc-building.jpg');
   background-size: auto, cover;
   background-position: left, right;
   background-repeat: no-repeat, no-repeat;
@@ -19,7 +19,7 @@ section.title::before {
   left: 30px;
   width: 150px;
   height: 200px;
-  background-image: url('../../style/images/LBNL-logo-vertical.png');
+  background-image: url('../images/LBNL-logo-vertical.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -33,7 +33,7 @@ section.title .nersc-logo {
   left: 30px;
   width: 150px;
   height: 80px;
-  background-image: url('../../style/images/nersc-logo.png');
+  background-image: url('../images/nersc-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -96,6 +96,6 @@ section.title::after {
 /* Override default background for title slide */
 section.title {
   background-image: linear-gradient(to right, var(--color-dark-blue) 25%, transparent 25%),
-                    url('../../style/images/nersc-building.jpg') !important;
+    url('../images/nersc-building.jpg') !important;
   padding: 0;
 }

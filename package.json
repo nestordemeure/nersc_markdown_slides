@@ -1,0 +1,7 @@
+{
+    "name": "nersc-slides",
+    "version": "0.0.1",
+    "marp": {
+        "themeSet": "./style/nersc-theme.css"
+    }
+}

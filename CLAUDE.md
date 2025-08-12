@@ -1,115 +1,46 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This is a NERSC markdown-based slides repository using [Marp](https://marp.app/) as the slide generation engine. The repository contains style definitions, assets, and slide decks following Berkeley Lab/NERSC visual identity guidelines.
 
-## Project Overview
-
-This is a NERSC markdown-based slides repository using [Marp](https://marp.app/) as the slide generation engine. The repository contains style definitions, assets, and demo slide decks following Berkeley Lab/NERSC visual identity guidelines.
-
-## Installation & Setup
-
-Install Marp CLI globally:
-```sh
-npm install -g @marp-team/marp-cli
-```
-
-## Common Commands
-
-**Build slides to PDF:**
-```sh
-marp slide-deck.md --pdf --theme style/nersc-theme.css
-```
-
-**Build slides to HTML:**
-```sh
-marp slide-deck.md --html --theme style/nersc-theme.css
-```
-
-**Watch mode for development:**
-```sh
-marp slide-deck.md --watch --theme style/nersc-theme.css
-```
+Use the [Context7 MCP](https://context7.com/) to get documentation on using `marp-cli` (the command line tool we use to build the slides) and `marpit` (the format used to write the slides and the CSS styling). 
 
 ## Repository Structure
 
 ```
 /
-├── README.md                    # Project overview and installation
-├── style/
-│   ├── specification.md         # Complete Berkeley Lab visual identity spec
-│   ├── images/                  # Logo assets and branding images
-│   │   ├── LBNL-logo-*.png     # Berkeley Lab logos (horizontal/vertical)
-│   │   ├── nersc-logo.png      # NERSC logo
-│   │   └── nersc-building.jpg  # Background image for title slides
-│   └── example slides/          # PNG examples of each slide type
-└── slide decks/                 # Actual slide deck implementations
-    ├── demo/                    # Demo presentation
-    └── documentation chatbot/   # Example presentation
+├── README.md                        # Project overview, installation, and usage instructions
+├── package.json                     # Project configuration for Marp CLI
+├── slide decks/                     # Slide decks
+│   ├── demo/                        # Demo presentation
+│   └── ...                          # Other slide decks
+└── style/                           # Slide styling and themes
+    ├── specification.md             # Reference spec for slide style
+    ├── nersc-theme.css              # Main theme file; imports all other CSS
+    ├── css/                         # Folder for partial CSS files
+    │   ├── base.css                 # Base styling rules for all slides
+    │   ├── content-slide.css        # CSS for standard content slides
+    │   ├── question-slide.css       # CSS for "leading question" slide type
+    │   ├── section-title.css        # CSS for section title slides
+    │   ├── thanks-slide.css         # CSS for "thank you" slide type
+    │   └── title-slide.css          # CSS for main title slide
+    ├── images/                      # Branding images for styling
+    │   ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
+    │   ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
+    │   ├── nersc-logo.png           # NERSC logo
+    │   └── nersc-building.jpg       # NERSC building photo for slides
+    └── example slides/              # Example images for each slide type
 ```
 
-## Visual Identity & Style Requirements
+## Basic Usage Information
 
-All slides must follow Berkeley Lab visual identity (detailed in `style/specification.md:1`):
+The following commands will build a given deck to HTML / PDF, picking up on our style via `package.json`:
 
-**Colors:**
-- Dark Blue (#00313C) - headers, banners
-- Teal (#007681) - secondary brand color  
-- Orange (#D57800) - bullet points, section titles
-- Dark Gray (#63666A) - main body text
-- Light Gray (#B1B3B3) - secondary text
+```sh
+# Convert a specific deck to HTML
+marp "slide decks/demo/slides.md" --allow-local-files
 
-**Fonts:**
-- Arial - default body text
-- ITC Franklin Gothic Std - headlines/titles
+# Convert to PDF
+marp "slide decks/demo/slides.md" --allow-local-files --pdf
+```
 
-**Slide Types:**
-1. **Title Slide** - Dark blue sidebar with logos, NERSC building background
-2. **Section Title** - Split layout with orange section title on dark blue
-3. **Basic Content** - Dark blue header banner with white body content
-4. **Question Slide** - Centered large question text
-5. **Thanks Slide** - Split layout with contact information
-
-## Key Assets
-
-Logo files in `style/images/`:
-- `LBNL-logo-horizontal.png` - For content slide headers
-- `LBNL-logo-vertical.png` - For title slide sidebar
-- `nersc-logo.png` - Paired with Berkeley Lab logo on title slides
-- `nersc-building.jpg` - Title slide background image
-
-Reference examples in `style/example slides/` show proper implementation of each slide type.
-
-## Theme Development Workflow
-
-**IMPORTANT: Use this workflow when developing/testing the NERSC theme:**
-
-1. **Build debug output for visual comparison:**
-   ```sh
-   ./build-debug.sh
-   ```
-   This script will:
-   - Build the demo slide deck (`slide decks/demo/demo-slides.md`) to PDF
-   - Convert each PDF page to individual PNG files in `debug/` folder
-   - Generate files: `debug/slide-1.png`, `debug/slide-2.png`, etc.
-
-2. **Compare generated slides with specification:**
-   - Generated PNGs: `debug/slide-*.png`
-   - Reference examples: `style/example slides/*.png`
-   - Visual specification: `style/specification.md`
-
-3. **Iterate on theme:**
-   - Edit `style/nersc-theme.css`
-   - Run `./build-debug.sh` to regenerate debug PNGs
-   - Compare against reference examples
-   - Repeat until theme matches specification
-
-**Note:** The `debug/` folder is git-ignored and used only for development.
-
-## Development Notes
-
-- The project is in early development stage (README shows TODO items)
-- No existing Marp theme file yet - this needs to be created based on the specification
-- Slide content should be written in standard Markdown with Marp directives
-- All slides except title slides should have page numbers in bottom right
-- Orange square bullets are default for lists
-- Code blocks should appear in gray boxes with monospace font
+Note the use of `--allow-local-files` to load local images (as part of our theme).
