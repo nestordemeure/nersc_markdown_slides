@@ -11,7 +11,7 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
 ├── README.md                        # Project overview, installation, and usage instructions
 ├── package.json                     # Project configuration for Marp CLI
 ├── slide decks/                     # Slide decks
-│   ├── demo/                        # Demo presentation
+│   ├── docs/                        # Documentation presentation
 │   └── ...                          # Other slide decks
 └── style/                           # Slide styling and themes
     ├── specification.md             # Reference spec for slide style
@@ -30,10 +30,10 @@ The following commands will build a given deck to HTML / PDF, picking up on our 
 
 ```sh
 # Convert a specific deck to HTML
-marp "slide decks/demo/slides.md"
+marp "slide decks/docs/slides.md"
 
 # Convert to PDF
-marp "slide decks/demo/slides.md" --pdf
+marp "slide decks/docs/slides.md" --pdf
 ```
 
 Marp has a `--debug` flag you can use to get fine grained details on the build process and error messages.

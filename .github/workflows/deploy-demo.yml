@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths: 
-      - 'slide decks/demo/**'
+      - 'slide decks/docs/**'
       - 'style/**'
       - 'package.json'
   workflow_dispatch:
@@ -38,7 +38,7 @@ jobs:
         run: npm ci
 
       - name: Build demo slides
-        run: marp "slide decks/demo/slides.md" --output docs/index.html
+        run: marp "slide decks/docs/slides.md" --output docs/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

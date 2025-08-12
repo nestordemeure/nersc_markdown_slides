@@ -1,6 +1,6 @@
 # NERSC Markdown-based Slides
 
-This repository contains the style information, as well as a number of demo slide decks, for NERSC's Markdown-based slides.
+This repository contains the style information, as well as a number of slide decks, for NERSC's Markdown-based slides.
 
 ## Repository Structure
 
@@ -12,7 +12,7 @@ The corresponding project files are organized as follows:
 ├── README.md                        # Project overview, installation, and usage instructions
 ├── package.json                     # Project configuration for Marp CLI
 ├── slide decks/                     # Slide decks
-│   ├── demo/                        # Demo presentation
+│   ├── docs/                        # Documentation presentation
 │   └── ...                          # Other slide decks
 └── style/                           # Slide styling and themes
     ├── specification.md             # Reference spec for slide style
@@ -37,10 +37,10 @@ The following commands will build a given deck to HTML / PDF (picking up on our 
 
 ```sh
 # Convert a specific deck to HTML
-marp "slide decks/demo/slides.md"
+marp "slide decks/docs/slides.md"
 
 # Convert to PDF
-marp "slide decks/demo/slides.md" --pdf
+marp "slide decks/docs/slides.md" --pdf
 ```
 
 Also, you might want to use the `--debug` flag to debug warning and error messages.
@@ -63,4 +63,4 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 
 * improve style
 
-* write demo / docs slides
+* write docs slides

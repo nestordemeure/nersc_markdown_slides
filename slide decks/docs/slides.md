@@ -11,7 +11,7 @@ paginate: true
 
 # **NERSC Markdown Slides Demo**
 
-## A demonstration of Marp-based presentations
+## Documentation for Marp-based presentations
 
 ### NERSC User Meeting 2024
 
@@ -56,7 +56,7 @@ Our custom theme implements the Berkeley Lab visual identity:
 
 ```bash
 # Example build command
-marp demo-slides.md --pdf --theme ../../style/nersc-theme.css
+marp slides.md --pdf --theme ../../style/nersc-theme.css
 ```
 
 ---
