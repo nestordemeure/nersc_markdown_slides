@@ -7,7 +7,7 @@ But, [sli.dev](https://sli.dev/) might also be a meaningful choice.
 
 ## Instalation
 
-Install `marp`:
+Install `marp` as follows:
 
 ```sh
 npm install -g @marp-team/marp-cli
@@ -15,7 +15,7 @@ npm install -g @marp-team/marp-cli
 
 ## Usage
 
-Building the slides into a PDF:
+Building the slides into a PDF (for example our demo deck):
 
 ```sh
 TODO
@@ -23,7 +23,6 @@ TODO
 
 ## TODO
 
-* get a demo pdf to help with the styling
-* gather the images I am using in my style
-* create a spec for the style
-* create a demo style
+* install marp
+* create a nersc style
+* create a demo set of slides
