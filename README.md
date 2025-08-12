@@ -66,7 +66,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
   * title:
     * fix vertical spacing of titles
     * fix NERSC logo positions
-    * remove page number
   * base:
     * text is way too small
     * text zone appear small too?

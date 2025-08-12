@@ -160,6 +160,7 @@ section.title::after {
   background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/nersc-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
+  color: transparent;
 }
 
 section.title h1,
