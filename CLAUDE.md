@@ -19,12 +19,11 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
 └── style/                           # Slide styling and themes
     ├── specification.md             # Reference spec for slide style
     ├── nersc-theme.css              # Theme file
-    ├── images/                      # Branding images for styling
-    │   ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
-    │   ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
-    │   ├── nersc-logo.png           # NERSC logo
-    │   └── nersc-building.jpg       # NERSC building photo for slides
-    └── example slides/              # Example images for each slide type
+    └── images/                      # Branding images for styling
+        ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
+        ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
+        ├── nersc-logo.png           # NERSC logo
+        └── nersc-building.jpg       # NERSC building photo for slides
 ```
 
 ## Basic Usage Information

@@ -20,12 +20,11 @@ The corresponding project files are organized as follows:
 └── style/                           # Slide styling and themes
     ├── specification.md             # Reference spec for slide style
     ├── nersc-theme.css              # Theme file
-    ├── images/                      # Branding images for styling
-    │   ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
-    │   ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
-    │   ├── nersc-logo.png           # NERSC logo
-    │   └── nersc-building.jpg       # NERSC building photo for slides
-    └── example slides/              # Example images for each slide type
+    └── images/                      # Branding images for styling
+        ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
+        ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
+        ├── nersc-logo.png           # NERSC logo
+        └── nersc-building.jpg       # NERSC building photo for slides
 ```
 
 ## Usage
