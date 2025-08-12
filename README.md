@@ -3,7 +3,6 @@
 This repository contains the style information, as well as a number of demo slide decks, for NERSC's Markdown-based slides.
 
 We are using [marp](https://marp.app/) as our engine.
-But, [sli.dev](https://sli.dev/) might also be a meaningful choice.
 
 ## Instalation
 
@@ -91,6 +90,19 @@ The NERSC theme provides 5 slide types that follow Berkeley Lab visual identity 
 5. **Thanks Slide** (`<!-- _class: thanks -->`): Split layout with contact information
 
 See the demo deck (`slide decks/demo/demo-slides.md`) for examples of each slide type.
+
+## Marp Documentation
+
+Here are some useful links on using `marp`:
+
+* [marp.app](https://marp.app/): Marp's official page
+* [marp-cli](https://github.com/marp-team/marp-cli): Marp's command line tool
+* [marpit.marp.app](https://marpit.marp.app/): Marp's official documentation (including [a page on custom CSS themes](https://marpit.marp.app/theme-css))
+* [marp-vscode](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode): Official VScode extension
+* For LLM use, the [Context7 MCP](https://context7.com/?q=marp) has [Marpit](https://context7.com/marp-team/marpit) and [Marp-CLI](https://context7.com/marp-team/marp-cli) pages.
+
+Marp was picked as, once we have styling in place, it emphasize writting slides in straight Markdown.
+However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/) might be a solid alternative.
 
 ## TODO
 
