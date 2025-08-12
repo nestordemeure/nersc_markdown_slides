@@ -64,12 +64,15 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * improve style to fit reference:
   * base:
-    * text is way too small
-    * text zone appear small too?
+    * main text is too small
+    * page number is too high (bottom margin too high?)
+    * logo is too small
 
 * write slides
   * write docs slides
-    illustrating various capabilities (image, latex formulas, python code, shell code, etc.)
+    * write down motivations
+    * illustrating various capabilities (image, latex formulas, python code, shell code, etc.)
+    * write down pros and cons
   * port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
 
 * slides can be surprisingly heavy
