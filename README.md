@@ -45,8 +45,7 @@ marp "slide decks/docs/slides.md"
 marp "slide decks/docs/slides.md" --pdf
 ```
 
-Also, you might want to use the `--debug` flag to debug warning and error messages.
-
+You might want to use the `--debug` flag when debugging warning and error messages.
 
 ## Marp Documentation
 
@@ -58,8 +57,8 @@ Here are some useful links on using `marp`:
 * [marp-vscode](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode): Official VScode extension
 * For LLM use, the [Context7 MCP](https://context7.com/?q=marp) has [Marpit](https://context7.com/marp-team/marpit) and [Marp-CLI](https://context7.com/marp-team/marp-cli) pages.
 
-Marp was picked as, once we have styling in place, it emphasize writting slides in straight Markdown.
-However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/) might be a solid alternative.
+Marp was picked as it emphasizes writing slides in straight Markdown once we have defined our CSS style.
+However, if we ever find it too limiting for our needs, [sli.dev](https://sli.dev/) might be a solid alternative.
 
 ## TODO
 
@@ -74,8 +73,10 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
   * question: DONE!
   * thanks:
 
-* write docs slides
-* port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
+* write slides
+  * write docs slides
+    illustrating various capabilities (image, latex formulas, python code, shell code, etc.)
+  * port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
 
 * slides can be surprisingly heavy
-  check that once the style is finalized
+  re-check once the style is finalized
