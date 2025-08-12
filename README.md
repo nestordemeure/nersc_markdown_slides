@@ -64,7 +64,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * improve style to fit reference:
   * base:
-    * main text is too small
     * page number is too high (bottom margin too high?)
     * logo is too small
 
