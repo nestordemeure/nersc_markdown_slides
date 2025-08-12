@@ -64,8 +64,8 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
 ## Slide Types
 
 ### Title Slide
-- **Left side (1/3):** Dark blue background with Berkeley Lab and NERSC logos stacked vertically
-- **Right side (2/3):** NERSC building background image
+- **Left side (1/4):** Dark blue background with Berkeley Lab and NERSC logos stacked vertically
+- **Right side (3/4):** NERSC building background image
 - **Text overlay on image (white with dark shadow fo readability):**
   - Title (bold, ~size 23)
   - Subtitle (~size 21)  

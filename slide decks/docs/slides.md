@@ -11,8 +11,8 @@ paginate: true
 ### NERSC User Meeting 2024
 
 <div class="authors">
-<strong>Nestor Demeure, NERSC</strong><br>
-Lawrence Berkeley National Laboratory
+<strong>Nestor Demeure</strong><br>
+National Energy Research Scientific Computing Center, Berkeley CA, United-States
 </div>
 
 ---

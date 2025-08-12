@@ -63,7 +63,16 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 
 ## TODO
 
-* improve style to fit reference
+* improve style to fit reference:
+  * title:
+    * center shadows on letters
+    * fix vertical spacing of titles
+    * fix NERSC logo positions
+    * fix background image (crop right, not left)
+  * base:
+  * section title:
+  * question: DONE!
+  * thanks:
 
 * write docs slides
 * port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
