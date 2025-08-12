@@ -61,4 +61,6 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 
 ## TODO
 
-* have the github page for this repo link to the demo deck
+* improve style
+
+* write demo / docs slides
