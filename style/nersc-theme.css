@@ -141,9 +141,9 @@ section.title::before {
   content: "";
   position: absolute;
   top: 80px;
-  left: calc(25% / 2 - 75px);
-  width: 150px;
-  height: 200px;
+  left: calc(25% / 2 - 96px);
+  width: 192px;
+  height: 256px;
   background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/LBNL-logo-vertical.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -154,8 +154,8 @@ section.title::after {
   content: "";
   position: absolute;
   bottom: 80px;
-  left: calc(25% / 2 - 75px);
-  width: 150px;
+  left: calc(25% / 2 - 96px);
+  width: 192px;
   height: 80px;
   background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/nersc-logo.png');
   background-size: contain;
