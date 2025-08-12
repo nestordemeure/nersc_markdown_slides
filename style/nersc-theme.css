@@ -174,18 +174,18 @@ section.title h3 {
 }
 
 section.title h1 {
-  top: 120px;
+  top: 132px;
   font-size: 48px;
 }
 
 section.title h2 {
-  top: 220px;
+  top: 190px;
   font-size: 36px;
   font-weight: normal;
 }
 
 section.title h3 {
-  top: 300px;
+  top: 255px;
   font-size: 24px;
   font-weight: normal;
 }
@@ -193,7 +193,7 @@ section.title h3 {
 /* The .authors div is the only one needed now */
 section.title .authors {
   position: absolute;
-  bottom: 60px;
+  bottom: 80px;
   left: 30%;
   right: 5%;
   font-size: 16px;

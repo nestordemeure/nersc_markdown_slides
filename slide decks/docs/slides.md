@@ -6,9 +6,9 @@ paginate: true
 
 <!-- _class: title -->
 
-# **NERSC Markdown Slides Demo**
+# **NERSC Markdown-based Slides**
 ## Documentation for Marp-based presentations
-### NERSC User Meeting 2024
+### NERSC Week 2025
 
 <div class="authors">
 <strong>Nestor Demeure</strong><br>
