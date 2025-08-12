@@ -290,12 +290,15 @@ section.thanks h1 {
 }
 
 section.thanks h2 {
-  font-size: 32px;
+  font-size: 36px;
   color: var(--color-teal);
   margin: 20px 0;
   font-weight: normal;
+  width: 55%;
+  max-width: 55%;
+  word-wrap: break-word;
 }
 
 section.thanks p {
-  font-size: 24px;
+  font-size: 27px;
 }

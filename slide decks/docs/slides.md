@@ -46,6 +46,6 @@ marp slides.md --pdf --theme ./nersc-theme.css
 
 # **Thank you!**
 
-## [https://github.com/nestordemeure/nersc_markdown_slides](https://github.com/nestordemeure/nersc_markdown_slides)
+## [https://github.com/nestordemeure/<br>nersc_markdown_slides](https://github.com/nestordemeure/nersc_markdown_slides)
 
-**ndemeure@lbl.gov**
+ndemeure@lbl.gov
