@@ -63,8 +63,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 ## TODO
 
 * improve style to fit reference:
-  * title:
-    * title / lbnl logo a bit too high
   * base:
     * text is way too small
     * text zone appear small too?
