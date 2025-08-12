@@ -9,6 +9,9 @@ The corresponding project files are organized as follows:
 
 ```
 /
+├── .github/                         # GitHub configuration
+│   └── workflows/                   # GitHub Actions workflows
+│       └── deploy-demo.yml          # Auto-deploy docs slides to GitHub Pages
 ├── README.md                        # Project overview, installation, and usage instructions
 ├── package.json                     # Project configuration for Marp CLI
 ├── slide decks/                     # Slide decks
