@@ -11,7 +11,7 @@ The corresponding project files are organized as follows:
 /
 ├── .github/                         # GitHub configuration
 │   └── workflows/                   # GitHub Actions workflows
-│       └── deploy-demo.yml          # Auto-deploy docs slides to GitHub Pages
+│       └── deploy-pages.yml         # Auto-deploy docs slides to GitHub Pages
 ├── README.md                        # Project overview, installation, and usage instructions
 ├── package.json                     # Project configuration for Marp CLI
 ├── slide decks/                     # Slide decks
@@ -67,3 +67,4 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 * improve style
 
 * write docs slides
+* port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
