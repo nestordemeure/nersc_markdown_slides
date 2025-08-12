@@ -78,6 +78,10 @@ a {
   text-decoration: underline;
 }
 
+a:hover {
+  color: var(--color-dark-blue);
+}
+
 code {
   font-family: 'Courier New', monospace;
   background-color: #F5F5F5;
@@ -291,7 +295,7 @@ section.thanks h1 {
 
 section.thanks h2 {
   font-size: 36px;
-  color: var(--color-teal);
+  color: var(--color-dark-gray);
   margin: 20px 0;
   font-weight: normal;
   width: 55%;

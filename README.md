@@ -68,7 +68,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
   * base:
     * text is way too small
     * text zone appear small too?
-  * links should be teal, not specific sections of text
 
 * write slides
   * write docs slides
