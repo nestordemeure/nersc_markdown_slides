@@ -7,12 +7,12 @@ This repository contains the style information, as well as a number of demo slid
 Install `marp` as follows:
 
 ```sh
-npm install -g @marp-team/marp-cli
+npm install -g @marp-team/marp-cli @marp-team/marp-core
 ```
 
 ## Usage
 
-The following commands will build a given deck to HTML / PDF, picking up on our style via `package.json`:
+The following commands will build a given deck to HTML / PDF (picking up on our style via `package.json`):
 
 ```sh
 # Convert a specific deck to HTML
@@ -23,6 +23,8 @@ marp "slide decks/demo/slides.md" --allow-local-files --pdf
 ```
 
 Note the use of `--allow-local-files` to load local images (as part of our theme).
+
+Also, you might want to use the `--debug` flag to debug warning and error messages.
 
 ## Repository Structure
 

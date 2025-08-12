@@ -44,3 +44,6 @@ marp "slide decks/demo/slides.md" --allow-local-files --pdf
 ```
 
 Note the use of `--allow-local-files` to load local images (as part of our theme).
+
+Marp has a `--debug` flag you can use to get fine grained details on the build process and error messages.
+Use it whenever you debug a Marp warning or error message.
