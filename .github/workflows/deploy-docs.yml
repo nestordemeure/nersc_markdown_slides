@@ -1,4 +1,4 @@
-name: Deploy Demo Slides to GitHub Pages
+name: Deploy Documentation Slides to GitHub Pages
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build demo slides
+      - name: Build docs slides
         run: marp "slide decks/docs/slides.md" --output docs/index.html
 
       - name: Setup Pages
