@@ -129,7 +129,7 @@ section pre code {
 
 section.title {
   background: linear-gradient(to right, var(--color-dark-blue) 25%, transparent 25%),
-    url('../images/nersc-building.jpg');
+    url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/nersc-building.jpg');
   background-size: auto, cover;
   background-position: left, right;
   background-repeat: no-repeat, no-repeat;
@@ -146,7 +146,7 @@ section.title::before {
   left: 30px;
   width: 150px;
   height: 200px;
-  background-image: url('../images/LBNL-logo-vertical.png');
+  background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/LBNL-logo-vertical.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -160,7 +160,7 @@ section.title .nersc-logo {
   left: 30px;
   width: 150px;
   height: 80px;
-  background-image: url('../images/nersc-logo.png');
+  background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/nersc-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -223,7 +223,7 @@ section.title::after {
 /* Override default background for title slide */
 section.title {
   background-image: linear-gradient(to right, var(--color-dark-blue) 25%, transparent 25%),
-    url('../images/nersc-building.jpg') !important;
+    url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/nersc-building.jpg') !important;
   padding: 0;
 }
 
@@ -247,7 +247,7 @@ section::before {
   left: 30px;
   width: 120px;
   height: 60px;
-  background-image: url('../images/LBNL-logo-horizontal.png');
+  background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/LBNL-logo-horizontal.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;

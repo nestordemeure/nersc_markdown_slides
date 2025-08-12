@@ -61,7 +61,4 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 
 ## TODO
 
-* fix file file paths issues when building
-  * point at github urls of our images instead of using local ones
-
 * have the github page for this repo link to the demo deck
