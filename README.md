@@ -63,9 +63,10 @@ However, if we ever find it too limited for our need, [sli.dev](https://sli.dev/
 
 ## TODO
 
-* improve style
+* improve style to fit reference
 
 * slides are incredibly heavy ?!
+  this might be due to chrome reencoding images as full size png at pdf importing
 
 * write docs slides
 * port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)

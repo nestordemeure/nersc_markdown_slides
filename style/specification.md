@@ -6,8 +6,9 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
 
 ### Fonts
 
-- **Arial** is the default typeface for body text
-- [**ITC Franklin Gothic Std**](https://fonts.google.com/specimen/Libre+Franklin) is used for headlines and titles (you can, otherwise, default to Arial)
+- **Arial** is the default typeface for all text (body text, headlines, and titles)
+
+**Note:** All font sizes mentioned in this specification are from Google Slides and may need conversion to appropriate Marp sizes.
 
 ### Colors
 
@@ -63,8 +64,8 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
 ## Slide Types
 
 ### Title Slide
-- **Left side (1/4):** Dark blue background with Berkeley Lab and NERSC logos stacked vertically
-- **Right side (3/4):** NERSC building background image
+- **Left side (1/3):** Dark blue background with Berkeley Lab and NERSC logos stacked vertically
+- **Right side (2/3):** NERSC building background image
 - **Text overlay on image (white with dark shadow fo readability):**
   - Title (bold, ~size 23)
   - Subtitle (~size 21)  
@@ -72,8 +73,8 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
   - Authors and institutions (size 12, bottom)
 
 ### Section Title Slide
-- **Left side (1/4):** White background
-- **Right side (3/4):** Dark blue background
+- **Left side (1/3):** White background
+- **Right side (2/3):** Dark blue background
 - **Text on dark blue side:**
   - Section title (bold, orange, ~size 24)
   - Section subtitle (white, ~size 20)
@@ -91,11 +92,11 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
 - **Centered question in bold, large text** (~size 36)
 
 ### Thanks Slide
-- **Left side (3/4):** White background with centered content:
+- **Left side (2/3):** White background with centered content:
   - "Thank you!" (bold, ~size 36)
   - Optional link/reference (~size 24)
   - Email contact (~size 18)
-- **Right side (1/4):** Dark blue background
+- **Right side (1/3):** Dark blue background
 
 ## Images Used
 
