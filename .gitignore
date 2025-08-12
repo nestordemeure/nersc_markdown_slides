@@ -4,3 +4,7 @@
 
 # node things
 /node_modules
+
+# LLM things
+/marp docs
+CLAUDE.local.md
