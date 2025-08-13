@@ -72,9 +72,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
   * write proper documentation slides
   * port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
 
-* slides can be surprisingly heavy
-  re-check once the style is finalized
-
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
   * that way we can add alternative themes, including a proper official one

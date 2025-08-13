@@ -30,6 +30,8 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
         └── deploy-pages.yml         # Auto-deploy docs slides to GitHub Pages
 ```
 
+The code is organized around strong separation of concerns: the `slide decks` folder is all about slide content and does not discuss or codify appearances, the `style` folder is all about appearances, and the `src` folder is all about any additional logic that might be required to produce the slides as desired.
+
 ## Basic Usage Information
 
 The following commands will build a given deck to HTML / PDF, picking up on our style and engine via `package.json`:
