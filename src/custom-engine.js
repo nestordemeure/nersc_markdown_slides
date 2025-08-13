@@ -36,5 +36,21 @@ module.exports = (opts) => {
   // Add our custom plugin to preserve list markers
   marp.use(listMarkerPlugin);
   
+  // Override Marp's render method to remove fragment attributes
+  const originalRender = marp.render.bind(marp);
+  
+  marp.render = function(markdown, env) {
+    const result = originalRender(markdown, env);
+    
+    // Remove data-marpit-fragment and data-marpit-fragments attributes from HTML
+    if (result.html) {
+      result.html = result.html
+        .replace(/\s+data-marpit-fragment="[^"]*"/g, '')
+        .replace(/\s+data-marpit-fragments="[^"]*"/g, '');
+    }
+    
+    return result;
+  };
+  
   return marp;
 };
