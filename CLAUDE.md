@@ -8,26 +8,26 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
 
 ```
 /
-├── .github/                         # GitHub configuration
-│   └── workflows/                   # GitHub Actions workflows
-│       └── deploy-pages.yml         # Auto-deploy docs slides to GitHub Pages
 ├── README.md                        # Project overview, installation, and usage instructions
 ├── package.json                     # Project configuration for Marp CLI
 ├── slide decks/                     # Slide decks
 │   ├── README.md                    # Slide deck writing guide
 │   ├── docs/                        # Documentation presentation
 │   └── ...                          # Other slide decks
+├── style/                           # Slide styling and themes
+│   ├── specification.md             # Reference spec for slide style
+│   ├── nersc-theme.css              # Theme file
+│   └── images/                      # Branding images and logos for styling
+│       ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
+│       ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
+│       ├── nersc-logo.png           # NERSC logo
+│       └── nersc-building.jpg       # NERSC building photo for slides
 ├── src/                             # Custom engine extensions
-│   ├── custom-engine.js             # Custom Marp engine with additional features
-│   └── README.md                    # Engine documentation
-└── style/                           # Slide styling and themes
-    ├── specification.md             # Reference spec for slide style
-    ├── nersc-theme.css              # Theme file
-    └── images/                      # Branding images for styling
-        ├── LBNL-logo-horizontal.png # Berkeley Lab horizontal logo
-        ├── LBNL-logo-vertical.png   # Berkeley Lab vertical logo
-        ├── nersc-logo.png           # NERSC logo
-        └── nersc-building.jpg       # NERSC building photo for slides
+│   ├── README.md                    # Engine documentation
+│   └── custom-engine.js             # Custom Marp engine with additional features
+└── .github/                         # GitHub configuration
+    └── workflows/                   # GitHub Actions workflows
+        └── deploy-pages.yml         # Auto-deploy docs slides to GitHub Pages
 ```
 
 ## Basic Usage Information
