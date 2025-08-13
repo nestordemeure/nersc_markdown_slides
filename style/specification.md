@@ -69,7 +69,7 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
   - Text is justified and typically size 18
 - **Page Numbers:** All slides except title slides have page numbers in bottom right corner
 - **Hyperlinks:** Shown in blue/teal color and clickeable
-- **Code/technical text:** Appears in monospace font in gray boxes
+- **Code/technical text:** Appears in monospace font in gray boxes with syntax highlighting colored according to the programming language being displayed. Uses the highlight.js `atom-one-light` theme for consistent, readable syntax highlighting across languages like Python, Bash, C++, etc. Colors are subtle and focused on readability rather than strong graphical emphasis.
 - **Emphasis:** Text can use different weights/colors for hierarchy
 
 ## Slide Types

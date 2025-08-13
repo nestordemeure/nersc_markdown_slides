@@ -69,7 +69,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
     * page number is too high (how low does the bottom go?)
     * logo is misplaced
   * blue lines have a gradient in the VScode pdf display?!
-  * code block should have proper colors
 
 * write slides
   * write proper documentation slides
