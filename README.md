@@ -56,11 +56,10 @@ marp --watch --preview "slide decks/docs/slides.md"
 
 ## Marp Documentation
 
-Here are some useful links on using `marp`:
+Here are some useful links on using [Marp](https://marp.app/):
 
-* [marp.app](https://marp.app/): Marp's main page
-* [marp-cli](https://github.com/marp-team/marp-cli): Marp's command line tool
 * [marpit.marp.app](https://marpit.marp.app/): Marp's official documentation (including [a page on custom CSS themes](https://marpit.marp.app/theme-css))
+* [marp-cli](https://github.com/marp-team/marp-cli): Marp's command line tool
 * For LLM use, the [Context7 MCP](https://context7.com/?q=marp) has [Marpit](https://context7.com/marp-team/marpit) and [Marp-CLI](https://context7.com/marp-team/marp-cli) pages.
 
 Marp was picked as it emphasizes writing slides in straight Markdown once we have defined our CSS style.
@@ -68,18 +67,26 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
+* document slide types and their inputs in:
+  * a readme in the slide decks folder
+  * personnal one on my typical slides (who am i slide), and usage (question before most sections)
+
 * improve style to fit reference:
   * base:
     * page number is too high (how low does the bottom go?)
     * logo is misplaced
   * blue lines have a gradient in the VScode pdf display?!
+  * code block should have proper colors
+  * try red / green bullets in lists
+  * how to deal with local images in html?
 
 * write slides
-  * write docs slides
-    * write down motivations
-    * illustrating various capabilities (image, latex formulas, python code, shell code, etc.)
-    * write down pros and cons
+  * write proper documentation slides
   * port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
 
 * slides can be surprisingly heavy
   re-check once the style is finalized
+
+* rename the `style` folder into `themes`
+  * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
+  * that way we can add alternative themes, including a proper official one
