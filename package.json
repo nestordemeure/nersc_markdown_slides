@@ -1,11 +1,16 @@
 {
     "name": "nersc-slides",
     "version": "0.0.1",
+    "scripts": {
+        "build": "marp \"slide decks/docs/slides.md\" --pdf",
+        "watch": "marp \"slide decks/docs/slides.md\" --watch --preview"
+    },
     "marp": {
         "themeSet": [
             "./style/nersc-theme.css"
         ],
-        "allowLocalFiles": true
+        "allowLocalFiles": true,
+        "engine": "./src/custom-engine.js"
     },
     "dependencies": {
         "@marp-team/marp-cli": "^4.2.3",

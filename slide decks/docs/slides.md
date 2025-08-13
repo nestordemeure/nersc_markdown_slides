@@ -21,8 +21,6 @@ National Energy Research Scientific Computing Center, Berkeley CA, United-States
 
 # **Can we have version controlled NERSC slides?**
 
-~~Can Claude read my slides?~~
-
 ---
 
 <!-- _class: section-title -->
@@ -34,10 +32,10 @@ National Energy Research Scientific Computing Center, Berkeley CA, United-States
 
 # What is Marp?
 
-- **Markdown Presentation Ecosystem** - Write slides in simple Markdown syntax
-- **Separates Content from Form** - Content in Markdown, styling in single CSS file
-- **Multiple Output Formats** - Generate HTML, PDF, and PowerPoint presentations
-- **Current Style** - Emulates preferred NERSC style (PRs welcome for more standard NERSC style!)
+* **Markdown Presentation Ecosystem** - Write slides in simple Markdown syntax
+* **Separates Content from Form** - Content in Markdown, styling in single CSS file
+* **Multiple Output Formats** - Generate HTML, PDF, and PowerPoint presentations
+* **Current Style** - Emulates preferred NERSC style (PRs welcome for more standard NERSC style!)
 
 ```bash
 # Example build command
@@ -52,7 +50,7 @@ Normal text works as expected, with support for **bold**, *italic*, and `inline 
 
 You can also include images easily:
 
-![w:600](images/doudna.jpg)
+![w:600](https://github.com/nestordemeure/nersc_markdown_slides/raw/main/slide%20decks/docs/images/doudna.jpg)
 
 *The Doudna building at NERSC*
 
@@ -143,14 +141,14 @@ marp --debug "slide decks/docs/slides.md"
 # Auto-deployment and Documentation
 
 **GitHub Pages Integration:**
-- Automatic deployment via GitHub Actions workflow
-- Slides published automatically on push to main branch
+* Automatic deployment via GitHub Actions workflow
+* Slides published automatically on push to main branch
 
 **Documentation Resources:**
-- **[marp.app](https://marp.app/)** - Marp's main page
-- **[marp-cli](https://github.com/marp-team/marp-cli)** - Command line tool documentation  
-- **[marpit.marp.app](https://marpit.marp.app/)** - Official Marpit documentation
-- **[Context7 MCP](https://context7.com/?q=marp)** - For LLM assistance
+* **[marp.app](https://marp.app/)** - Marp's main page
+* **[marp-cli](https://github.com/marp-team/marp-cli)** - Command line tool documentation  
+* **[marpit.marp.app](https://marpit.marp.app/)** - Official Marpit documentation
+* **[Context7 MCP](https://context7.com/?q=marp)** - For LLM assistance
 
 ---
 
@@ -170,9 +168,9 @@ marp --debug "slide decks/docs/slides.md"
 # Pros and Cons
 
 **Pros:**
-- **Version Control** - Full Git history for slides
-- **Pull Requests** - Collaborative review process for slide content
-- **LLM Assistance** - Spell check, clarity improvements, conciseness
++ **Version Control** - Full Git history for slides
++ **Pull Requests** - Collaborative review process for slide content
++ **LLM Assistance** - Spell check, clarity improvements, conciseness
 
 **Cons:**
 - **Loss of Interactivity** - No Google Slides collaborative editing
@@ -193,32 +191,32 @@ marp --debug "slide decks/docs/slides.md"
 # Overview
 
 **What We've Covered:**
-- Marp as a Markdown-to-slides solution
-- Separation of content and presentation
-- Rich formatting capabilities (text, images, formulas, code)
-- Installation and basic usage workflows
-- Trade-offs between flexibility and collaboration
+* Marp as a Markdown-to-slides solution
+* Separation of content and presentation
+* Rich formatting capabilities (text, images, formulas, code)
+* Installation and basic usage workflows
+* Trade-offs between flexibility and collaboration
 
 **Key Benefits:**
-- Version controlled presentation content
-- Reproducible slide generation
-- Integration with modern development workflows
+* Version controlled presentation content
+* Reproducible slide generation
+* Integration with modern development workflows
 
 ---
 
 # Perspectives
 
 **Things Still To Do:**
-- Enhance NERSC theme to match official branding guidelines
-- Add more slide layout options (two-column, comparison slides)
-- Improve mobile/responsive viewing experience
-- Expand code syntax highlighting support
-- Create slide template library for common presentation patterns
+* Enhance NERSC theme to match official branding guidelines
+* Add more slide layout options (two-column, comparison slides)
+* Improve mobile/responsive viewing experience
+* Expand code syntax highlighting support
+* Create slide template library for common presentation patterns
 
 **Get Involved:**
-- Fork the repository and create your own slide decks
-- Submit PRs to improve the NERSC theme
-- Share feedback on workflow and usability
+* Fork the repository and create your own slide decks
+* Submit PRs to improve the NERSC theme
+* Share feedback on workflow and usability
 
 ---
 

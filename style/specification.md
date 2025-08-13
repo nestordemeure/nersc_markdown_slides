@@ -40,7 +40,17 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
   - HTML: #D57800
   - Used for bullet points and highlighting
 
-- **GREEN**, **YELLOW**, **RED**, **BLUE**, **PURPLE**, etc.
+- **GREEN** (Pros)
+  - RGB: 76, 175, 80
+  - HTML: #4CAF50
+  - Used for "pro" items in lists
+
+- **RED** (Cons)
+  - RGB: 244, 67, 54
+  - HTML: #F44336
+  - Used for "con" items in lists
+
+- **YELLOW**, **RED**, **BLUE**, **PURPLE**, etc.
   - Available for specific use cases like pros/cons lists
 
 ### Text Colors
@@ -53,8 +63,9 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
 ## Slide Elements
 
 - **Bullet Lists:**
-  - Default bullets are **square and orange**
-  - Green and red bullets can emphasize pros and cons
+  - Default bullets are **square and orange** (use `*` in markdown)
+  - **Green bullets for pros** (use `+` in markdown)
+  - **Red bullets for cons** (use `-` in markdown)
   - Text is justified and typically size 18
 - **Page Numbers:** All slides except title slides have page numbers in bottom right corner
 - **Hyperlinks:** Shown in blue/teal color and clickeable

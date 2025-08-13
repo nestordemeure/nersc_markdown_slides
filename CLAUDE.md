@@ -14,8 +14,12 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
 ├── README.md                        # Project overview, installation, and usage instructions
 ├── package.json                     # Project configuration for Marp CLI
 ├── slide decks/                     # Slide decks
+│   ├── README.md                    # Slide deck writing guide
 │   ├── docs/                        # Documentation presentation
 │   └── ...                          # Other slide decks
+├── src/                             # Custom engine extensions
+│   ├── custom-engine.js             # Custom Marp engine with additional features
+│   └── README.md                    # Engine documentation
 └── style/                           # Slide styling and themes
     ├── specification.md             # Reference spec for slide style
     ├── nersc-theme.css              # Theme file
@@ -28,7 +32,7 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
 
 ## Basic Usage Information
 
-The following commands will build a given deck to HTML / PDF, picking up on our style via `package.json`:
+The following commands will build a given deck to HTML / PDF, picking up on our style and engine via `package.json`:
 
 ```sh
 # Convert a specific deck to HTML
@@ -37,6 +41,8 @@ marp "slide decks/docs/slides.md"
 # Convert to PDF
 marp "slide decks/docs/slides.md" --pdf
 ```
+
+The documentation slides (`slide decks/docs/slides.md`) serve as our test deck and feature demonstration.
 
 Marp has a `--debug` flag you can use to get fine-grained details on the build process and error messages.
 Use it whenever you debug a Marp warning or error message.

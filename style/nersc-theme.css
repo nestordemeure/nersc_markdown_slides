@@ -24,6 +24,8 @@
   --color-dark-gray: #434343;
   --color-light-gray: #595959;
   --color-white: #FFFFFF;
+  --color-green: #4CAF50;
+  --color-red: #F44336;
 }
 
 /* Base styles for all slides */
@@ -72,6 +74,17 @@ ul li::before {
   height: 12px;
   background-color: var(--color-orange);
 }
+
+/* Green bullets for pros (use + in markdown) */
+ul li[data-marker="+"]::before {
+  background-color: var(--color-green);
+}
+
+/* Red bullets for cons (use - in markdown) */
+ul li[data-marker="-"]::before {
+  background-color: var(--color-red);
+}
+
 
 a {
   color: var(--color-teal);

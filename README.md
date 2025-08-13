@@ -15,8 +15,12 @@ The corresponding project files are organized as follows:
 ├── README.md                        # Project overview, installation, and usage instructions
 ├── package.json                     # Project configuration for Marp CLI
 ├── slide decks/                     # Slide decks
+│   ├── README.md                    # Slide deck writing guide
 │   ├── docs/                        # Documentation presentation
 │   └── ...                          # Other slide decks
+├── src/                             # Custom engine extensions
+│   ├── custom-engine.js             # Custom Marp engine with additional features
+│   └── README.md                    # Engine documentation
 └── style/                           # Slide styling and themes
     ├── specification.md             # Reference spec for slide style
     ├── nersc-theme.css              # Theme file
@@ -54,6 +58,8 @@ For development purposes, you can use the watch mode to automatically rebuild sl
 marp --watch --preview "slide decks/docs/slides.md"
 ```
 
+You can also use npm scripts, `npm run build` (builds PDF) and `npm run watch` (watch with preview), to work on the documentation slides.
+
 ## Marp Documentation
 
 Here are some useful links on using [Marp](https://marp.app/):
@@ -67,18 +73,12 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-* document slide types and their inputs in:
-  * a readme in the slide decks folder
-  * personnal one on my typical slides (who am i slide), and usage (question before most sections)
-
 * improve style to fit reference:
   * base:
     * page number is too high (how low does the bottom go?)
     * logo is misplaced
   * blue lines have a gradient in the VScode pdf display?!
   * code block should have proper colors
-  * try red / green bullets in lists
-  * how to deal with local images in html?
 
 * write slides
   * write proper documentation slides
