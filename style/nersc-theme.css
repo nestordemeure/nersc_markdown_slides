@@ -278,6 +278,8 @@ section.question h1 {
   position: static;
   font-size: 72px;
   color: var(--color-dark-gray);
+  width: 100%;
+  text-align: center;
 }
 
 
