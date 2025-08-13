@@ -139,7 +139,7 @@ section::before {
   content: "";
   position: absolute;
   top: -50px;
-  left: 40px;
+  left: -15px;
   height: 216px;
   width: 240px;
   background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/LBNL-logo-horizontal.png');
