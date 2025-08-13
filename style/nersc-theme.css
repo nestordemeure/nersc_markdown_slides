@@ -116,7 +116,9 @@ pre {
 /* ========== Default Content Slide (class: content) ========== */
 section {
   padding-top: 160px;
-  background-image: linear-gradient(to bottom, var(--color-dark-blue) 0%, var(--color-dark-blue) 20%, var(--color-white) 20%, var(--color-white) 100%);
+  background-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
+  background-repeat: no-repeat;
+  background-size: 100% 144px; /* 20% of 720px */
 }
 
 section h1 {
@@ -147,9 +149,7 @@ section::before {
 
 /* ========== Title Slide (class: title) ========== */
 section.title {
-  background: linear-gradient(to right, var(--color-dark-blue) 25%, transparent 25%), url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/nersc-building.jpg');
-  background-size: auto, cover;
-  background-position: left, 320px center;
+  background: var(--color-dark-blue) url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/nersc-building.jpg') no-repeat right center / 75% 100%;
   padding: 0;
   color: var(--color-white);
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
@@ -223,7 +223,11 @@ section.title .authors {
 
 /* ========== Section Title Slide (class: section-title) ========== */
 section.section-title {
-  background: linear-gradient(to right, var(--color-white) 33.33%, var(--color-dark-blue) 33.33%);
+  background-color: var(--color-white);
+  background-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 66.67% 100%;
   padding: 0;
 }
 
@@ -279,7 +283,11 @@ section.question h1 {
 
 /* ========== Thanks Slide (class: thanks) ========== */
 section.thanks {
-  background: linear-gradient(to right, var(--color-white) 66.67%, var(--color-dark-blue) 66.67%);
+  background-color: var(--color-white);
+  background-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 33.33% 100%;
   padding: 0 0 0 60px;
   display: flex;
   flex-direction: column;
