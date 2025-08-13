@@ -138,10 +138,10 @@ section h1 {
 section::before {
   content: "";
   position: absolute;
-  top: -65px;
+  top: -38px;
   left: 40px;
-  height: 216px;
-  width: 240px;
+  height: 189px;
+  width: 210px;
   background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/LBNL-logo-horizontal.png');
   background-size: contain;
   background-repeat: no-repeat;
