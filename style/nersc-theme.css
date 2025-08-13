@@ -49,8 +49,8 @@ section {
 section::after {
   content: attr(data-marpit-pagination);
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: -45px;
+  right: -40px;
   font-size: 14px;
   color: var(--color-dark-gray);
 }
@@ -118,7 +118,8 @@ section {
   padding-top: 160px;
   background-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
   background-repeat: no-repeat;
-  background-size: 100% 144px; /* 20% of 720px */
+  background-size: 100% 144px;
+  /* 20% of 720px */
 }
 
 section h1 {

@@ -66,7 +66,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * improve style to fit reference:
   * base:
-    * page number is too high (how low does the bottom go?)
     * logo is misplaced
 
 * write slides
