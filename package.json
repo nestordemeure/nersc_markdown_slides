@@ -5,8 +5,7 @@
         "themeSet": [
             "./style/nersc-theme.css"
         ],
-        "allowLocalFiles": true,
-        "baseUrl": "./style"
+        "allowLocalFiles": true
     },
     "dependencies": {
         "@marp-team/marp-cli": "^4.2.3",

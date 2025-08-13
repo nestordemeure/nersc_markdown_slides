@@ -58,10 +58,9 @@ marp --watch --preview "slide decks/docs/slides.md"
 
 Here are some useful links on using `marp`:
 
-* [marp.app](https://marp.app/): Marp's official page
+* [marp.app](https://marp.app/): Marp's main page
 * [marp-cli](https://github.com/marp-team/marp-cli): Marp's command line tool
 * [marpit.marp.app](https://marpit.marp.app/): Marp's official documentation (including [a page on custom CSS themes](https://marpit.marp.app/theme-css))
-* [marp-vscode](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode): Official VScode extension
 * For LLM use, the [Context7 MCP](https://context7.com/?q=marp) has [Marpit](https://context7.com/marp-team/marpit) and [Marp-CLI](https://context7.com/marp-team/marp-cli) pages.
 
 Marp was picked as it emphasizes writing slides in straight Markdown once we have defined our CSS style.
