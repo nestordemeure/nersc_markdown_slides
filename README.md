@@ -66,7 +66,7 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * improve style to fit reference:
   * base:
-    * logo is misplaced
+    * logo is too small / could be shifted left
 
 * write slides
   * write proper documentation slides

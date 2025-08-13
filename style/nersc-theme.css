@@ -125,7 +125,7 @@ section {
 section h1 {
   position: absolute;
   top: 40px;
-  left: 180px;
+  left: 220px;
   right: 60px;
   color: var(--color-white);
   font-size: 44px;
@@ -138,9 +138,10 @@ section h1 {
 section::before {
   content: "";
   position: absolute;
-  bottom: 10px;
+  top: 0;
   left: 40px;
-  height: 160px;
+  height: 144px;
+  width: 160px;
   background-image: url('https://github.com/nestordemeure/nersc_markdown_slides/raw/main/style/images/LBNL-logo-horizontal.png');
   background-size: contain;
   background-repeat: no-repeat;
