@@ -1,4 +1,4 @@
-# CLAUDE.md
+# NERSC Markdown Slides
 
 This is a NERSC markdown-based slides repository using [Marp](https://marp.app/) as the slide generation engine. The repository contains style definitions, assets, and slide decks following Berkeley Lab/NERSC visual identity guidelines.
 
@@ -48,3 +48,13 @@ The documentation slides (`slide decks/docs/slides.md`) serve as our test deck a
 
 Marp has a `--debug` flag you can use to get fine-grained details on the build process and error messages.
 Use it whenever you debug a Marp warning or error message.
+
+## Detailed Documentation
+
+For specific guidance on different aspects of the project:
+
+### Slide Writing Guide
+@slide decks/CLAUDE.md
+
+### Theme Development Guide  
+@style/CLAUDE.md

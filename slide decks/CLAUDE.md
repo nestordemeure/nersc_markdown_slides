@@ -1,4 +1,4 @@
-# Slide Decks Writing Guide
+# Slide Writing Guide
 
 ## Folder Structure
 
@@ -100,3 +100,9 @@ Mixed lists:
 * Another normal point
 - Negative consideration
 ```
+
+## User-Specific Writing Guide
+
+The following contains user-specific preferences and guidelines for slide writing:
+
+@CLAUDE.local.md

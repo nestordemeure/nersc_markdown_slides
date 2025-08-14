@@ -1,6 +1,7 @@
 # Marp outputs
 *.pdf
 *.html
+*.pptx
 
 # node things
 /node_modules

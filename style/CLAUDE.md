@@ -1,4 +1,4 @@
-## Styling
+# Theme Development Guide
 
 Updates to the style should be reflected in both the specification and CSS file.
 Changing one should come with changing the other, and vice versa, unless a change is meant to get them in sync (i.e. the CSS not behaving as specified by the specification).
