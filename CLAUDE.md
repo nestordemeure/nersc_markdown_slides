@@ -1,6 +1,6 @@
 # NERSC Markdown Slides
 
-This is a NERSC markdown-based slides repository using [Marp](https://marp.app/) as the slide generation engine. The repository contains style definitions, assets, and slide decks following Berkeley Lab/NERSC visual identity guidelines.
+This is a NERSC markdown-based slides repository using [Marp](https://marp.app/) as the slide generation engine. The repository contains style definitions, assets, and slide_decks following Berkeley Lab/NERSC visual identity guidelines.
 
 Use the [Context7 MCP](https://context7.com/) to get documentation on using `marp-cli` (the command line tool we use to build the slides) and `marpit` (the format used to write the slides and the CSS styling). 
 
@@ -10,10 +10,10 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
 /
 ├── README.md                        # Project overview, installation, and usage instructions
 ├── package.json                     # Project configuration for Marp CLI
-├── slide decks/                     # Slide decks
+├── slide_decks/                     # Slide decks
 │   ├── README.md                    # Slide deck writing guide
 │   ├── docs/                        # Documentation presentation
-│   └── ...                          # Other slide decks
+│   └── ...                          # Other slide_decks
 ├── style/                           # Slide styling and themes
 │   ├── specification.md             # Reference spec for slide style
 │   ├── nersc-theme.css              # Theme file
@@ -30,7 +30,7 @@ Use the [Context7 MCP](https://context7.com/) to get documentation on using `mar
         └── deploy-pages.yml         # Auto-deploy docs slides to GitHub Pages
 ```
 
-The code is organized around strong separation of concerns: the `slide decks` folder is all about slide content and does not discuss or codify appearances, the `style` folder is all about appearances, and the `src` folder is all about any additional logic that might be required to produce the slides as desired.
+The code is organized around strong separation of concerns: the `slide_decks` folder is all about slide content and does not discuss or codify appearances, the `style` folder is all about appearances, and the `src` folder is all about any additional logic that might be required to produce the slides as desired.
 
 ## Basic Usage Information
 
@@ -38,13 +38,13 @@ The following commands will build a given deck to HTML / PDF, picking up on our 
 
 ```sh
 # Convert a specific deck to HTML
-marp "slide decks/docs/slides.md"
+marp "slide_decks/docs/slides.md"
 
 # Convert to PDF
-marp "slide decks/docs/slides.md" --pdf
+marp "slide_decks/docs/slides.md" --pdf
 ```
 
-The documentation slides (`slide decks/docs/slides.md`) serve as our test deck and feature demonstration.
+The documentation slides (`slide_decks/docs/slides.md`) serve as our test deck and feature demonstration.
 
 Marp has a `--debug` flag you can use to get fine-grained details on the build process and error messages.
 Use it whenever you debug a Marp warning or error message.
@@ -54,7 +54,7 @@ Use it whenever you debug a Marp warning or error message.
 For specific guidance on different aspects of the project:
 
 ### Slide Writing Guide
-@slide decks/CLAUDE.md
+@slide_decks/CLAUDE.md
 
 ### Theme Development Guide  
 @style/CLAUDE.md

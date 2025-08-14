@@ -124,16 +124,16 @@ npm install -g @marp-team/marp-core @marp-team/marp-cli
 **Basic Commands:**
 ```bash
 # Generate HTML
-marp "slide decks/docs/slides.md"
+marp "slide_decks/docs/slides.md"
 
 # Generate PDF
-marp "slide decks/docs/slides.md" --pdf
+marp "slide_decks/docs/slides.md" --pdf
 
 # Live editing with preview
-marp --watch --preview "slide decks/docs/slides.md"
+marp --watch --preview "slide_decks/docs/slides.md"
 
 # Debug mode for troubleshooting
-marp --debug "slide decks/docs/slides.md"
+marp --debug "slide_decks/docs/slides.md"
 ```
 
 ---
@@ -214,7 +214,7 @@ marp --debug "slide decks/docs/slides.md"
 * Create slide template library for common presentation patterns
 
 **Get Involved:**
-* Fork the repository and create your own slide decks
+* Fork the repository and create your own slide_decks
 * Submit PRs to improve the NERSC theme
 * Share feedback on workflow and usability
 

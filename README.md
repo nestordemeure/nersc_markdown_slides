@@ -1,6 +1,6 @@
 # NERSC Markdown-based Slides
 
-This repository contains the style information, as well as a number of slide decks, for NERSC's Markdown-based slides.
+This repository contains the style information, as well as a number of slide_decks, for NERSC's Markdown-based slides.
 
 ## Repository Structure
 
@@ -10,10 +10,10 @@ The corresponding project files are organized as follows:
 ```
 /
 ├── package.json                     # Project configuration for Marp CLI
-├── slide decks/                     # Slide decks
+├── slide_decks/                     # Slide decks
 │   ├── README.md                    # Slide deck writing guide
 │   ├── docs/                        # Documentation presentation
-│   └── ...                          # Other slide decks
+│   └── ...                          # Other slide_decks
 ├── style/                           # Slide styling and themes
 │   ├── specification.md             # Reference spec for slide style
 │   ├── nersc-theme.css              # Theme file
@@ -34,10 +34,10 @@ The following commands will build a given deck to HTML / PDF (picking up on our 
 
 ```sh
 # Convert a specific deck to HTML
-marp "slide decks/docs/slides.md"
+marp "slide_decks/docs/slides.md"
 
 # Convert to PDF
-marp "slide decks/docs/slides.md" --pdf
+marp "slide_decks/docs/slides.md" --pdf
 ```
 
 You might want to use the `--debug` flag when debugging warning and error messages.
@@ -46,7 +46,7 @@ For development purposes, you can use the watch mode to automatically rebuild sl
 
 ```sh
 # Watch a specific slide deck and rebuild on changes with preview window
-marp --watch --preview "slide decks/docs/slides.md"
+marp --watch --preview "slide_decks/docs/slides.md"
 ```
 
 You can also use npm scripts, `npm run build` (builds PDF) and `npm run watch` (watch with preview), to work on the documentation slides.
