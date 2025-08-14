@@ -64,14 +64,31 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
+* add readme on porting process in the jax workshop folder
+  * compare pptx2md with markitdown with the pptx option
+
+* addcontext7 ids for marp and marpit in claude.md file
+
 * improve style to fit reference:
   * title:
-    * multiline titles should go up not down into the subtitle
+    * multiline titles should go up, not down into the subtitle
   * base:
     * have text centered verticlaly in slides?
+    * multiline titles should be centered vertically in header 
+  * section title:
+    * multiline titles should go up, not down into the subtitle
+  * question:
+    * any additional text should go below the question
+  * elements:
+    * lists bullets are too spaced out
+    * images / figures 
+      * should be centered horizontally unless told otherwise (how do we ask for centering in marpit?)
+      * and scaled down to fit in the page if need be
+    * how to center text when it makes sense?
 
 * write slides
   * write proper documentation slides
+    * fix douna building path
   * clena up the port of the JAX Workshop slides
 
 * rename the `style` folder into `themes`
