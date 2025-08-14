@@ -2,7 +2,7 @@
     "name": "nersc-slides",
     "version": "0.0.1",
     "scripts": {
-        "build": "marp \"slide_decks/docs/slides.md\" --pdf",
+        "build": "marp \"slide_decks/**/slides.md\" --pdf",
         "watch": "marp \"slide_decks/docs/slides.md\" --watch --preview"
     },
     "marp": {

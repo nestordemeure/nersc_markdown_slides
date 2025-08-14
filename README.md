@@ -49,7 +49,7 @@ For development purposes, you can use the watch mode to automatically rebuild sl
 marp --watch --preview "slide_decks/docs/slides.md"
 ```
 
-You can also use npm scripts, `npm run build` (builds PDF) and `npm run watch` (watch with preview), to work on the documentation slides.
+You can also use npm scripts, `npm run build` (builds all slide decks to PDF) and `npm run watch` (watch dcoumentation slides with preview).
 
 ## Marp Documentation
 
@@ -65,6 +65,8 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 ## TODO
 
 * improve style to fit reference:
+  * title:
+    * multiline titles should go up not down into the subtitle
   * base:
     * have text centered verticlaly in slides?
 
