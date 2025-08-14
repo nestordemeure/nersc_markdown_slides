@@ -70,7 +70,7 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * write slides
   * write proper documentation slides
-  * port some of my slides as proof of concept (jax workshop, documentation chatbot, etc)
+  * clena up the port of the JAX Workshop slides
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
