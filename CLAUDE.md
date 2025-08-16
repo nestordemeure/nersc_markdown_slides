@@ -2,7 +2,7 @@
 
 This is a NERSC markdown-based slides repository using [Marp](https://marp.app/) as the slide generation engine. The repository contains style definitions, assets, and slide_decks following Berkeley Lab/NERSC visual identity guidelines.
 
-Use the [Context7 MCP](https://context7.com/) to get documentation on using `marp-cli` (the command line tool we use to build the slides) and `marpit` (the format used to write the slides and the CSS styling). 
+Use the [Context7 MCP](https://context7.com/) to get documentation on using `marp-cli` (the command line tool we use to build the slides, Context7 ID: `/marp-team/marp-cli`) and `marpit` (the format used to write the slides and the CSS styling, Context7 ID: `/marp-team/marpit`). 
 
 ## Repository Structure
 

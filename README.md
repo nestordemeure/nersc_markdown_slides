@@ -49,7 +49,7 @@ For development purposes, you can use the watch mode to automatically rebuild sl
 marp --watch --preview "slide_decks/docs/slides.md"
 ```
 
-You can also use npm scripts, `npm run build` (builds all slide decks to PDF) and `npm run watch` (watch dcoumentation slides with preview).
+You can also use npm script `npm run build` to rebuild all slide decks to PDF.
 
 ## Marp Documentation
 
@@ -63,11 +63,6 @@ Marp was picked as it emphasizes writing slides in straight Markdown once we hav
 However, if we ever find it too limiting for our needs, [sli.dev](https://sli.dev/) might be a solid alternative.
 
 ## TODO
-
-* add readme on porting process in the jax workshop folder
-  * compare pptx2md with markitdown with the pptx option
-
-* addcontext7 ids for marp and marpit in claude.md file
 
 * improve style to fit reference:
   * title:
@@ -88,8 +83,7 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * write slides
   * write proper documentation slides
-    * fix douna building path
-  * clena up the port of the JAX Workshop slides
+  * clean up the port of the JAX Workshop slides
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
