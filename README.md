@@ -79,6 +79,10 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * write slides
   * write proper documentation slides
   * clean up the port of the JAX Workshop slides
+    * turn exercice link into QR code
+    * figures
+      * rename images
+      * resize images
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
