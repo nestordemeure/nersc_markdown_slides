@@ -337,6 +337,11 @@ section.question h1 {
   margin: 0;
 }
 
+/* Add extra space after h1 when followed by other elements */
+section.question h1:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 section.question p,
 section.question ul,
 section.question ol {
