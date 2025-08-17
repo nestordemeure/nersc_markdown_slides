@@ -74,10 +74,10 @@ By the end of this workshop I want you to:
 # Using off-the-shelf kernels
 
 + Call a library providing off-the-shelf kernels:
-  + *[Numpy](https://numpy.org/)* ➡ *[Cupy](https://docs.cupy.dev/en/stable/reference/routines.html)*
-  + *[Scipy](https://scipy.org/)* ➡ *[Cupy](https://docs.cupy.dev/en/stable/reference/scipy.html)*
-  + *[Pandas](https://pandas.pydata.org/)* ➡ *[RAPIDS CuDF](https://docs.rapids.ai/api/cudf/stable/)*
-  + *[Scikit-learn](https://scikit-learn.org/stable/)* ➡ *[RAPIDS CuML](https://docs.rapids.ai/api/cuml/stable/)*
+  + *[Numpy](https://numpy.org/) ➡ [Cupy](https://docs.cupy.dev/en/stable/reference/routines.html)*
+  + *[Scipy](https://scipy.org/) ➡ [Cupy](https://docs.cupy.dev/en/stable/reference/scipy.html)*
+  + *[Pandas](https://pandas.pydata.org/) ➡ [RAPIDS CuDF](https://docs.rapids.ai/api/cudf/stable/)*
+  + *[Scikit-learn](https://scikit-learn.org/stable/) ➡ [RAPIDS CuML](https://docs.rapids.ai/api/cuml/stable/)*
 + Very easy to use,
 + perfect if you find what you need,
 - cannot write your own kernel,
