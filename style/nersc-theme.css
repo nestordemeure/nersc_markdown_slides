@@ -327,11 +327,7 @@ section.thanks {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 33.33% 100%;
-  padding: 0 0 0 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  padding: 60px 0 60px 60px;
   box-sizing: border-box;
 }
 
@@ -340,31 +336,35 @@ section.thanks::after {
   display: none;
 }
 
-section.thanks h1,
-section.thanks h2,
-section.thanks p {
-  position: static;
+/* Create a centered content block within the left zone */
+section.thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section.thanks > * {
+  width: calc(66.67% - 60px); /* Left zone minus left padding */
   text-align: center;
-  width: 60%;
-  max-width: 60%;
+  margin: 0; /* Reset margins to control spacing precisely */
 }
 
 section.thanks h1 {
   font-size: 72px;
   color: var(--color-dark-gray);
-  margin: 0 0 40px 0;
+  margin: 0;
 }
 
 section.thanks h2 {
   font-size: 36px;
   color: var(--color-dark-gray);
-  margin: 20px 0;
+  margin: 10px 0 0 0;
   font-weight: normal;
-  width: 55%;
-  max-width: 55%;
   word-wrap: break-word;
 }
 
 section.thanks p {
   font-size: 27px;
+  margin: 10px 0 0 0;
 }

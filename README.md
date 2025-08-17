@@ -66,7 +66,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * add a test deck that is explciitly for tests (with a readme stating so), update the readmes and claudes to point to it
 
-* streamline style for thanks pages?
 * what about title pages?
 
 * improve style to fit reference:
