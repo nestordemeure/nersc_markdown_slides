@@ -64,9 +64,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-claude
-* you can look at generated html to get a feel for the structure of it
-
 marpit
 * how to center text when it makes sense?
 * how to make texlocally bigger for further emphasis?
