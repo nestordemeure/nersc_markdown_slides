@@ -60,7 +60,7 @@ By the end of this workshop I want you to:
 <!-- _class: content -->
 # Up to x45 speed-up from optimized C++ to JAX!
 
-![](images/slides%20%28eng%29_0.png)
+![w:928](images/slides%20%28eng%29_0.png)
 
 ---
 
@@ -188,7 +188,7 @@ y = jnp.dot(x, x.T)  # runs on GPU if available
 
 Calls a *just-in-time compiler* when you execute your function with a *new problem size*:
 
-![](images/slides%20%28eng%29_1.png)
+![w:928](images/slides%20%28eng%29_1.png)
 
 ---
 
@@ -495,14 +495,14 @@ Kernels were ported **from C++ to Numpy to JAX** and validated using **unit test
 <!-- _class: content -->
 # Porting the code (x7 reduction in lines of code)
 
-![](images/slides%20%28eng%29_2.png)
+![w:928](images/slides%20%28eng%29_2.png)
 
 ---
 
 <!-- _class: content -->
 # Performance per kernel (up to x45 speed-up)
 
-![](images/slides%20%28eng%29_3.png)
+![w:928](images/slides%20%28eng%29_3.png)
 
 ---
 

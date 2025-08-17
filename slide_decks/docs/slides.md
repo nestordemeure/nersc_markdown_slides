@@ -50,7 +50,7 @@ Normal text works as expected, with support for **bold**, *italic*, and `inline 
 
 You can also include images easily:
 
-![w:600](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
+![w:928](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
 
 *The Doudna building at NERSC*
 

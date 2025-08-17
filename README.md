@@ -64,13 +64,18 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
+claude
+* you can look at generated html to get a feel for the structure of it
+
+marpit
+* how to center text when it makes sense?
+* how to make texlocally bigger for further emphasis?
+
 * improve style to fit reference:
   * elements:
     * lists bullets are too spaced out
     * images / figures 
       * should be centered horizontally unless told otherwise (how do we ask for centering in marpit?)
-      * and scaled down to fit in the page if need be
-    * how to center text when it makes sense?
 
 * write slides
   * write proper documentation slides

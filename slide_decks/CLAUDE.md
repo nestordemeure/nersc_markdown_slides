@@ -73,6 +73,16 @@ Local images only work in PDFs and local HTML. By default, use repository URLs:
 ![alt text](https://github.com/nestordemeure/nersc_markdown_slides/raw/main/path/to/image.jpg)
 ```
 
+Image size should be made relative to page size to ensure proper fitting (80% of the textwidth is a good default).
+Use Marpit's sizing keywords:
+
+```markdown
+![width:200px](image.jpg)
+![height:30cm](image.jpg)  
+![width:200px height:30cm](image.jpg)
+![w:32 h:32](image.jpg)
+```
+
 ### Bullet Lists
 
 Bullet symbols should default to `*`.
