@@ -65,8 +65,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 ## TODO
 
 * improve style to fit reference:
-  * title:
-    * multiline titles should go up, not down into the subtitle
   * base:
     * have text centered verticlaly in slides?
     * multiline titles should be centered vertically in header 

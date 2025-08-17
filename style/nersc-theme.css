@@ -195,8 +195,10 @@ section.title h3 {
 }
 
 section.title h1 {
-  top: 184px;
+  bottom: 468px;
   font-size: 48px;
+  display: flex;
+  align-items: flex-end;
 }
 
 section.title h2 {
