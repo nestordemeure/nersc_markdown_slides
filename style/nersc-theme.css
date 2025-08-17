@@ -91,6 +91,42 @@ ul li[data-marker="-"]::before {
   background-color: var(--color-red);
 }
 
+/* Nested list styling - subbullets */
+ul ul {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+ul ul li {
+  padding-left: 25px;
+}
+
+ul ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 12px;
+  height: 6px;
+  background-color: var(--color-light-gray);
+  border-radius: 0;
+}
+
+/* Green subbullets for pros (use + in markdown) */
+ul ul li[data-marker="+"]::before {
+  background-color: var(--color-green);
+}
+
+/* Red subbullets for cons (use - in markdown) */
+ul ul li[data-marker="-"]::before {
+  background-color: var(--color-red);
+}
+
+/* Grey subbullets for normal items (use * in markdown) - default */
+ul ul li[data-marker="*"]::before {
+  background-color: var(--color-light-gray);
+}
+
 
 a {
   color: var(--color-teal);

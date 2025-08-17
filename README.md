@@ -64,8 +64,7 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-* improve style to fit reference:
-  * subbullets should be grey rectangles
+* add a feature to introduce QR codes directly from link?
 
 * CSS generation
   * once i am happy with the CSS, maybe try to boil the CSS and spec into a spec that better reflecs the intent, then produce a better streanlined CSS accordingly

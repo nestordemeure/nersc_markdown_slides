@@ -66,6 +66,10 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
   - Default bullets are **square and orange** (use `*` in markdown)
   - **Green bullets for pros** (use `+` in markdown)
   - **Red bullets for cons** (use `-` in markdown)
+  - **Subbullets are grey rectangles (fat -)** that change color based on markdown symbol:
+    - Grey rectangles for normal items (use `*` in markdown)
+    - Green rectangles for pros (use `+` in markdown) 
+    - Red rectangles for cons (use `-` in markdown)
   - Text is justified and typically size 18
 - **Page Numbers:** All slides except title slides have page numbers in bottom right corner
 - **Hyperlinks:** Shown in blue/teal color and clickeable
