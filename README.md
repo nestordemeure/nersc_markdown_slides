@@ -64,16 +64,15 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-* Approach css generation as looking at the md and html for a page type, plus a tight spec
-  * Start with normal pages, for a baseline on css
-
-* add a test deck that is explciitly for tests (with a readme stating so), update the readmes and claudes to point to it
-
 * improve style to fit reference:
-  * elements:
-    * lists bullets are too spaced out
+  * too much space between paragraphs
+  * subbullets should be grey rectangles
 
-* once i am happy with the CSS, maybe try to boil the CSS and spec into a spec that better reflecs the intent, then produce a better streanlined CSS accordingly
+* CSS generation
+  * once i am happy with the CSS, maybe try to boil the CSS and spec into a spec that better reflecs the intent, then produce a better streanlined CSS accordingly
+  * Approach css generation as looking at the md and html for a page type, plus a tight spec
+    * Start with normal pages, for a baseline on css
+  * add a test deck that is explciitly for tests (with a readme stating so), update the readmes and claudes to point to it
 
 * marpit
   * how to center text when it makes sense?

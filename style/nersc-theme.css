@@ -55,17 +55,15 @@ section::after {
   color: var(--color-dark-gray);
 }
 
-/* General element styling */
+/* General element styling - only override what's necessary */
 ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 1.5em;
 }
 
 ul li {
   position: relative;
   padding-left: 30px;
-  margin: 0.5em 0;
 }
 
 ul li::before {
