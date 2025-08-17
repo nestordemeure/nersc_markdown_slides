@@ -127,7 +127,7 @@ img[style] {
 
 
 /* ========== Content Slide (class: content or default) ========== */
-section:not(.title):not(.section-title):not(.question):not(.thanks) {
+section {
   padding-top: 160px;
   background-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
   background-repeat: no-repeat;
@@ -138,7 +138,7 @@ section:not(.title):not(.section-title):not(.question):not(.thanks) {
   justify-content: center;
 }
 
-section:not(.title):not(.section-title):not(.question):not(.thanks) h1 {
+section h1 {
   position: absolute;
   top: 0;
   left: 280px;
@@ -157,7 +157,7 @@ section:not(.title):not(.section-title):not(.question):not(.thanks) h1 {
   justify-content: center;
 }
 
-section:not(.title):not(.section-title):not(.question):not(.thanks)::before {
+section::before {
   content: "";
   position: absolute;
   top: -38px;
@@ -217,10 +217,22 @@ section.title h3 {
 }
 
 section.title h1 {
+  position: absolute;
+  top: auto;
   bottom: 468px;
+  left: 30%;
+  right: 5%;
+  height: auto;
+  color: var(--color-white);
   font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 section.title h2 {
@@ -276,10 +288,18 @@ section.section-title > * {
 }
 
 section.section-title h1 {
+  position: static;
   font-size: 48px;
   color: var(--color-orange);
   margin: 0;
   line-height: 1.1;
+  top: auto;
+  left: auto;
+  right: auto;
+  height: auto;
+  display: block;
+  flex-direction: initial;
+  justify-content: initial;
 }
 
 section.section-title h2 {
@@ -359,9 +379,17 @@ section.thanks>* {
 }
 
 section.thanks h1 {
+  position: static;
   font-size: 72px;
   color: var(--color-dark-gray);
   margin: 0;
+  top: auto;
+  left: auto;
+  right: auto;
+  height: auto;
+  display: block;
+  flex-direction: initial;
+  justify-content: initial;
 }
 
 section.thanks h2 {
