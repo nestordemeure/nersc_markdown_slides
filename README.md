@@ -65,7 +65,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 ## TODO
 
 * improve style to fit reference:
-  * too much space between paragraphs
   * subbullets should be grey rectangles
 
 * CSS generation
