@@ -64,15 +64,16 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-marpit
-* how to center text when it makes sense?
-* how to make texlocally bigger for further emphasis?
+some style are applied to normal by exclusing others
+maybe we should just better specify others?
 
 * improve style to fit reference:
   * elements:
     * lists bullets are too spaced out
-    * images / figures 
-      * should be centered horizontally unless told otherwise (how do we ask for centering in marpit?)
+
+* marpit
+  * how to center text when it makes sense?
+  * how to make texlocally bigger for further emphasis?
 
 * write slides
   * write proper documentation slides

@@ -112,6 +112,19 @@ pre {
   margin: 1em 0;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure all images with inline styles are still centered */
+img[style] {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 
 /* ========== Default Content Slide (class: content) ========== */
 section {
