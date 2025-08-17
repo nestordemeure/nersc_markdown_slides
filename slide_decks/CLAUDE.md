@@ -83,6 +83,24 @@ Use Marpit's sizing keywords:
 ![w:32 h:32](image.jpg)
 ```
 
+### QR Codes
+
+QR codes can be generated automatically from URLs using the `qr` prefix in image alt text:
+
+```markdown
+![qr](https://example.com/link)
+![qr width:200px](https://github.com/your-repo/exercise1)
+![qr alt:Download Dataset](https://data.example.com/dataset.zip)
+![qr w:150 alt:Exercise Link](mailto:contact@example.com)
+```
+
+**QR Code Syntax:**
+- Start alt text with `qr` to trigger QR code generation
+- Use standard Marpit image sizing (`width:`, `height:`, `w:`, `h:`, percentages)
+- Use `alt:Custom Text` to override the default alt text
+- The URL becomes the QR code content
+- Generated as embedded data URLs (works in PDFs and all formats)
+
 ### Bullet Lists
 
 Bullet symbols should default to `*`.

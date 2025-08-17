@@ -5,6 +5,10 @@ It's configured in `package.json` under the `engine` property.
 
 ## Features
 
+### QR Code Generation
+
+Automatically generates QR codes from URLs using `![qr](url)` syntax. Supports standard Marpit image sizing and custom alt text.
+
 ### Colored Bullets
 
 Preserves markdown list markers (`*`, `+`, `-`) as `data-marker` attributes for CSS styling - enabling orange (default), green (pros), and red (cons) bullets.

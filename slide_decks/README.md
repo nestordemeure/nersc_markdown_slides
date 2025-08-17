@@ -73,6 +73,34 @@ Local images only work in PDFs and local HTML. By default, use repository URLs:
 ![alt text](https://github.com/nestordemeure/nersc_markdown_slides/raw/main/path/to/image.jpg)
 ```
 
+Image size should be made relative to page size to ensure proper fitting (80% of the textwidth is a good default).
+Use Marpit's sizing keywords:
+
+```markdown
+![width:200px](image.jpg)
+![height:30cm](image.jpg)  
+![width:200px height:30cm](image.jpg)
+![w:32 h:32](image.jpg)
+```
+
+### QR Codes
+
+QR codes can be generated automatically from URLs using the `qr` prefix in image alt text:
+
+```markdown
+![qr](https://example.com/link)
+![qr width:200px](https://github.com/your-repo/exercise1)
+![qr alt:Download Dataset](https://data.example.com/dataset.zip)
+![qr w:150 alt:Exercise Link](mailto:contact@example.com)
+```
+
+**QR Code Syntax:**
+- Start alt text with `qr` to trigger QR code generation
+- Use standard Marpit image sizing (`width:`, `height:`, `w:`, `h:`, percentages)
+- Use `alt:Custom Text` to override the default alt text
+- The URL becomes the QR code content
+- Generated as embedded data URLs (works in PDFs and all formats)
+
 ### Bullet Lists
 
 Bullet symbols should default to `*`.

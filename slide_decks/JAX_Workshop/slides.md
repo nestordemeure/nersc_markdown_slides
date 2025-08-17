@@ -451,7 +451,7 @@ You can do three easy things to improve performance significantly:
 <!-- _class: content -->
 # Exercises!
 
-https://cutt.ly/vw9JWWaY
+![qr width:600px alt:Workshop Exercises](https://cutt.ly/vw9JWWaY)
 
 ---
 
