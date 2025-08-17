@@ -67,7 +67,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * improve style to fit reference:
   * base:
     * have text centered verticlaly in slides?
-    * multiline titles should be centered vertically in header 
   * elements:
     * lists bullets are too spaced out
     * images / figures 
