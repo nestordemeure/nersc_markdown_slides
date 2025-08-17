@@ -250,9 +250,11 @@ section.section-title h2 {
 }
 
 section.section-title h1 {
-  top: 280px;
+  bottom: 370px;
   font-size: 48px;
   color: var(--color-orange);
+  display: flex;
+  align-items: flex-end;
 }
 
 section.section-title h2 {

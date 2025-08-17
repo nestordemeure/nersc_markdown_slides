@@ -25,7 +25,7 @@ National Energy Research Scientific Computing Center, Berkeley CA, United-States
 
 <!-- _class: section-title -->
 
-# What is Marp?
+# What is Marp? Understanding the Markdown Presentation Ecosystem
 ## Understanding the Markdown Presentation Ecosystem
 
 ---
