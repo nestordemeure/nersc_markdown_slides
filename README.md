@@ -68,8 +68,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
   * base:
     * have text centered verticlaly in slides?
     * multiline titles should be centered vertically in header 
-  * question:
-    * any additional text should go below the question
   * elements:
     * lists bullets are too spaced out
     * images / figures 

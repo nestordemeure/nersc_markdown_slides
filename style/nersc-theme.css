@@ -270,6 +270,7 @@ section.question {
   background: var(--color-white);
   padding: 60px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -286,6 +287,11 @@ section.question h1 {
   color: var(--color-dark-gray);
   width: 100%;
   text-align: center;
+}
+
+section.question p {
+  font-size: 32px;
+  margin-top: 40px;
 }
 
 
