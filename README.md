@@ -64,12 +64,18 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
+* add a test deck that is explciitly for tests (with a readme stating so), update the readmes and claudes to point to it
+
 some style are applied to normal by exclusing others
 maybe we should just better specify others?
+* question is easily specified, as is thanks
+* section title and title can just draw from the current normal slide
 
 * improve style to fit reference:
   * elements:
     * lists bullets are too spaced out
+
+* once i am happy with the CSS, maybe try to boil the CSS and spec into a spec that better reflecs the intent, then produce a better streanlined CSS accordingly
 
 * marpit
   * how to center text when it makes sense?
