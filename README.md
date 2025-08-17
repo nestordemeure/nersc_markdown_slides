@@ -66,10 +66,8 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * add a test deck that is explciitly for tests (with a readme stating so), update the readmes and claudes to point to it
 
-some style are applied to normal by exclusing others
-maybe we should just better specify others?
-* question is easily specified, as is thanks
-* section title and title can just draw from the current normal slide
+* streamline style for thanks pages?
+* what about title pages?
 
 * improve style to fit reference:
   * elements:

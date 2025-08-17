@@ -308,11 +308,15 @@ section.question h1 {
   width: 100%;
   text-align: center;
   line-height: 1.1;
+  margin: 0;
 }
 
-section.question p {
+section.question p,
+section.question ul,
+section.question ol {
   font-size: 32px;
   margin-top: 40px;
+  text-align: center;
 }
 
 
