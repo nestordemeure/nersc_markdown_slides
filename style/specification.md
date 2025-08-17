@@ -90,13 +90,14 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
   - Section title (bold, orange, ~size 24)
   - Section subtitle (white, ~size 20)
 
-### Basic Content Slide
+### Content Slide (Default)
 - **Top banner (1/5 height):** Dark blue background
   - Berkeley Lab horizontal logo on left
   - Slide title (bold, white, ~size 22)
 - **Body (4/5 height):** White background
   - Body text justified, ~size 18
   - Orange square bullets for lists
+- **Note:** This is the default styling applied to slides without an explicit class
 
 ### Question Slide
 - **Full white background**

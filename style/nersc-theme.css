@@ -126,46 +126,36 @@ img[style] {
 }
 
 
-/* ========== Default Content Slide (class: content) ========== */
-section {
+/* ========== Content Slide (class: content or default) ========== */
+section:not(.title):not(.section-title):not(.question):not(.thanks) {
   padding-top: 160px;
   background-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
   background-repeat: no-repeat;
   background-size: 100% 144px;
   /* 20% of 720px */
-}
-
-/* Vertically center the body of default slides */
-section:not(.title):not(.section-title):not(.question):not(.thanks) {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-section h1 {
+section:not(.title):not(.section-title):not(.question):not(.thanks) h1 {
   position: absolute;
-  top: 40px;
+  top: 0;
   left: 280px;
   right: 60px;
+  height: 144px; /* Match the header height */
   color: var(--color-white);
   font-size: 44px;
   font-weight: bold;
-  line-height: 60px;
+  line-height: 1.2; /* Adjust line-height for multi-line titles */
   text-align: left;
   margin: 0;
-}
-
-/* Vertical centering for default slide titles */
-section:not(.title):not(.section-title):not(.question):not(.thanks) h1 {
-  top: 0;
-  height: 144px; /* Match the header height */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 1.2; /* Adjust line-height for multi-line titles */
 }
 
-section::before {
+section:not(.title):not(.section-title):not(.question):not(.thanks)::before {
   content: "";
   position: absolute;
   top: -38px;
