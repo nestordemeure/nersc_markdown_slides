@@ -69,8 +69,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * add a test deck that is explciitly for tests (with a readme stating so), update the readmes and claudes to point to it
 
-* reduce interline on title slide sections
-
 * improve style to fit reference:
   * elements:
     * lists bullets are too spaced out
