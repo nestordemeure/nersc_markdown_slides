@@ -143,11 +143,13 @@ section:not(.title):not(.section-title):not(.question):not(.thanks) h1 {
   top: 0;
   left: 280px;
   right: 60px;
-  height: 144px; /* Match the header height */
+  height: 144px;
+  /* Match the header height */
   color: var(--color-white);
   font-size: 44px;
   font-weight: bold;
-  line-height: 1.2; /* Adjust line-height for multi-line titles */
+  line-height: 1.2;
+  /* Adjust line-height for multi-line titles */
   text-align: left;
   margin: 0;
   display: flex;
@@ -252,7 +254,12 @@ section.section-title {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 66.67% 100%;
-  padding: 0;
+  padding: 60px 40px 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  box-sizing: border-box;
 }
 
 section.section-title::before,
@@ -260,28 +267,25 @@ section.section-title::after {
   display: none;
 }
 
-section.section-title h1,
-section.section-title h2 {
-  position: absolute;
-  left: calc(33.33% + 60px);
-  width: 60%;
+section.section-title > * {
+  width: 66.67%;
+  padding-left: 60px;
   text-align: left;
   margin: 0;
+  box-sizing: border-box;
 }
 
 section.section-title h1 {
-  bottom: 370px;
   font-size: 48px;
   color: var(--color-orange);
-  display: flex;
-  align-items: flex-end;
+  margin: 0;
 }
 
 section.section-title h2 {
-  top: 350px;
   font-size: 32px;
   font-weight: normal;
   color: var(--color-white);
+  margin: 10px 0 0 0;
 }
 
 
@@ -344,10 +348,12 @@ section.thanks {
   align-items: flex-start;
 }
 
-section.thanks > * {
-  width: calc(66.67% - 60px); /* Left zone minus left padding */
+section.thanks>* {
+  width: calc(66.67% - 60px);
+  /* Left zone minus left padding */
   text-align: center;
-  margin: 0; /* Reset margins to control spacing precisely */
+  margin: 0;
+  /* Reset margins to control spacing precisely */
 }
 
 section.thanks h1 {

@@ -64,9 +64,12 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
+* Approach css generation as looking at the md and html for a page type, plus a tight spec
+  * Start with normal pages, for a baseline on css
+
 * add a test deck that is explciitly for tests (with a readme stating so), update the readmes and claudes to point to it
 
-* what about title pages?
+* reduce interline on title slide sections
 
 * improve style to fit reference:
   * elements:
