@@ -122,6 +122,13 @@ section {
   /* 20% of 720px */
 }
 
+/* Vertically center the body of default slides */
+section:not(.title):not(.section-title):not(.question):not(.thanks) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 section h1 {
   position: absolute;
   top: 40px;

@@ -65,8 +65,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 ## TODO
 
 * improve style to fit reference:
-  * base:
-    * have text centered verticlaly in slides?
   * elements:
     * lists bullets are too spaced out
     * images / figures 
