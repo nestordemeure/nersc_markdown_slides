@@ -15,7 +15,6 @@ National Energy Research Scientific Computing Center, Berkeley CA, United-States
 
 ---
 
-<!-- _class: content -->
 # Who am I?
 
 I am a member of NERSC's **Programming Environments and Models** group with a focus on high performance computing, numerical accuracy and artificial intelligence.
@@ -32,7 +31,6 @@ I am just off a postdoc helping port the *[TOAST software framework](https://git
 
 ---
 
-<!-- _class: content -->
 # Goals
 
 By the end of this workshop I want you to:
@@ -45,7 +43,6 @@ By the end of this workshop I want you to:
 
 ---
 
-<!-- _class: content -->
 # Summary of the workshop
 
 * Introduction,
@@ -57,7 +54,6 @@ By the end of this workshop I want you to:
 
 ---
 
-<!-- _class: content -->
 # Up to x45 speed-up from optimized C++ to JAX!
 
 ![w:928](images/slides%20%28eng%29_0.png)
@@ -70,14 +66,15 @@ By the end of this workshop I want you to:
 
 ---
 
-<!-- _class: content -->
 # Using off-the-shelf kernels
 
-+ Call a library providing off-the-shelf kernels:
-  + *[Numpy](https://numpy.org/) ➡ [Cupy](https://docs.cupy.dev/en/stable/reference/routines.html)*
-  + *[Scipy](https://scipy.org/) ➡ [Cupy](https://docs.cupy.dev/en/stable/reference/scipy.html)*
-  + *[Pandas](https://pandas.pydata.org/) ➡ [RAPIDS CuDF](https://docs.rapids.ai/api/cudf/stable/)*
-  + *[Scikit-learn](https://scikit-learn.org/stable/) ➡ [RAPIDS CuML](https://docs.rapids.ai/api/cuml/stable/)*
+Call a library providing off-the-shelf kernels:
+* *[Numpy](https://numpy.org/) ➡ [Cupy](https://docs.cupy.dev/en/stable/reference/routines.html)*
+* *[Scipy](https://scipy.org/) ➡ [Cupy](https://docs.cupy.dev/en/stable/reference/scipy.html)*
+* *[Pandas](https://pandas.pydata.org/) ➡ [RAPIDS CuDF](https://docs.rapids.ai/api/cudf/stable/)*
+* *[Scikit-learn](https://scikit-learn.org/stable/) ➡ [RAPIDS CuML](https://docs.rapids.ai/api/cuml/stable/)*
+
+
 + Very easy to use,
 + perfect if you find what you need,
 - cannot write your own kernel,
@@ -87,13 +84,13 @@ By the end of this workshop I want you to:
 
 ---
 
-<!-- _class: content -->
 # Using a deep-learning library
 
-+ Use a deep-learning library:
-  + *[Pytorch](https://pytorch.org/)*
-  + *[Tensorflow](https://www.tensorflow.org/)*
-  + *[JAX](https://jax.readthedocs.io/en/latest/)*
+Use a deep-learning library:
+* *[Pytorch](https://pytorch.org/)*
+* *[Tensorflow](https://www.tensorflow.org/)*
+* *[JAX](https://jax.readthedocs.io/en/latest/)*
+
 + Great for deep-learning,
 + easy to use and well documented,
 + support for most numerical building blocks,
@@ -103,11 +100,11 @@ By the end of this workshop I want you to:
 
 ---
 
-<!-- _class: content -->
 # Writing a kernel in a low-level language
 
-+ Write a kernel in **CUDA** / **OpenCL** / **HIP** / **SYCL** / etc and link it in Python.
-+ You can use *[PyOpenCL](https://documen.tician.de/pyopencl/)* or *[PyCuda](https://documen.tician.de/pycuda/)* to link your kernel.
+Write a kernel in **CUDA** / **OpenCL** / **HIP** / **SYCL** / etc and link it in Python.  
+You can use *[PyOpenCL](https://documen.tician.de/pyopencl/)* or *[PyCuda](https://documen.tician.de/pycuda/)* to link your kernel.
+
 + Perfect control of performance,
 - cannot reuse numerical building blocks (PRNG, FFT, linear algebra),
 - requires a lot of expertise:
@@ -117,19 +114,19 @@ By the end of this workshop I want you to:
 
 ---
 
-<!-- _class: content -->
 # Writing a kernel in Python
 
-+ Write a kernel in Python using:
-  + *[Numba](https://numba.readthedocs.io/en/stable/cuda/index.html)*,
-    * limited Numpy support,
-    * low-level CUDA-like syntax,
-  + *[Taichi](https://www.taichi-lang.org/)*
-    * focus on graphics,
-    * requires implementing most of the operations you need from scratch,
-  + *[Triton](https://github.com/openai/triton)*
-    * no library support,
-    * low-level unique syntax.
+Write a kernel in Python using:
+* *[Numba](https://numba.readthedocs.io/en/stable/cuda/index.html)*,
+  * limited Numpy support,
+  * low-level CUDA-like syntax,
+* *[Taichi](https://www.taichi-lang.org/)*
+  * focus on graphics,
+  * requires implementing most of the operations you need from scratch,
+* *[Triton](https://github.com/openai/triton)*
+  * no library support,
+  * low-level unique syntax.
+
 + Full Python codebase,
 - can still be very low-level,
 - very limited building blocks.
@@ -148,7 +145,6 @@ By the end of this workshop I want you to:
 
 ---
 
-<!-- _class: content -->
 # What is JAX?
 
 *[JAX](https://github.com/google/jax)* is a Python library to write code that can run in parallel on:
@@ -167,7 +163,6 @@ Developed by Google as a building block for deep-learning frameworks. Seeing wid
 
 ---
 
-<!-- _class: content -->
 # What does JAX look like?
 
 It has a Numpy-like interface:
@@ -183,7 +178,6 @@ y = jnp.dot(x, x.T)  # runs on GPU if available
 
 ---
 
-<!-- _class: content -->
 # How does JAX work?
 
 Calls a *just-in-time compiler* when you execute your function with a *new problem size*:
@@ -192,7 +186,6 @@ Calls a *just-in-time compiler* when you execute your function with a *new probl
 
 ---
 
-<!-- _class: content -->
 # JAX's limitations
 
 - Compilation happens just-in-time, at runtime, easily amortized on a long running computation
@@ -203,7 +196,6 @@ Calls a *just-in-time compiler* when you execute your function with a *new probl
 
 ---
 
-<!-- _class: content -->
 # JAX's strengths
 
 + Focus on the semantic, leaves optimization to the compiler,
@@ -224,7 +216,6 @@ Calls a *just-in-time compiler* when you execute your function with a *new probl
 
 ---
 
-<!-- _class: content -->
 # Numpy-like syntax
 
 **If you know Numpy you are 90% of the way there.**
@@ -240,7 +231,6 @@ y2 = jnp.linalg.solve(x, z)
 
 ---
 
-<!-- _class: content -->
 # Mutability
 
 JAX arrays are **immutable** but, you can use shadowing and *[.at[] functions](https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.at.html#jax.numpy.ndarray.at)*:
@@ -260,7 +250,6 @@ arr = arr.at[index].add(1)
 
 ---
 
-<!-- _class: content -->
 # Just-in-time compilation
 
 JAX will be *slow* unless you *[compile](https://jax.readthedocs.io/en/latest/jax.html#just-in-time-compilation-jit)* your code:
@@ -282,7 +271,6 @@ inputs can be built-in types, arrays, lists, dictionaries, struct, etc.
 
 ---
 
-<!-- _class: content -->
 # Just-in-time compilation: static values
 
 Numbers, booleans and user defined struct can be marked as **static**:
@@ -305,7 +293,6 @@ will **trigger recompilation** if the value is changed.
 
 ---
 
-<!-- _class: content -->
 # Just-in-time compilation: donate input
 
 Inputs can be **donated**:
@@ -326,7 +313,6 @@ does **not currently apply to CPU**.
 
 ---
 
-<!-- _class: content -->
 # Conditionals
 
 *In jitted sections*, you can only perform tests on static values, instead:
@@ -347,7 +333,6 @@ y = jax.lax.cond(is_true, f_true, f_false, x)
 
 ---
 
-<!-- _class: content -->
 # Loops and vectorisation
 
 *In jitted sections*, loop conditions are restricted to static values and will be **unrolled**:
@@ -371,7 +356,6 @@ f_xmap_ij = xmap(f_body, in_axes=[['i','j',...], [...]], out_axes=['i','j'])
 
 ---
 
-<!-- _class: content -->
 # Pseudo random number generation
 
 JAX uses *[its own PRNG](https://jax.readthedocs.io/en/latest/jax.random.html)* tailored for parallelism and reproducibility:
@@ -390,7 +374,6 @@ x = random.normal(subkey, shape=(3000, 3000))
 
 ---
 
-<!-- _class: content -->
 # Automatic differentiation
 
 JAX does *[automatic differentiation](https://jax.readthedocs.io/en/latest/jax.html#automatic-differentiation)* by code transformation:
@@ -416,7 +399,6 @@ overhead **similar to analytic solution**,
 
 ---
 
-<!-- _class: content -->
 # Performance tricks
 
 You can do three easy things to improve performance significantly:
@@ -429,7 +411,6 @@ You can do three easy things to improve performance significantly:
 
 ---
 
-<!-- _class: content -->
 # Useful libraries
 
 * The *[Awesome JAX](https://github.com/n2cholas/awesome-jax)* repository has a *lot* of good references. I would recommend:
@@ -448,7 +429,6 @@ You can do three easy things to improve performance significantly:
 
 ---
 
-<!-- _class: content -->
 # Exercises!
 
 ![qr width:400px alt:Workshop Exercises](https://cutt.ly/vw9JWWaY)
@@ -466,7 +446,6 @@ You can do three easy things to improve performance significantly:
 
 ---
 
-<!-- _class: content -->
 # TOAST
 
 *[TOAST](https://github.com/hpc4cmb/toast)* is a large Python application used to study the **cosmic microwave background**.
@@ -479,7 +458,6 @@ We ported **13 kernels to GPU**.
 
 ---
 
-<!-- _class: content -->
 # Porting the code
 
 Kernels were ported **from C++ to Numpy to JAX** and validated using **unit tests**.
@@ -492,21 +470,18 @@ Kernels were ported **from C++ to Numpy to JAX** and validated using **unit test
 
 ---
 
-<!-- _class: content -->
 # Porting the code (x7 reduction in lines of code)
 
 ![w:928](images/slides%20%28eng%29_2.png)
 
 ---
 
-<!-- _class: content -->
 # Performance per kernel (up to x45 speed-up)
 
 ![w:928](images/slides%20%28eng%29_3.png)
 
 ---
 
-<!-- _class: content -->
 # Perspectives
 
 This was a *proof of concept*, we can improve and simplify things significantly:
@@ -524,7 +499,6 @@ This was a *proof of concept*, we can improve and simplify things significantly:
 
 ---
 
-<!-- _class: content -->
 # Overview
 
 I believe JAX is in a **sweet spot for research and complex numerical codes**:
@@ -536,7 +510,6 @@ I believe JAX is in a **sweet spot for research and complex numerical codes**:
 
 ---
 
-<!-- _class: content -->
 # Perspective
 
 Should you use JAX?

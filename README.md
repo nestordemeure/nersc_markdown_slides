@@ -64,10 +64,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-* style fix
-  * lists
-    * have subitems be in a smaller font
-
 * CSS generation
   * once i am happy with the CSS, maybe try to boil the CSS and spec into a spec that better reflecs the intent, then produce a better streanlined CSS accordingly
   * Approach css generation as looking at the md and html for a page type, plus a tight spec
@@ -81,9 +77,12 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * write slides
   * write proper documentation slides
   * clean up the port of the JAX Workshop slides
-    * figures
+    * p8
+      * arroes instead of emojis
+      * fix spacing
+    * figures (page 6)
       * rename images
-      * resize images
+      * resize images to better fill page
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),

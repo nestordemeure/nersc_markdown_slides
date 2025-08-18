@@ -108,6 +108,7 @@ ul ul {
 
 ul ul li {
   padding-left: 25px;
+  font-size: 0.75em; /* 25% smaller than parent */
 }
 
 ul ul li::before {
