@@ -41,7 +41,7 @@ By the end of this workshop I want you to:
 * be able to port your code to JAX,
 * be able to run it on a GPU,
 * know if JAX is a good fit for your application,
-* *not* be able to implement a neural network in JAX.
+- ***not*** be able to implement a neural network in JAX.
 
 ---
 
@@ -51,7 +51,7 @@ By the end of this workshop I want you to:
 * Introduction,
 * Porting a Python code to GPU,
 * Introducing JAX,
-* Using JAX,
++ Using JAX,
 * Case study,
 * Overview and perspectives.
 
