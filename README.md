@@ -81,7 +81,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
     * fix spacing around lists on page 8-10
     * p16 jax schematic could be mermaid or other?
     * p17 cons colors wrong on list with subitems
-    * p22 code in code blocks is a bit too big
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
