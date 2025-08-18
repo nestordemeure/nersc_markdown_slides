@@ -83,6 +83,8 @@ Use Marpit's sizing keywords:
 ![w:32 h:32](image.jpg)
 ```
 
+For full-page images that should fill the slide body (excluding header), use `height:530px`.
+
 ### QR Codes
 
 QR codes can be generated automatically from URLs using the `qr` prefix in image alt text:

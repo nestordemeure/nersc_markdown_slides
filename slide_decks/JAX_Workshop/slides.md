@@ -56,7 +56,7 @@ By the end of this workshop I want you to:
 
 # Up to x45 speed-up from optimized C++ to JAX!
 
-![w:928](images/slides%20%28eng%29_0.png)
+![height:530px](images/runtime_per_kernel.png)
 
 ---
 
@@ -69,10 +69,10 @@ By the end of this workshop I want you to:
 # Using off-the-shelf kernels
 
 Call a library providing off-the-shelf kernels:
-* *[Numpy](https://numpy.org/) ➡ [Cupy](https://docs.cupy.dev/en/stable/reference/routines.html)*
-* *[Scipy](https://scipy.org/) ➡ [Cupy](https://docs.cupy.dev/en/stable/reference/scipy.html)*
-* *[Pandas](https://pandas.pydata.org/) ➡ [RAPIDS CuDF](https://docs.rapids.ai/api/cudf/stable/)*
-* *[Scikit-learn](https://scikit-learn.org/stable/) ➡ [RAPIDS CuML](https://docs.rapids.ai/api/cuml/stable/)*
+* *[Numpy](https://numpy.org/) → [Cupy](https://docs.cupy.dev/en/stable/reference/routines.html)*
+* *[Scipy](https://scipy.org/) → [Cupy](https://docs.cupy.dev/en/stable/reference/scipy.html)*
+* *[Pandas](https://pandas.pydata.org/) → [RAPIDS CuDF](https://docs.rapids.ai/api/cudf/stable/)*
+* *[Scikit-learn](https://scikit-learn.org/stable/) → [RAPIDS CuML](https://docs.rapids.ai/api/cuml/stable/)*
 
 
 + Very easy to use,
@@ -150,16 +150,16 @@ Write a kernel in Python using:
 *[JAX](https://github.com/google/jax)* is a Python library to write code that can run in parallel on:
 
 * CPU,
-* GPU (*[Nvidia, AMD, and Apple](https://github.com/google/jax#supported-platforms)*),
+* GPU (*[NVIDIA, AMD, and Apple](https://github.com/google/jax#supported-platforms)*),
 * TPU,
 * etc.
 
 Developed by Google as a building block for deep-learning frameworks. Seeing wider use in numerical applications including:
 
-* *[Molecular dynamics](https://github.com/google/jax-md)*,
-* *[computational fluid dynamics](https://arxiv.org/abs/2203.13760)*,
-* *[ocean simulation](https://veros.readthedocs.io/en/latest/)*,
-* *[cosmology](https://github.com/eelregit/pmwd)*.
+* [Molecular dynamics](https://github.com/google/jax-md),
+* [computational fluid dynamics](https://arxiv.org/abs/2203.13760),
+* [ocean simulation](https://veros.readthedocs.io/en/latest/),
+* [cosmology](https://github.com/eelregit/pmwd).
 
 ---
 
@@ -180,27 +180,35 @@ y = jnp.dot(x, x.T)  # runs on GPU if available
 
 # How does JAX work?
 
-Calls a *just-in-time compiler* when you execute your function with a *new problem size*:
+Calls a ***just-in-time compiler*** when you execute your function with a ***new problem size***:
 
-![w:928](images/slides%20%28eng%29_1.png)
+![w:928](images/jax.png)
 
 ---
 
 # JAX's limitations
 
-- Compilation happens just-in-time, at runtime, easily amortized on a long running computation
-- input sizes must be known to the tracer, padding, masking and recompiling for various sizes
-- loops and tests are limited inside JIT sections, JAX provides replacement functions
-- no side effects and no in-place modifications, one gets used to it, it actually helps with correctness
-- focus on GPU optimizations rather than CPU. there is growing attention to the problem
+- Compilation happens just-in-time, at runtime,
+  * easily amortized on a long running computation
+- input sizes must be known to the tracer, 
+  * padding, masking and recompiling for various sizes
+- loops and tests are limited inside JIT sections, 
+  * JAX provides replacement functions
+- no side effects and no in-place modifications, 
+  * one gets used to it, it actually helps with correctness
+- focus on GPU optimizations rather than CPU.
+  * there is growing attention to the problem
 
 ---
 
 # JAX's strengths
 
 + Focus on the semantic, leaves optimization to the compiler,
+
 + single code base to deal with CPU and GPUs,
+
 + immutable design is actually *nice* for correctness,
+
 + easy to use numerical building blocks inside kernels.
 
 ---
@@ -218,13 +226,14 @@ Calls a *just-in-time compiler* when you execute your function with a *new probl
 
 # Numpy-like syntax
 
-**If you know Numpy you are 90% of the way there.**
+If you know Numpy you are 90% of the way there:
 
 ```python
 import jax.numpy as jnp
 
 x = jnp.ones(shape=(1000,1000))
 y = 2 * jnp.zeros(1000)
+
 z = jnp.dot(x, jnp.cos(y))
 y2 = jnp.linalg.solve(x, z)
 ```
@@ -265,9 +274,8 @@ f_jitted = jit(f)
 y = f_jitted(x)
 ```
 
-Recompile when the **static inputs** (including problem size) are changed,
-
-inputs can be built-in types, arrays, lists, dictionaries, struct, etc.
+* Recompile when the **static inputs** (including problem size) are changed,
+* inputs can be built-in types, arrays, lists, dictionaries, struct, etc.
 
 ---
 
@@ -285,11 +293,9 @@ def f(x, should_double):
 f_jitted = jit(f, static_argnames=["should_double"])
 ```
 
-Useful to **help optimizer** and **workaround limitations** in tests and loops,
-
-value needs to be **hashable** (does not apply to lists and arrays),
-
-will **trigger recompilation** if the value is changed.
+* Useful to **help optimizer** and **workaround limitations** in tests and loops,
+* value needs to be **hashable** (does not apply to lists and arrays),
+* will **trigger recompilation** if the value is changed.
 
 ---
 
@@ -307,9 +313,8 @@ def f(x):
 f_jitted = jit(f, donate_argnums=[0])
 ```
 
-useful to **reduce allocations**,
-
-does **not currently apply to CPU**.
+* useful to **reduce allocations**,
+* does **not currently apply to CPU**.
 
 ---
 
@@ -317,9 +322,8 @@ does **not currently apply to CPU**.
 
 *In jitted sections*, you can only perform tests on static values, instead:
 
-Use *[where](https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.where.html?highlight=where)* to combine inexpensive computations with a mask,
-
-use *[cond](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.cond.html?highlight=cond)* to run expensive computations depending on a boolean.
+* Use *[where](https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.where.html?highlight=where)* to combine inexpensive computations with a mask,
+* use *[cond](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.cond.html?highlight=cond)* to run expensive computations depending on a boolean.
 
 ```python
 import jax
@@ -337,9 +341,8 @@ y = jax.lax.cond(is_true, f_true, f_false, x)
 
 *In jitted sections*, loop conditions are restricted to static values and will be **unrolled**:
 
-JAX provides *[control flow operators](https://jax.readthedocs.io/en/latest/jax.lax.html#control-flow-operators)* including *[while_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.while_loop.html#jax.lax.while_loop)* and *[fori_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.fori_loop.html#jax.lax.fori_loop)*,
-
-JAX let you *[vectorise](https://jax.readthedocs.io/en/latest/jax.html#vectorization-vmap)* your function with *[vmap](https://jax.readthedocs.io/en/latest/_autosummary/jax.vmap.html#jax.vmap)*, *[pmap](https://jax.readthedocs.io/en/latest/_autosummary/jax.pmap.html#jax.pmap)* and *[xmap](https://jax.readthedocs.io/en/latest/_autosummary/jax.experimental.maps.xmap.html?highlight=xmap)*.
+* JAX provides *[control flow operators](https://jax.readthedocs.io/en/latest/jax.lax.html#control-flow-operators)* including *[while_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.while_loop.html#jax.lax.while_loop)* and *[fori_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.fori_loop.html#jax.lax.fori_loop)*,
+* JAX let you *[vectorise](https://jax.readthedocs.io/en/latest/jax.html#vectorization-vmap)* your function with *[vmap](https://jax.readthedocs.io/en/latest/_autosummary/jax.vmap.html#jax.vmap)*, *[pmap](https://jax.readthedocs.io/en/latest/_autosummary/jax.pmap.html#jax.pmap)* and *[xmap](https://jax.readthedocs.io/en/latest/_autosummary/jax.experimental.maps.xmap.html?highlight=xmap)*.
 
 ```python
 from jax.experimental.maps import xmap
@@ -351,6 +354,7 @@ from jax import vmap
 
 f_vmap_j = vmap(f_body, in_axes=(0,None), out_axes=0)
 f_vmap_ij = vmap(f_vmap_j, in_axes=(0,None), out_axes=0)
+
 f_xmap_ij = xmap(f_body, in_axes=[['i','j',...], [...]], out_axes=['i','j'])
 ```
 
@@ -389,13 +393,10 @@ y = f(x)
 dx = df(x)
 ```
 
-Can be applied repeatedly for **higher order derivation**,
-
-overhead **similar to analytic solution**,
-
-**no overhead** to function that are not differentiated,
-
-*[some operations](https://jax.readthedocs.io/en/latest/notebooks/Common_Gotchas_in_JAX.html#summary)* cannot be differentiated.
+* Can be applied repeatedly for **higher order derivation**,
+* overhead **similar to analytic solution**,
+* **no overhead** to function that are not differentiated,
+* *[some operations](https://jax.readthedocs.io/en/latest/notebooks/Common_Gotchas_in_JAX.html#summary)* cannot be differentiated.
 
 ---
 
@@ -407,17 +408,18 @@ You can do three easy things to improve performance significantly:
 * put a maximum of your **code inside a jitted section**,
 * **keep the data on GPU**, inside JAX arrays.
 
-**Warning:** JAX will **unroll** loops causing long compile times, use *[fori_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.fori_loop.html)*, *[while_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.while_loop.html)*, or *[scan](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.scan.html)* when possible.
+**Warning:** JAX will **unroll** loops causing long compile times,
+use *[fori_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.fori_loop.html)*, *[while_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.while_loop.html)*, or *[scan](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.scan.html)* when possible.
 
 ---
 
 # Useful libraries
 
-* The *[Awesome JAX](https://github.com/n2cholas/awesome-jax)* repository has a *lot* of good references. I would recommend:
-  * *[MPI4JAX](https://github.com/mpi4jax/mpi4jax)*: MPI support for JAX,
-  * *[JAXTyping](https://github.com/patrick-kidger/jaxtyping)*: type and shape checking,
-  * *[Einshape](https://github.com/deepmind/einshape)*: alternative reshaping syntax,
-  * *[Xmap](https://github.com/nestordemeure/xmap/tree/main)*: a better xmap implementation,
+The *[Awesome JAX](https://github.com/n2cholas/awesome-jax)* repository has a *lot* of good references. I would recommend:
+* *[MPI4JAX](https://github.com/mpi4jax/mpi4jax)*: MPI support for JAX,
+* *[JAXTyping](https://github.com/patrick-kidger/jaxtyping)*: type and shape checking,
+* *[Einshape](https://github.com/deepmind/einshape)*: alternative reshaping syntax,
+* *[Xmap](https://github.com/nestordemeure/xmap/tree/main)*: a better xmap implementation,
 * optimizers and solvers built in JAX:
   * *[Optax](https://github.com/google-deepmind/optax)*: common optimizers and loss functions,
   * *[Lineax](https://github.com/patrick-kidger/lineax)*: linear solvers,
@@ -472,13 +474,13 @@ Kernels were ported **from C++ to Numpy to JAX** and validated using **unit test
 
 # Porting the code (x7 reduction in lines of code)
 
-![w:928](images/slides%20%28eng%29_2.png)
+![height:530px](images/lines_of_code.png)
 
 ---
 
 # Performance per kernel (up to x45 speed-up)
 
-![w:928](images/slides%20%28eng%29_3.png)
+![height:530px](images/runtime_per_kernel.png)
 
 ---
 
@@ -495,11 +497,26 @@ This was a *proof of concept*, we can improve and simplify things significantly:
 
 <!-- _class: section-title -->
 # Conclusion
-## Overview and Perspective
+## Should you use JAX in your project?
 
 ---
 
-# Overview
+# JAX's Limitations
+
+- Compilation happens just-in-time, at runtime,
+  * easily amortized on a long running computation
+- input sizes must be known to the tracer, 
+  * padding, masking and recompiling for various sizes
+- loops and tests are limited inside JIT sections, 
+  * JAX provides replacement functions
+- no side effects and no in-place modifications, 
+  * one gets used to it, it actually helps with correctness
+- focus on GPU optimizations rather than CPU.
+  * there is growing attention to the problem
+
+---
+
+# JAX's Strengths
 
 I believe JAX is in a **sweet spot for research and complex numerical codes**:
 
@@ -510,9 +527,7 @@ I believe JAX is in a **sweet spot for research and complex numerical codes**:
 
 ---
 
-# Perspective
-
-Should you use JAX?
+# Should you use JAX?
 
 * Your code is written in **Python**,
 * your code can be written with **Numpy**,

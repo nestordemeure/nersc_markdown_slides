@@ -77,12 +77,11 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * write slides
   * write proper documentation slides
   * clean up the port of the JAX Workshop slides
-    * p8
-      * arroes instead of emojis
-      * fix spacing
-    * figures (page 6)
-      * rename images
-      * resize images to better fill page
+    * p6 image not centered horizontally
+    * fix spacing around lists on page 8-10
+    * p16 jax schematic could be mermaid or other?
+    * p17 cons colors wrong on list with subitems
+    * p22 code in code blocks is a bit too big
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
