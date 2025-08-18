@@ -35,7 +35,7 @@
 section {
   width: 1280px;
   height: 720px;
-  padding: 60px;
+  padding: 60px 60px 30px 60px;
   font-family: Arial, sans-serif;
   font-size: 24px;
   color: var(--color-dark-gray);
@@ -325,7 +325,7 @@ section.section-title::after {
   display: none;
 }
 
-section.section-title > * {
+section.section-title>* {
   width: 66.67%;
   padding-left: 60px;
   text-align: left;
