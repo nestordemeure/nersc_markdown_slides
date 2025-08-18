@@ -100,6 +100,7 @@ QR codes can be generated automatically from URLs using the `qr` prefix in image
 - Use `alt:Custom Text` to override the default alt text
 - The URL becomes the QR code content
 - Generated as embedded data URLs (works in PDFs and all formats)
+- **Recommended size:** `width:400px` for QR codes taking a full slide
 
 ### Bullet Lists
 

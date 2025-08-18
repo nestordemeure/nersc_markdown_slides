@@ -25,7 +25,7 @@ function qrCodePlugin(md) {
         // Create SVG manually from QR code modules
         const modules = qrCode.modules;
         const size = modules.size;
-        const margin = 4;
+        const margin = 0; // No white border
         const cellSize = 4;
         const svgSize = (size + 2 * margin) * cellSize;
         
@@ -41,8 +41,7 @@ function qrCodePlugin(md) {
         }
         
         const svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="${svgSize}" height="${svgSize}" viewBox="0 0 ${svgSize} ${svgSize}">
-          <rect width="${svgSize}" height="${svgSize}" fill="#ffffff"/>
-          <path d="${svgPath}" fill="#000000"/>
+          <path d="${svgPath}" fill="#00313C"/>
         </svg>`;
         
         // Convert SVG to data URL
