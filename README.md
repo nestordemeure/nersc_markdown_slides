@@ -64,8 +64,9 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-* write slides
-  * write proper documentation slides
+* write proper documentation slides
+  * clean up plan
+  * port it to marp
 
 * marpit usage
   * how to center text when it makes sense?
