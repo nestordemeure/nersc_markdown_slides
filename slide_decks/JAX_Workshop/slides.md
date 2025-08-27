@@ -77,7 +77,6 @@ Call a library providing off-the-shelf kernels:
   * more data transfers to the GPU.
 
 ---
-<!-- _class: compact -->
 # Using a deep-learning library
 
 Use a deep-learning library:
@@ -93,7 +92,6 @@ Use a deep-learning library:
   * intermediate values.
 
 ---
-<!-- _class: compact -->
 # Writing a kernel in a low-level language
 
 Write a kernel in **CUDA** / **OpenCL** / **HIP** / **SYCL** / etc and link it in Python.  
