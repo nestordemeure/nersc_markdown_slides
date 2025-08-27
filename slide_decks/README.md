@@ -63,6 +63,14 @@ Affiliation
 Contact information
 ```
 
+### `compact` - Content slide with reduced spacing
+```markdown
+<!-- _class: compact -->
+# Slide Title
+- Content with tighter vertical spacing
+- For slides that need to fit more content
+```
+
 ## Graphical Elements
 
 ### Images

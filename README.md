@@ -66,9 +66,8 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 * write slides
   * write proper documentation slides
-  * clean up the port of the JAX Workshop slides
 
-* marpit
+* marpit usage
   * how to center text when it makes sense?
   * how to make texlocally bigger for further emphasis?
 

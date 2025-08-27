@@ -59,6 +59,7 @@ By the end of this workshop I want you to:
 ## Pros and cons of the current approaches
 
 ---
+<!-- _class: compact -->
 # Using off-the-shelf kernels
 
 Call a library providing off-the-shelf kernels:
@@ -76,6 +77,7 @@ Call a library providing off-the-shelf kernels:
   * more data transfers to the GPU.
 
 ---
+<!-- _class: compact -->
 # Using a deep-learning library
 
 Use a deep-learning library:
@@ -91,6 +93,7 @@ Use a deep-learning library:
   * intermediate values.
 
 ---
+<!-- _class: compact -->
 # Writing a kernel in a low-level language
 
 Write a kernel in **CUDA** / **OpenCL** / **HIP** / **SYCL** / etc and link it in Python.  
@@ -104,6 +107,7 @@ You can use *[PyOpenCL](https://documen.tician.de/pyopencl/)* or *[PyCuda](https
   * to **compile and link** the result into Python.
 
 ---
+<!-- _class: compact -->
 # Writing a kernel in Python
 
 Write a kernel in Python using:
@@ -132,6 +136,7 @@ Write a kernel in Python using:
 ## High-level introduction to JAX
 
 ---
+<!-- _class: compact -->
 # What is JAX?
 
 *[JAX](https://github.com/google/jax)* is a Python library to write code that can run in parallel on:
@@ -272,7 +277,6 @@ f_jitted = jit(f, static_argnames=["should_double"])
 * will **trigger recompilation** if the value is changed.
 
 ---
-
 # Just-in-time compilation: donate input
 
 Inputs can be **donated**:
@@ -291,7 +295,6 @@ f_jitted = jit(f, donate_argnums=[0])
 * does **not currently apply to CPU**.
 
 ---
-
 # Conditionals
 
 *In jitted sections*, you can only perform tests on static values, instead:
@@ -310,7 +313,7 @@ y = jax.lax.cond(is_true, f_true, f_false, x)
 ```
 
 ---
-
+<!-- _class: compact -->
 # Loops and vectorisation
 
 *In jitted sections*, loop conditions are restricted to static values and will be **unrolled**:
@@ -333,7 +336,6 @@ f_xmap_ij = xmap(f_body, in_axes=[['i','j',...], [...]], out_axes=['i','j'])
 ```
 
 ---
-
 # Pseudo random number generation
 
 JAX uses *[its own PRNG](https://jax.readthedocs.io/en/latest/jax.random.html)* tailored for parallelism and reproducibility:
@@ -351,7 +353,7 @@ x = random.normal(subkey, shape=(3000, 3000))
 ```
 
 ---
-
+<!-- _class: compact -->
 # Automatic differentiation
 
 JAX does *[automatic differentiation](https://jax.readthedocs.io/en/latest/jax.html#automatic-differentiation)* by code transformation:
@@ -373,7 +375,6 @@ dx = df(x)
 * *[some operations](https://jax.readthedocs.io/en/latest/notebooks/Common_Gotchas_in_JAX.html#summary)* cannot be differentiated.
 
 ---
-
 # Performance tricks
 
 You can do three easy things to improve performance significantly:
@@ -386,7 +387,7 @@ You can do three easy things to improve performance significantly:
 use *[fori_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.fori_loop.html)*, *[while_loop](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.while_loop.html)*, or *[scan](https://jax.readthedocs.io/en/latest/_autosummary/jax.lax.scan.html)* when possible.
 
 ---
-
+<!-- _class: compact -->
 # Useful libraries
 
 The *[Awesome JAX](https://github.com/n2cholas/awesome-jax)* repository has a *lot* of good references. I would recommend:
@@ -404,24 +405,20 @@ The *[Awesome JAX](https://github.com/n2cholas/awesome-jax)* repository has a *l
   * *[etc](https://github.com/n2cholas/awesome-jax#libraries)*.
 
 ---
-
 # Exercises!
 
 ![qr width:400px alt:Workshop Exercises](https://cutt.ly/vw9JWWaY)
 
 ---
-
 <!-- _class: question -->
 # **Is it worth it?**
 
 ---
-
 <!-- _class: section-title -->
 # Case study
 ## Porting the TOAST codebase to GPU
 
 ---
-
 # TOAST
 
 *[TOAST](https://github.com/hpc4cmb/toast)* is a large Python application used to study the **cosmic microwave background**.
@@ -433,7 +430,6 @@ Kernels use a **wide variety of numerical methods** including random number gene
 We ported **13 kernels to GPU**.
 
 ---
-
 # Porting the code
 
 Kernels were ported **from C++ to Numpy to JAX** and validated using **unit tests**.
@@ -445,19 +441,16 @@ Kernels were ported **from C++ to Numpy to JAX** and validated using **unit test
 **Data movement is expensive**, we move data *once* at the beginning and end of each pipeline call.
 
 ---
-
 # Porting the code (x7 reduction in lines of code)
 
 ![height:530px](images/lines_of_code.png)
 
 ---
-
 # Performance per kernel (up to x45 speed-up)
 
 ![height:530px](images/runtime_per_kernel.png)
 
 ---
-
 # Perspectives
 
 This was a *proof of concept*, we can improve and simplify things significantly:
@@ -468,13 +461,11 @@ This was a *proof of concept*, we can improve and simplify things significantly:
 * redesign pipelines to JIT them into **single GPU kernels**.
 
 ---
-
 <!-- _class: section-title -->
 # Conclusion
 ## Should you use JAX in your project?
 
 ---
-
 # JAX's Limitations
 
 - Compilation happens just-in-time, at runtime,
@@ -489,7 +480,6 @@ This was a *proof of concept*, we can improve and simplify things significantly:
   there is growing attention to the problem
 
 ---
-
 # JAX's Strengths
 
 I believe JAX is in a **sweet spot for research and complex numerical codes**:
@@ -500,7 +490,6 @@ I believe JAX is in a **sweet spot for research and complex numerical codes**:
 + easy to use **numerical building blocks** inside kernels.
 
 ---
-
 # Should you use JAX?
 
 * Your code is written in **Python**,
@@ -509,7 +498,6 @@ I believe JAX is in a **sweet spot for research and complex numerical codes**:
 * single-thread CPU is an **acceptable fallback** in the absence of GPU.
 
 ---
-
 <!-- _class: thanks -->
 # **Thank you!**
 ## ndemeure@lbl.gov

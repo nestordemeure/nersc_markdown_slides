@@ -232,6 +232,35 @@ section::before {
   background-position: left center;
 }
 
+/* ========== Compact Slide (class: compact) ========== */
+/* Derives from the default content slide but with vertical spacing reduction (approx. 70-80% less). */
+section.compact p,
+section.compact ul,
+section.compact ol {
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
+}
+
+section.compact pre {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+section.compact h2,
+section.compact h3,
+section.compact h4,
+section.compact h5,
+section.compact h6 {
+  margin-top: 0.25em;
+  margin-bottom: 0.1em;
+}
+
+section.compact ul ul,
+section.compact ol ol,
+section.compact ul ol,
+section.compact ol ul {
+  margin-top: 0em;
+}
 
 /* ========== Title Slide (class: title) ========== */
 section.title {

@@ -114,6 +114,12 @@ The Berkeley Lab visual identity is described [here](https://creative.lbl.gov/vi
   - Email contact (~size 18)
 - **Right side (1/3):** Dark blue background
 
+### Compact Slide
+- **Same layout as Content Slide** but with reduced vertical spacing
+- **Use case:** For slides that need to fit more content in tight space
+- **Structure:** Same dark blue top banner and white body as content slides
+- **Spacing:** Reduced margins and padding throughout the slide
+
 ## Images Used
 
 - **Berkeley Lab building icon (`berkeley_lab_icon.png`):** Used in content slide headers (top-left on dark blue banner)
