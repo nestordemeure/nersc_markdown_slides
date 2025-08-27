@@ -135,4 +135,13 @@ Mixed lists:
 * Normal bullet point
 * Another normal point
 - Negative consideration
+
+Itemless sublists (sub-content without bullet markers):
+- Main point with detailed explanation,
+  this continues the explanation under the bullet
+- Another main point,
+  with its own detailed sub-content
+- Third point with multiple sub-lines,
+  first sub-line explaining details
+  second sub-line with more context
 ```

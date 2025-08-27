@@ -64,6 +64,9 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
+* CSS:
+  * compact should be a bit less agressive on interlines
+
 * write slides
   * write proper documentation slides
 
