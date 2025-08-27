@@ -64,16 +64,13 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-* marpit
-  * how to center text when it makes sense?
-  * how to make texlocally bigger for further emphasis?
-
 * write slides
   * write proper documentation slides
   * clean up the port of the JAX Workshop slides
-    * p6 image not centered horizontally?
-    * fix spacing around lists on page 8-10
-    * p17 cons colors wrong on list with subitems
+
+* marpit
+  * how to center text when it makes sense?
+  * how to make texlocally bigger for further emphasis?
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),

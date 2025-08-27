@@ -48,13 +48,3 @@ The documentation slides (`slide_decks/docs/slides.md`) serve as our test deck a
 
 Marp has a `--debug` flag you can use to get fine-grained details on the build process and error messages.
 Use it whenever you debug a Marp warning or error message.
-
-## Detailed Documentation
-
-For specific guidance on different aspects of the project:
-
-### Slide Writing Guide
-@slide_decks/CLAUDE.md
-
-### Theme Development Guide  
-@style/CLAUDE.md
