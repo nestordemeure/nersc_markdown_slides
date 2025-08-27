@@ -24,7 +24,8 @@ translation
 easily enforced style over all slides!
 (not sure i like that given that i use a non-standard style...)
 
-we could do exotic stuff like testing some code blocks at build / push time...
+we *could* do exotic stuff like testing some code blocks at build / push time...
+(do we want to?)
 
 ## What can we do with it?
 
@@ -38,10 +39,13 @@ formulas (in latex!)
 
 plots (with??? having raw data straight into the repo)
 
-mermaid diagram? (did not try, i think i need a plugin for that)
+diagram!
+mermaid is apparently possible (did not try, i think i need a plugin for that)
+SVG is easy to embed
+or... raw HTML
 
 and more! the engine can be moded fairly easily which i did to get...
-* QR codes!
+* QR codes! (pointing to docs slide)
 * colored pro/con bullets! (I really like those...)
 
 ## Okay, what are we losing?
@@ -60,10 +64,11 @@ html export need either the images available online, or in the local system
 ## Conclusion and perspective
 
 It works!
-I ported my JAX workshop slides to it
+the current slides are written with it (link to markdown file)
+I ported my (non trivial) JAX workshop slides to it
 I will try and use it for my upcoming slide decks
 
-Its very much a proof f concept
+Its very much a proof of concept
 * feel free to play with it, submit issues and PR!
   * i am using a theme mimicking my prefered google slides theme, we could put together an official(-looking) theme
   * porting other people's slides would be a good exercice in feasability
