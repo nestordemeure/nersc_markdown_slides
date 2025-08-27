@@ -9,7 +9,8 @@
             "./style/nersc-theme.css"
         ],
         "allowLocalFiles": true,
-        "engine": "./src/custom-engine.js"
+        "engine": "./src/custom-engine.js",
+        "html": true
     },
     "dependencies": {
         "@marp-team/marp-cli": "^4.2.3",

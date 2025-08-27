@@ -14,7 +14,6 @@ National Energy Research Scientific Computing Center, Berkeley CA, United-States
 </div>
 
 ---
-
 # Who am I?
 
 I am a member of NERSC's **Programming Environments and Models** group with a focus on high performance computing, numerical accuracy and artificial intelligence.
@@ -24,13 +23,11 @@ I specialize in helping teams of researchers make use of high performance comput
 I am just off a postdoc helping port the *[TOAST software framework](https://github.com/hpc4cmb/toast)* to the new Perlmutter supercomputer and, in particular, to graphic processors (GPU).
 
 ---
-
 <!-- _class: section-title -->
 # Introduction
 ## Goals and scope of this workshop
 
 ---
-
 # Goals
 
 By the end of this workshop I want you to:
@@ -42,7 +39,6 @@ By the end of this workshop I want you to:
 - ***not*** be able to implement a neural network in JAX.
 
 ---
-
 # Summary of the workshop
 
 * Introduction,
@@ -53,19 +49,16 @@ By the end of this workshop I want you to:
 * Overview and perspectives.
 
 ---
-
 # Up to x45 speed-up from optimized C++ to JAX!
 
 ![height:530px](images/runtime_per_kernel.png)
 
 ---
-
 <!-- _class: section-title -->
 # Porting a Python code to GPU
 ## Pros and cons of the current approaches
 
 ---
-
 # Using off-the-shelf kernels
 
 Call a library providing off-the-shelf kernels:
@@ -83,7 +76,6 @@ Call a library providing off-the-shelf kernels:
   * more data transfers to the GPU.
 
 ---
-
 # Using a deep-learning library
 
 Use a deep-learning library:
@@ -99,7 +91,6 @@ Use a deep-learning library:
   * intermediate values.
 
 ---
-
 # Writing a kernel in a low-level language
 
 Write a kernel in **CUDA** / **OpenCL** / **HIP** / **SYCL** / etc and link it in Python.  
@@ -113,7 +104,6 @@ You can use *[PyOpenCL](https://documen.tician.de/pyopencl/)* or *[PyCuda](https
   * to **compile and link** the result into Python.
 
 ---
-
 # Writing a kernel in Python
 
 Write a kernel in Python using:
@@ -132,19 +122,16 @@ Write a kernel in Python using:
 - very limited building blocks.
 
 ---
-
 <!-- _class: question -->
 # **Can we have good GPU performance, portability, and productivity?**
 ## (in Python)
 
 ---
-
 <!-- _class: section-title -->
 # Introducing JAX
 ## High-level introduction to JAX
 
 ---
-
 # What is JAX?
 
 *[JAX](https://github.com/google/jax)* is a Python library to write code that can run in parallel on:
@@ -162,7 +149,6 @@ Developed by Google as a building block for deep-learning frameworks. Seeing wid
 * [cosmology](https://github.com/eelregit/pmwd).
 
 ---
-
 # What does JAX look like?
 
 It has a Numpy-like interface:
@@ -177,15 +163,13 @@ y = jnp.dot(x, x.T)  # runs on GPU if available
 ```
 
 ---
-
 # How does JAX work?
 
 Calls a ***just-in-time compiler*** when you execute your function with a ***new problem size***:
 
-![w:928](images/jax.png)
+<iframe style="width:100%; border:none;" src="images/jax_xla_schematics.html"></iframe>
 
 ---
-
 # JAX's limitations
 
 - Compilation happens just-in-time, at runtime,
@@ -200,30 +184,23 @@ Calls a ***just-in-time compiler*** when you execute your function with a ***new
   * there is growing attention to the problem
 
 ---
-
 # JAX's strengths
 
 + Focus on the semantic, leaves optimization to the compiler,
-
 + single code base to deal with CPU and GPUs,
-
 + immutable design is actually *nice* for correctness,
-
 + easy to use numerical building blocks inside kernels.
 
 ---
-
 <!-- _class: question -->
 # **How do we use it?**
 
 ---
-
 <!-- _class: section-title -->
 # Using JAX
 ## Writing JAX code
 
 ---
-
 # Numpy-like syntax
 
 If you know Numpy you are 90% of the way there:
@@ -239,7 +216,6 @@ y2 = jnp.linalg.solve(x, z)
 ```
 
 ---
-
 # Mutability
 
 JAX arrays are **immutable** but, you can use shadowing and *[.at[] functions](https://jax.readthedocs.io/en/latest/_autosummary/jax.numpy.ndarray.at.html#jax.numpy.ndarray.at)*:
@@ -258,7 +234,6 @@ arr = arr.at[index].add(1)
 ```
 
 ---
-
 # Just-in-time compilation
 
 JAX will be *slow* unless you *[compile](https://jax.readthedocs.io/en/latest/jax.html#just-in-time-compilation-jit)* your code:
@@ -278,7 +253,6 @@ y = f_jitted(x)
 * inputs can be built-in types, arrays, lists, dictionaries, struct, etc.
 
 ---
-
 # Just-in-time compilation: static values
 
 Numbers, booleans and user defined struct can be marked as **static**:

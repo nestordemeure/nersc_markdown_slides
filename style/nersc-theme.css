@@ -162,6 +162,12 @@ pre {
   font-size: 22px;
 }
 
+pre code {
+  font-size: inherit;
+  background-color: transparent;
+  padding: 0;
+}
+
 img {
   display: block;
   margin-left: auto;

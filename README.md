@@ -64,12 +64,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-* CSS generation
-  * once i am happy with the CSS, maybe try to boil the CSS and spec into a spec that better reflecs the intent, then produce a better streanlined CSS accordingly
-  * Approach css generation as looking at the md and html for a page type, plus a tight spec
-    * Start with normal pages, for a baseline on css
-  * add a test deck that is explciitly for tests (with a readme stating so), update the readmes and claudes to point to it
-
 * marpit
   * how to center text when it makes sense?
   * how to make texlocally bigger for further emphasis?
@@ -77,11 +71,11 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * write slides
   * write proper documentation slides
   * clean up the port of the JAX Workshop slides
-    * p6 image not centered horizontally
+    * p6 image not centered horizontally?
     * fix spacing around lists on page 8-10
-    * p16 jax schematic could be mermaid or other?
     * p17 cons colors wrong on list with subitems
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
   * that way we can add alternative themes, including a proper official one
+* add a `test` deck used solely for tests (with a readme stating so), demonstrating various feature and edge cases
