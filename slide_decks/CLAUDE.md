@@ -64,7 +64,7 @@ Contact information
 ```
 
 ### `compact` - Content slide with reduced spacing
-Use only when user explicitly requests it.
+Should be suggested (but not used without confirmation) for any slide with more than 12 lines of content (including blank lines between elements). Use only when user explicitly requests it or confirms the suggestion.
 ```markdown
 <!-- _class: compact -->
 # Slide Title
