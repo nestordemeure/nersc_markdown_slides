@@ -234,6 +234,16 @@ section::before {
 
 /* ========== Compact Slide (class: compact) ========== */
 /* Derives from the default content slide but with a balanced vertical spacing reduction (approx. 60% less). */
+section.compact {
+  padding-bottom: 10px;
+  /* smaller bottom margin */
+}
+
+section.compact::after {
+  bottom: 5px;
+  /* adjusting page number position accordingly with padding-bottom */
+}
+
 section.compact p,
 section.compact ul,
 section.compact ol {
