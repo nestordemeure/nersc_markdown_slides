@@ -173,15 +173,15 @@ Calls a ***just-in-time compiler*** when you execute your function with a ***new
 # JAX's limitations
 
 - Compilation happens just-in-time, at runtime,
-  * easily amortized on a long running computation
+  easily amortized on a long running computation
 - input sizes must be known to the tracer, 
-  * padding, masking and recompiling for various sizes
+  padding, masking and recompiling for various sizes
 - loops and tests are limited inside JIT sections, 
-  * JAX provides replacement functions
+  JAX provides replacement functions
 - no side effects and no in-place modifications, 
-  * one gets used to it, it actually helps with correctness
+  one gets used to it, it actually helps with correctness
 - focus on GPU optimizations rather than CPU.
-  * there is growing attention to the problem
+  there is growing attention to the problem
 
 ---
 # JAX's strengths
@@ -478,15 +478,15 @@ This was a *proof of concept*, we can improve and simplify things significantly:
 # JAX's Limitations
 
 - Compilation happens just-in-time, at runtime,
-  * easily amortized on a long running computation
+  easily amortized on a long running computation
 - input sizes must be known to the tracer, 
-  * padding, masking and recompiling for various sizes
+  padding, masking and recompiling for various sizes
 - loops and tests are limited inside JIT sections, 
-  * JAX provides replacement functions
+  JAX provides replacement functions
 - no side effects and no in-place modifications, 
-  * one gets used to it, it actually helps with correctness
+  one gets used to it, it actually helps with correctness
 - focus on GPU optimizations rather than CPU.
-  * there is growing attention to the problem
+  there is growing attention to the problem
 
 ---
 

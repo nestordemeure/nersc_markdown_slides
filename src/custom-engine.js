@@ -1,7 +1,7 @@
 const { Marp } = require('@marp-team/marp-core');
 const QRCode = require('qrcode');
 
-// --- UNCHANGED: Your QR Code Plugin ---
+// --- QR Code Plugin ---
 function qrCodePlugin(md) {
   const originalImageRender = md.renderer.rules.image || function (tokens, idx, options, env, renderer) {
     return renderer.renderToken(tokens, idx, options);
@@ -56,7 +56,7 @@ function qrCodePlugin(md) {
   };
 }
 
-// --- UNCHANGED: Your List Marker Plugin ---
+// --- List Marker Plugin ---
 function listMarkerPlugin(md) {
   const originalListItemOpen = md.renderer.rules.list_item_open || function (tokens, idx, options, env, renderer) {
     return renderer.renderToken(tokens, idx, options);
@@ -70,36 +70,25 @@ function listMarkerPlugin(md) {
   };
 }
 
-// --- ✨ FIXED: Plugin to merge ONLY consecutive lists ---
+// --- List Coalescing Plugin ---
 function listCoalescingPlugin(md) {
   md.core.ruler.push('list_coalescer', (state) => {
     const tokens = state.tokens;
     let i = 0;
     while (i < tokens.length - 1) {
-      // Find the pattern: a list closes and another immediately opens.
       if (tokens[i].type === 'bullet_list_close' && tokens[i + 1].type === 'bullet_list_open') {
-
-        // --- Smart Check using Line Numbers ---
-        // Get the starting line of the new list. The `map` property holds [startLine, endLine].
         const nextListStartLine = tokens[i + 1].map[0];
-
-        // Find the ending line of the previous list by searching backwards for the last token with a line map.
         let prevListEndLine = -1;
         for (let j = i - 1; j >= 0; j--) {
           if (tokens[j].map) {
-            // A token's map `endLine` is the line *after* its content.
-            // This is exactly what we need to check for consecutiveness.
             prevListEndLine = tokens[j].map[1];
             break;
           }
         }
-
-        // ONLY merge if the new list starts on the line right after the previous one ended.
-        // This prevents merging across empty lines.
         if (nextListStartLine === prevListEndLine) {
-          tokens.splice(i, 2); // Remove the close/open tokens
-          if (i > 0) i--;      // Step back to re-evaluate in case of 3+ lists
-          continue;            // Restart loop
+          tokens.splice(i, 2);
+          if (i > 0) i--;
+          continue;
         }
       }
       i++;
@@ -108,15 +97,45 @@ function listCoalescingPlugin(md) {
   });
 }
 
+// --- Plugin for sub-lines ---
+function listItemSublinePlugin(md) {
+  const rule = (state) => {
+    let inListItem = false;
+    for (const token of state.tokens) {
+      if (token.type === 'list_item_open') inListItem = true;
+      if (token.type === 'list_item_close') inListItem = false;
+      if (inListItem && token.type === 'inline' && token.children) {
+        const children = token.children;
+        let subLineStartIndex = -1;
+        for (let i = 0; i < children.length; i++) {
+          if (children[i].type === 'softbreak') {
+            subLineStartIndex = i + 1;
+            break;
+          }
+        }
+        if (subLineStartIndex !== -1) {
+          const open = new state.Token('span_open', 'span', 1);
+          open.attrSet('class', 'sub-line');
+          const close = new state.Token('span_close', 'span', -1);
+          children.push(close);
+          children.splice(subLineStartIndex, 0, open);
+        }
+      }
+    }
+  };
+  md.core.ruler.push('list_item_subline', rule);
+}
+
 module.exports = (opts) => {
   const marp = new Marp(opts);
 
   // Add all custom plugins
   marp.use(qrCodePlugin);
   marp.use(listMarkerPlugin);
-  marp.use(listCoalescingPlugin); // ✨ Using the fixed version
+  marp.use(listCoalescingPlugin);
+  marp.use(listItemSublinePlugin);
 
-  // --- UNCHANGED: Your render override ---
+  // --- Render override ---
   const originalRender = marp.render.bind(marp);
   marp.render = function (markdown, env) {
     const result = originalRender(markdown, env);

@@ -103,6 +103,13 @@ ul ul li {
   /* 25% smaller than parent */
 }
 
+li .sub-line {
+  /* Ensures the span takes up its own line */
+  display: block;
+  /* Use the same smaller font size as sub-bullets */
+  font-size: 0.75em;
+}
+
 ul ul li::before {
   content: "";
   position: absolute;
