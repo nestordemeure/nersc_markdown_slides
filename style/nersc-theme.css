@@ -66,15 +66,6 @@ ul {
   margin: 0.5em 0;
 }
 
-/* Remove margin between consecutive ul elements (for mixed marker lists) */
-ul:has(+ ul) {
-  margin-bottom: 0;
-}
-
-ul + ul {
-  margin-top: 0;
-}
-
 ul li {
   position: relative;
   padding-left: 30px;
@@ -108,7 +99,8 @@ ul ul {
 
 ul ul li {
   padding-left: 25px;
-  font-size: 0.75em; /* 25% smaller than parent */
+  font-size: 0.75em;
+  /* 25% smaller than parent */
 }
 
 ul ul li::before {
