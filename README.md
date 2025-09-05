@@ -64,7 +64,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
-* are `con` bullets pure red?
 * add a `code` style used for documentation purpose
   one massive markdown code block, that we will use to showcase the syntax
 
