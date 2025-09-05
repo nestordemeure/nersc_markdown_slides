@@ -1,222 +1,192 @@
----
-marp: true
-theme: nersc
-paginate: true
----
-
-<!-- _class: title -->
-
-# **NERSC Markdown-based Slides**
-## Documentation for Marp-based presentations
-### NERSC Week 2025
-
-<div class="authors">
-<strong>Nestor Demeure</strong><br>
-National Energy Research Scientific Computing Center, Berkeley CA, United-States
-</div>
+# Markdown-based Slides
+## Writing slide decks in Markdown.
 
 ---
 
-<!-- _class: question -->
-
-# **Can we have version controlled NERSC slides?**
+Question: Can we write slides in Markdown? And why bother?
 
 ---
 
-<!-- _class: section-title -->
+# Marp!
 
-# What is Marp? Understanding the Markdown Presentation Ecosystem
-## Understanding the Markdown Presentation Ecosystem
+Those slides are produced with [Marp](link)!
+
+* written in markdown,
+* compiled to html / pdf / pptx / etc.,
+* using a custom style following my personnal NERSC theme.
+
+There *are* [alternatives](https://sli.dev/) but Marp is customizeable, and focuses on raw markdown syntax.
 
 ---
 
-# What is Marp?
+Question: Why bother?
 
-* **Markdown Presentation Ecosystem** - Write slides in simple Markdown syntax
-* **Separates Content from Form** - Content in Markdown, styling in single CSS file
-* **Multiple Output Formats** - Generate HTML, PDF, and PowerPoint presentations
-* **Current Style** - Emulates preferred NERSC style (PRs welcome for more standard NERSC style!)
+---
 
-```bash
-# Example build command
-marp slides.md --pdf --theme ./nersc-theme.css
+# Motivations
+## Why Markdown?
+
+---
+
+# Version Control
+
+Bringing version control to shared slide decks:
+
+* Keeping an history of all previous versions,
+* branches,
+* issues,
+* PRs.
+
+Particularly interesting for shared, long-lived, (user-training?) decks.
+
+---
+
+# Accesible to Coding Assistants
+
+Easily modified by coding assistants (ie claude code):
+
+* grammar / spell check,
+  "make sure I used the same acronym on all slides"
+* deck-wide modifications,
+  "we reran everything on this new hardware, update the specs slide and all corresponding mentions."
+* translation,
+  "translate this workshop from English to French",
+* great to write slides while holding a baby in one hand!
+
+---
+
+# And More!
+
+* We could test included code blocks at build / push time,
+  the Rust documentation does that, do we want to?
+* Easily standardize style over all slide decks,
+  not sure I like that, given that I use a non-standard style...
+* The tool can be fitted to our specific needs:
+  code, formula, plots, etc
+
+---
+
+Question: What can we do with it?
+
+---
+
+# Marp
+## Syntax and Capabilities
+
+---
+
+# Slide Types
+
+You can define various slide types and styles (as you saw in the previous slides).
+
+Here is one I added for this deck...
+
+---
+
+# Pictures
+
+TODO: doudna picture here
+
+---
+
+# Code
+
+With automatic colors!
+
+```py
+TODO: some jax code here
 ```
 
 ---
 
-# Marp Capabilities: Text and Images
+# Formulas
 
-Normal text works as expected, with support for **bold**, *italic*, and `inline code`.
+In mathjax (TODO: check):
 
-You can also include images easily:
-
-![w:928](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
-
-*The Doudna building at NERSC*
+TODO: a take on schrodingers equation here
 
 ---
 
-# Marp Capabilities: Formulas
+# Plots
 
-Mathematical formulas work great for HPC content:
+Generated from a CSV file in the repo, easily updated!
 
-$$\text{FLOPS} = \frac{\text{Number of Operations}}{\text{Execution Time}}$$
-
-For a matrix multiplication $C = A \times B$ where $A$ is $m \times k$ and $B$ is $k \times n$:
-
-$$\text{FLOPS} = \frac{2 \times m \times n \times k}{\text{time}}$$
+TODO: bar plot here
 
 ---
 
-# Marp Capabilities: Python Code
+# Diagram?
 
-```python
-# JAX linear algebra example
-import jax.numpy as jnp
-from jax import random
-
-# Create random matrices
-key = random.PRNGKey(42)
-A = random.normal(key, (1000, 1000))
-B = random.normal(key, (1000, 1000))
-
-# Matrix multiplication
-C = jnp.dot(A, B)
-print(f"Result shape: {C.shape}")
-```
-
-Code blocks support syntax highlighting for many languages.
+* I have used an embedded HTML diagram in my JAX slides,
+* SVG is easily included
+* Mermaid is apparently possible (but people report troubles with that)
 
 ---
 
-# Marp Capabilities: Shell Commands
+# And More
 
-```bash
-# SSH to Doudna and check system
-ssh username@doudna.nersc.gov
-
-# Check available modules
-module avail
-
-# Load your favorite compiler
-module load gcc/11.2.0
-
-# Run your HPC application
-srun -N 4 -n 128 ./my_hpc_app
-```
+The compiler can be moded fairly easily for our needs:
+* QR codes!
+* colored 
+  + pro
+  - con
+  * bullets!
+* etc!
 
 ---
 
-<!-- _class: section-title -->
+# Go check it for yourself
 
-# Getting Started
-## Installation and Basic Usage
+All of the code for the current slides is here:
 
----
-
-# Installation and Setup
-
-**Install Marp CLI:**
-```bash
-npm install -g @marp-team/marp-core @marp-team/marp-cli
-```
-
-**Basic Commands:**
-```bash
-# Generate HTML
-marp "slide_decks/docs/slides.md"
-
-# Generate PDF
-marp "slide_decks/docs/slides.md" --pdf
-
-# Live editing with preview
-marp --watch --preview "slide_decks/docs/slides.md"
-
-# Debug mode for troubleshooting
-marp --debug "slide_decks/docs/slides.md"
-```
+TODO: QR code to this file.
 
 ---
 
-# Auto-deployment and Documentation
-
-**GitHub Pages Integration:**
-* Automatic deployment via GitHub Actions workflow
-* Slides published automatically on push to main branch
-
-**Documentation Resources:**
-* **[marp.app](https://marp.app/)** - Marp's main page
-* **[marp-cli](https://github.com/marp-team/marp-cli)** - Command line tool documentation  
-* **[marpit.marp.app](https://marpit.marp.app/)** - Official Marpit documentation
-* **[Context7 MCP](https://context7.com/?q=marp)** - For LLM assistance
+Question: Okay, what are we losing?
 
 ---
 
-<!-- _class: question -->
+# Shortcomings
 
-# **What are the trade-offs?**
-
----
-
-<!-- _class: section-title -->
-
-# Pros and Cons
-## Evaluating the Markdown Slide Approach
-
----
-
-# Pros and Cons
-
-**Pros:**
-+ **Version Control** - Full Git history for slides
-+ **Pull Requests** - Collaborative review process for slide content
-+ **LLM Assistance** - Spell check, clarity improvements, conciseness
-
-**Cons:**
-- **Loss of Interactivity** - No Google Slides collaborative editing
-- **System Rigidity** - More structured approach required
-- **Basic Template** - Current styling is minimal (PRs welcome!)
-
-**Note:** Community contributions welcome to improve the template!
+- no real-time interaction
+  - no easy way to replace Google-slides style interactions
+- less fine-grained control on individual item placement
+  + standardized "no-thinking" style
+  - no last minute overlay of a block of text
+- less approacheable to non tech people
+  + its markdown
+  - and git versionned
+- some benefits do not apply to NDA decks
+  - HTML export requires publicly accesible image
+  - coding assistant should not be run on NDA decks
 
 ---
-
-<!-- _class: section-title -->
 
 # Conclusion
-## Overview and Perspectives
+## Overview and Perspective
 
 ---
 
 # Overview
 
-**What We've Covered:**
-* Marp as a Markdown-to-slides solution
-* Separation of content and presentation
-* Rich formatting capabilities (text, images, formulas, code)
-* Installation and basic usage workflows
-* Trade-offs between flexibility and collaboration
+It works!
 
-**Key Benefits:**
-* Version controlled presentation content
-* Reproducible slide generation
-* Integration with modern development workflows
+* the current slides are [written with it](link to markdown file),
+* I ported my (non trivial) [JAX workshop slides](link to those) to it,
+* I will try and use it for my upcoming slide decks.
 
 ---
 
 # Perspectives
 
-**Things Still To Do:**
-* Enhance NERSC theme to match official branding guidelines
-* Add more slide layout options (two-column, comparison slides)
-* Improve mobile/responsive viewing experience
-* Expand code syntax highlighting support
-* Create slide template library for common presentation patterns
+It is very much a proof of concept:
 
-**Get Involved:**
-* Fork the repository and create your own slide_decks
-* Submit PRs to improve the NERSC theme
-* Share feedback on workflow and usability
+* porting other people's slides would be a good exercice in feasability
+  my JAX workshop is fully ported [here](link)
+* we should put together an official(-looking) theme
+  the current one mimicks my prefered google slides theme
+* feel free to play with it, submit issues and PR!
 
 ---
 

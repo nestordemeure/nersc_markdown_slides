@@ -64,6 +64,9 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 
 ## TODO
 
+* add a `raw` style used for documentation purpose
+  one massive markdown code block, that we will use to showcase the syntax
+
 * write proper documentation slides
   * clean up plan
   * port it to marp
