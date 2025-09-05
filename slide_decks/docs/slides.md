@@ -1,27 +1,47 @@
-# Markdown-based Slides
-## Writing slide decks in Markdown.
+---
+marp: true
+theme: nersc
+paginate: true
+---
+
+<!-- _class: title -->
+
+# **Markdown-based Slides**
+## Writing slide decks in Markdown
+### Documentation and Tutorial
+
+<div class="authors">
+<strong>Nestor Demeure</strong><br>
+National Energy Research Scientific Computing Center, Berkeley CA, United-States
+</div>
 
 ---
 
-Question: Can we write slides in Markdown? And why bother?
+<!-- _class: question -->
+
+# **Can we write slides in Markdown? And why bother?**
 
 ---
 
 # Marp!
 
-Those slides are produced with [Marp](link)!
+These slides are produced with [Marp](https://marp.app/)!
 
-* written in markdown,
-* compiled to html / pdf / pptx / etc.,
-* using a custom style following my personnal NERSC theme.
+* Written in Markdown
+* Compiled to HTML / PDF / PPTX / etc.
+* Using a custom style following my NERSC theme
 
-There *are* [alternatives](https://sli.dev/) but Marp is customizeable, and focuses on raw markdown syntax.
+There *are* [alternatives](https://sli.dev/) but Marp is customizable, and focuses on raw Markdown syntax.
+
+---
+
+<!-- _class: question -->
+
+# **Why bother?**
 
 ---
 
-Question: Why bother?
-
----
+<!-- _class: section-title -->
 
 # Motivations
 ## Why Markdown?
@@ -32,26 +52,26 @@ Question: Why bother?
 
 Bringing version control to shared slide decks:
 
-* Keeping an history of all previous versions,
-* branches,
-* issues,
-* PRs.
+* Keeping a history of all previous versions
+* Branches
+* Issues
+* PRs
 
 Particularly interesting for shared, long-lived, (user-training?) decks.
 
 ---
 
-# Accesible to Coding Assistants
+# Accessible to Coding Assistants
 
-Easily modified by coding assistants (ie claude code):
+Easily modified by coding assistants (i.e., Claude Code):
 
-* grammar / spell check,
+* Grammar / spell check,
   "make sure I used the same acronym on all slides"
-* deck-wide modifications,
+* Deck-wide modifications,
   "we reran everything on this new hardware, update the specs slide and all corresponding mentions."
-* translation,
-  "translate this workshop from English to French",
-* great to write slides while holding a baby in one hand!
+* Translation,
+  "translate this workshop from English to French"
+* Great to write slides while holding a baby in one hand!
 
 ---
 
@@ -62,13 +82,17 @@ Easily modified by coding assistants (ie claude code):
 * Easily standardize style over all slide decks,
   not sure I like that, given that I use a non-standard style...
 * The tool can be fitted to our specific needs:
-  code, formula, plots, etc
+  code, formulas, plots, etc.
 
 ---
 
-Question: What can we do with it?
+<!-- _class: question -->
+
+# **What can we do with it?**
 
 ---
+
+<!-- _class: section-title -->
 
 # Marp
 ## Syntax and Capabilities
@@ -85,7 +109,9 @@ Here is one I added for this deck...
 
 # Pictures
 
-TODO: doudna picture here
+![w:928](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
+
+*The Doudna building at NERSC*
 
 ---
 
@@ -93,17 +119,30 @@ TODO: doudna picture here
 
 With automatic colors!
 
-```py
-TODO: some jax code here
+```python
+# JAX linear algebra example
+import jax.numpy as jnp
+from jax import random
+
+# Create random matrices
+key = random.PRNGKey(42)
+A = random.normal(key, (1000, 1000))
+B = random.normal(key, (1000, 1000))
+
+# Matrix multiplication
+C = jnp.dot(A, B)
+print(f"Result shape: {C.shape}")
 ```
 
 ---
 
 # Formulas
 
-In mathjax (TODO: check):
+In MathJax:
 
-TODO: a take on schrodingers equation here
+$$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t)$$
+
+*The time-dependent Schrödinger equation*
 
 ---
 
@@ -111,7 +150,7 @@ TODO: a take on schrodingers equation here
 
 Generated from a CSV file in the repo, easily updated!
 
-TODO: bar plot here
+**TODO: bar plot here**
 
 ---
 
@@ -125,9 +164,9 @@ TODO: bar plot here
 
 # And More
 
-The compiler can be moded fairly easily for our needs:
+The compiler can be modified fairly easily for our needs:
 * QR codes!
-* colored 
+* Colored 
   + pro
   - con
   * bullets!
@@ -137,34 +176,38 @@ The compiler can be moded fairly easily for our needs:
 
 # Go check it for yourself
 
-All of the code for the current slides is here:
+All of the code for these slides is here:
 
-TODO: QR code to this file.
+![qr width:400px](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
 
 ---
 
-Question: Okay, what are we losing?
+<!-- _class: question -->
+
+# **Okay, what are we losing?**
 
 ---
 
 # Shortcomings
 
-- no real-time interaction
-  - no easy way to replace Google-slides style interactions
-- less fine-grained control on individual item placement
-  + standardized "no-thinking" style
-  - no last minute overlay of a block of text
-- less approacheable to non tech people
-  + its markdown
-  - and git versionned
-- some benefits do not apply to NDA decks
-  - HTML export requires publicly accesible image
-  - coding assistant should not be run on NDA decks
+- No real-time interaction
+  - No easy way to replace Google Slides style interactions
+- Less fine-grained control on individual item placement
+  + Standardized "no-thinking" style
+  - No last minute overlay of a block of text
+- Less approachable to non-tech people
+  + It's Markdown
+  - And Git versioned
+- Some benefits do not apply to NDA decks
+  - HTML export requires publicly accessible images
+  - Coding assistant should not be run on NDA decks
 
 ---
 
+<!-- _class: section-title -->
+
 # Conclusion
-## Overview and Perspective
+## Overview and Perspectives
 
 ---
 
@@ -172,9 +215,9 @@ Question: Okay, what are we losing?
 
 It works!
 
-* the current slides are [written with it](link to markdown file),
-* I ported my (non trivial) [JAX workshop slides](link to those) to it,
-* I will try and use it for my upcoming slide decks.
+* These current slides are [written with it](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
+* I ported my (non-trivial) [JAX workshop slides](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax) to it
+* I will try and use it for my upcoming slide decks
 
 ---
 
@@ -182,11 +225,11 @@ It works!
 
 It is very much a proof of concept:
 
-* porting other people's slides would be a good exercice in feasability
-  my JAX workshop is fully ported [here](link)
-* we should put together an official(-looking) theme
-  the current one mimicks my prefered google slides theme
-* feel free to play with it, submit issues and PR!
+* Porting other people's slides would be a good exercise in feasibility
+  my JAX workshop is fully ported [here](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax)
+* We should put together an official(-looking) theme
+  the current one mimics my preferred Google Slides theme
+* Feel free to play with it, submit issues and PRs!
 
 ---
 
