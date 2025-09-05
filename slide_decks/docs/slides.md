@@ -155,27 +155,22 @@ Generated from a CSV file in the repo, easily updated!
 
 # Diagram?
 
-* I have used an embedded HTML diagram [in my JAX slides](TODO),
-* SVG is easily included,
-* Mermaid is possible (but people report troubles with that).
+- Mermaid is possible, but people report troubles with it,
+* I have used an embedded HTML diagram [in my JAX slides](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/images/jax_xla_schematics.html),
+* SVGs are easily included,
+* etc.
 
 ---
 
-# And More
+# And More!
 
-The compiler can be modified fairly easily for our needs:
-* QR codes!
-* Colored 
-  + pro
-  - con
-  * bullets!
-* etc!
+The **compiler can be modded** fairly easily for our needs.
+
+I already added **QR codes** and colored **pro / con bullets**.
 
 ---
 
-# Go check it for yourself
-
-All of the code for these slides is here:
+# Go check the full code for yourself
 
 ![qr width:400px](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
 
@@ -189,17 +184,17 @@ All of the code for these slides is here:
 
 # Shortcomings
 
-- No real-time interaction
-  - No easy way to replace Google Slides style interactions
-- Less fine-grained control on individual item placement
-  + Standardized "no-thinking" style
-  - No last minute overlay of a block of text
-- Less approachable to non-tech people
-  + It's Markdown
-  - And Git versioned
-- Some benefits do not apply to NDA decks
+- **No real-time interactions**,
+  - No easy way to replace Google Slides style interactions.
+- **Limited control** on item placement,
+  + Standardized "no-thinking" style,
+  - No last minute overlay of a block of text.
+- **Less approachable** to non-technical people,
+  + It's Markdown,
+  - And Git versioned.
+- Some benefits do not apply to **private decks**.
   - HTML export requires publicly accessible images
-  - Coding assistant should not be run on NDA decks
+  - Coding assistant should not be run on non-disclosure-agrement decks
 
 ---
 
@@ -212,9 +207,9 @@ All of the code for these slides is here:
 
 # Overview
 
-It works!
+**It works!**
 
-* These current slides are [written with it](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md),
+* The current slides are [written with Marp](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md),
 * I ported my (non-trivial) [JAX workshop slides](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax) to it,
 * I will try and use it for my upcoming slide decks.
 
@@ -222,13 +217,13 @@ It works!
 
 # Perspectives
 
-It is very much a proof of concept:
+This is very much a **proof of concept**:
 
-* Porting other people's slides would be a good exercise in feasibility
-  my JAX workshop is fully ported [here](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax),
-* We should put together an official(-looking) theme
-  the current one mimics my preferred Google Slides theme,
-* Feel free to play with it, submit issues and PRs!
+* **Porting other people's slides** would be a good exercise in feasibility,
+  My JAX workshop is fully ported [here](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax).
+* We should put together an **official(-looking) theme**,
+  The current one mimics my preferred Google Slides theme.
+* Feel free to **play with it**, submit issues and PRs!
 
 ---
 
