@@ -25,13 +25,14 @@ National Energy Research Scientific Computing Center, Berkeley CA, United-States
 
 # Marp!
 
-These slides are produced with [Marp](https://marp.app/)!
+These slides are produced with [**Marp**](https://marp.app/)!
 
-* Written in Markdown
-* Compiled to HTML / PDF / PPTX / etc.
-* Using a custom style following my NERSC theme
+* Written in Markdown,
+* Compiled to HTML / PDF / PPTX / etc.,
+* Using a custom style following my NERSC theme.
 
-There *are* [alternatives](https://sli.dev/) but Marp is customizable, and focuses on raw Markdown syntax.
+Marp is **customizable** and focuses on **raw Markdown** syntax, 
+but there *are* [alternatives](https://sli.dev/).
 
 ---
 
@@ -50,45 +51,45 @@ There *are* [alternatives](https://sli.dev/) but Marp is customizable, and focus
 
 # Version Control
 
-Bringing version control to shared slide decks:
+Bringing **version control** to shared slide decks:
 
-* Keeping a history of all previous versions
-* Branches
-* Issues
-* PRs
++ Keeping a history of all previous versions,
++ Branches,
++ Issues,
++ PRs.
 
-Particularly interesting for shared, long-lived, (user-training?) decks.
+Particularly interesting for *shared, long-lived, (user-training?) decks*.
 
 ---
 
 # Accessible to Coding Assistants
 
-Easily modified by coding assistants (i.e., Claude Code):
+Easily modified by **coding assistants** (i.e., Claude Code):
 
-* Grammar / spell check,
-  "make sure I used the same acronym on all slides"
-* Deck-wide modifications,
-  "we reran everything on this new hardware, update the specs slide and all corresponding mentions."
-* Translation,
-  "translate this workshop from English to French"
-* Great to write slides while holding a baby in one hand!
++ **Grammar / spell check**,
+  *"Make sure I used the same acronym on all slides."*
++ **Deck-wide modifications**,
+  *"We reran everything on this new hardware, update the specs slide and all corresponding mentions."*
++ **Translation**,
+  *"Translate this workshop from English to French."*
++ **Great to write slides while holding a baby in one hand!**
 
 ---
 
 # And More!
 
-* We could test included code blocks at build / push time,
-  the Rust documentation does that, do we want to?
-* Easily standardize style over all slide decks,
-  not sure I like that, given that I use a non-standard style...
-* The tool can be fitted to our specific needs:
-  code, formulas, plots, etc.
+* We *could* **test code blocks** at build / push time,
+  The Rust documentation does that, do we want to?
+* Easily **standardize style** over all slide decks,
+  Not sure I like that, given that I use a non-standard style...
+* The tool can be **fitted to our specific needs**:
+  Code, formulas, plots, etc.
 
 ---
 
 <!-- _class: question -->
 
-# **What can we do with it?**
+# **What *can* we do with it?**
 
 ---
 
@@ -101,7 +102,7 @@ Easily modified by coding assistants (i.e., Claude Code):
 
 # Slide Types
 
-You can define various slide types and styles (as you saw in the previous slides).
+You can **define various slide types and styles**, as you saw in the previous slides.
 
 Here is one I added for this deck...
 
@@ -109,18 +110,18 @@ Here is one I added for this deck...
 
 # Pictures
 
-![w:928](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
+Some [**Doudna** system advertisement](https://www.nersc.gov/what-we-do/computing-for-science/doudna-system):
 
-*The Doudna building at NERSC*
+![w:550](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
 
 ---
 
 # Code
 
-With automatic colors!
+With **syntax highlighting**!
 
 ```python
-# JAX linear algebra example
+# Import JAX
 import jax.numpy as jnp
 from jax import random
 
@@ -138,11 +139,9 @@ print(f"Result shape: {C.shape}")
 
 # Formulas
 
-In MathJax:
+In [**MathJax**](https://www.mathjax.org/):
 
 $$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t)$$
-
-*The time-dependent Schrödinger equation*
 
 ---
 
@@ -156,9 +155,9 @@ Generated from a CSV file in the repo, easily updated!
 
 # Diagram?
 
-* I have used an embedded HTML diagram in my JAX slides,
-* SVG is easily included
-* Mermaid is apparently possible (but people report troubles with that)
+* I have used an embedded HTML diagram [in my JAX slides](TODO),
+* SVG is easily included,
+* Mermaid is possible (but people report troubles with that).
 
 ---
 
@@ -215,9 +214,9 @@ All of the code for these slides is here:
 
 It works!
 
-* These current slides are [written with it](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
-* I ported my (non-trivial) [JAX workshop slides](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax) to it
-* I will try and use it for my upcoming slide decks
+* These current slides are [written with it](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md),
+* I ported my (non-trivial) [JAX workshop slides](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax) to it,
+* I will try and use it for my upcoming slide decks.
 
 ---
 
@@ -226,9 +225,9 @@ It works!
 It is very much a proof of concept:
 
 * Porting other people's slides would be a good exercise in feasibility
-  my JAX workshop is fully ported [here](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax)
+  my JAX workshop is fully ported [here](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax),
 * We should put together an official(-looking) theme
-  the current one mimics my preferred Google Slides theme
+  the current one mimics my preferred Google Slides theme,
 * Feel free to play with it, submit issues and PRs!
 
 ---

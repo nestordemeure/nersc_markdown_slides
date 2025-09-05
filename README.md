@@ -68,8 +68,8 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
   one massive markdown code block, that we will use to showcase the syntax
 
 * write proper documentation slides
-  * port it to marp
   * introduce `code` slides
+  * add the plot slide
 
 * marpit usage
   * how to center text when it makes sense?
