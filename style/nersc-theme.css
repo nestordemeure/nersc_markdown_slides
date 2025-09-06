@@ -3,16 +3,13 @@
  * @author Nestor Demeure (revised by Gemini)
  * @url https://github.com/nestordemeure/nersc_markdown_slides
  *
- * This theme has been revised to minimize the need for HTML.
- * It styles semantic h1, h2, etc., elements directly.
- * The 'authors' div on the title slide is the only remaining HTML wrapper needed.
- *
  * --- SLIDE TYPES ---
  * Apply a class to a slide using a comment: *
  * `title`: The main title slide with logos and background image.
  * `section-title`: Introduces a new section with a two-part background.
  * `content`: The default slide with a header banner. (Applied by default).
  * `question`: A simple slide with a large, centered question.
+ * `code`: A slide containing only a large code block with syntax highlighting.
  * `thanks`: The final "Thank you" slide.
  */
 
@@ -452,6 +449,68 @@ section.question ol {
 section.question h2 {
   font-size: 36px;
   font-weight: normal;
+}
+
+
+/* ========== Code Slide (class: code) ========== */
+/* This slide type creates a full-screen view for a single code block. */
+section.code {
+  /* Set padding to create the outer margins, matching other slides */
+  padding: 60px;
+  box-sizing: border-box;
+  /* Use background shorthand to ensure all other background properties are reset */
+  background: #F5F5F5;
+  /* Light grey background for the whole slide */
+}
+
+/* Hide header logo and page number common to other slides */
+section.code::before,
+section.code::after {
+  display: none;
+}
+
+/* Hide the slide title if one is accidentally included */
+section.code h1 {
+  display: none;
+}
+
+/* Style the <pre> element which contains the code */
+section.code pre {
+  /* Reset background and borders */
+  background-color: transparent;
+  border-radius: 0;
+
+  /* Fill available space */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  /* Remove internal padding */
+  padding: 0;
+
+  /* Ensure long code blocks are scrollable if they still overflow */
+  overflow: auto;
+
+  /* Set typography and wrapping behavior */
+  font-family: 'Courier New', monospace;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: left;
+  white-space: pre-wrap;
+  /* Allow lines to wrap */
+  word-break: break-word;
+  /* Break words to prevent overflow */
+
+  /* Make the <pre> a flex container to center the <code> vertically */
+  display: flex;
+  align-items: center;
+}
+
+/* The actual <code> element inside <pre> needs minimal styling */
+section.code pre code {
+  /* Inherit font styles and reset any conflicting default styles */
+  background-color: transparent;
+  padding: 0;
 }
 
 

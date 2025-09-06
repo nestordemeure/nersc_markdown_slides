@@ -108,11 +108,35 @@ Here is one I added for this deck...
 
 ---
 
+<!-- _class: code -->
+
+```md
+# Slide Types
+
+You can **define various slide types and styles**, as you saw in the previous slides.
+
+Here is one I added for this deck...
+```
+
+---
+
 # Pictures
 
 Some [**Doudna** system advertisement](https://www.nersc.gov/what-we-do/computing-for-science/doudna-system):
 
 ![w:550](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
+
+---
+
+<!-- _class: code -->
+
+```md
+# Pictures
+
+Some [**Doudna** system advertisement](https://www.nersc.gov/what-we-do/computing-for-science/doudna-system):
+
+![w:550](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
+```
 
 ---
 
@@ -137,11 +161,44 @@ print(f"Result shape: {C.shape}")
 
 ---
 
+<!-- _class: code -->
+
+```md
+# Code
+
+With **syntax highlighting**!
+
+'''python
+# Import JAX
+import jax.numpy as jnp
+from jax import random
+
+# Create random matrices
+key = random.PRNGKey(42)
+A = random.normal(key, (1000, 1000))
+B = random.normal(key, (1000, 1000))
+'''
+```
+
+---
+
 # Formulas
 
 In [**MathJax**](https://www.mathjax.org/):
 
 $$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t)$$
+
+---
+
+<!-- _class: code -->
+
+```md
+# Formulas
+
+In [**MathJax**](https://www.mathjax.org/):
+
+$$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t)$$
+```
 
 ---
 
@@ -153,12 +210,37 @@ Generated from a CSV file in the repo, easily updated!
 
 ---
 
+<!-- _class: code -->
+
+```md
+# Plots
+
+Generated from a CSV file in the repo, easily updated!
+
+**TODO: bar plot here**
+```
+
+---
+
 # Diagram?
 
-- Mermaid is possible, but people report troubles with it,
+- Mermaid *is* possible, but people report troubles with it,
 * I have used an embedded HTML diagram [in my JAX slides](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/images/jax_xla_schematics.html),
 * SVGs are easily included,
 * etc.
+
+---
+
+<!-- _class: code -->
+
+```md
+# Diagram?
+
+- Mermaid *is* possible, but people report troubles with it,
+* I have used an embedded HTML diagram [in my JAX slides](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/images/jax_xla_schematics.html),
+* SVGs are easily included,
+* etc.
+```
 
 ---
 
@@ -173,6 +255,16 @@ I already added **QR codes** and colored **pro / con bullets**.
 # Go check the full code for yourself
 
 ![qr width:400px](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
+
+---
+
+<!-- _class: code -->
+
+```md
+# Go check the full code for yourself
+
+![qr width:400px](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
+```
 
 ---
 

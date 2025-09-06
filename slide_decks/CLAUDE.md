@@ -72,6 +72,16 @@ Should be suggested (but not used without confirmation) for any slide with more 
 - For slides that need to fit more content
 ```
 
+### `code` - Large code block slide
+For slides containing only a single code block with syntax highlighting at double the normal font size.
+```markdown
+<!-- _class: code -->
+```python
+def example_function():
+    return "Hello, World!"
+```
+```
+
 ## Graphical Elements
 
 ### Images

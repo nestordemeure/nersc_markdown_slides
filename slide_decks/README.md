@@ -71,6 +71,15 @@ Contact information
 - For slides that need to fit more content
 ```
 
+### `code` - Large code block slide
+```markdown
+<!-- _class: code -->
+```python
+def example_function():
+    return "Hello, World!"
+```
+```
+
 ## Graphical Elements
 
 ### Images
