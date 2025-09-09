@@ -1,6 +1,7 @@
 # Marp outputs
 *.pdf
 *.html
+!**/images/*.html
 *.pptx
 
 # node things
