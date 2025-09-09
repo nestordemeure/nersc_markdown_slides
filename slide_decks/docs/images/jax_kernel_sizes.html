@@ -1,0 +1,97 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 10px;
+        font-family: sans-serif;
+    }
+
+    #chart-container {
+        width: 100%;
+        height: 400px;
+    }
+</style>
+
+<!-- CSV data is embedded here -->
+<script id="kernel-sizes-csv" type="text/csv">
+Kernel,JAX,OpenMP CPU,OpenMP Target Offload
+scan_map,151,209,284
+pixels_healpix,121,188,309
+build_noise_weighted,126,187,274
+stokes_weights_IQU,84,103,168
+pointing_detector,78,98,160
+offset_project_signal,94,71,137
+offset_add_to_signal,70,49,95
+noise_weight,41,39,86
+stokes_weights_I,6,36,83
+offset_apply_diag,13,24,60
+</script>
+
+<!-- The chart will be rendered in this canvas -->
+<div id="chart-container">
+    <canvas id="kernelChart"></canvas>
+</div>
+
+<!-- Script to parse CSV and create the chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Get the CSV data and split it into rows
+    const csvText = document.getElementById('kernel-sizes-csv').textContent;
+    const lines = csvText.trim().split('\n');
+    const header = lines[0].split(',');
+    const dataRows = lines.slice(1).map(line => line.split(','));
+
+    // Create the chart
+    new Chart(document.getElementById('kernelChart'), {
+        type: 'bar',
+        data: {
+            // Use the first column for labels (e.g., 'scan_map')
+            labels: dataRows.map(row => row[0]),
+            datasets: [
+                {
+                    label: header[1], // 'JAX'
+                    data: dataRows.map(row => parseInt(row[1])),
+                    backgroundColor: '#4285f4'
+                },
+                {
+                    label: header[2], // 'OpenMP CPU'
+                    data: dataRows.map(row => parseInt(row[2])),
+                    backgroundColor: '#ea4335'
+                },
+                {
+                    label: header[3], // 'OpenMP Target Offload'
+                    data: dataRows.map(row => parseInt(row[3])),
+                    backgroundColor: '#fbbc04'
+                }
+            ]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: false, // for proper PDF render
+            plugins: {
+                legend: {
+                    position: 'top'
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Lines of code'
+                    }
+                },
+                y: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+</script>
