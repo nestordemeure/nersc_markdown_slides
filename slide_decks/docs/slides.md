@@ -206,7 +206,7 @@ $$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t
 
 Generated from a CSV file in the repo, easily updated!
 
-<iframe src="./images/jax_kernel_sizes.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="images/jax_kernel_sizes.html" width="100%" height="500" frameborder="0"></iframe>
 
 ---
 
