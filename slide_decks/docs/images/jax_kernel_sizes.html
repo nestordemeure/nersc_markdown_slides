@@ -5,13 +5,14 @@
 
     body {
         margin: 0;
-        padding: 10px;
+        padding: 0px;
         font-family: sans-serif;
     }
 
     #chart-container {
         width: 100%;
-        height: 400px;
+        height: 100%;
+        color: #434343;
     }
 </style>
 
@@ -75,7 +76,10 @@ offset_apply_diag,13,24,60
             animation: false, // for proper PDF render
             plugins: {
                 legend: {
-                    position: 'top'
+                    position: 'top',
+                    labels: {
+                        color: '#434343'
+                    }
                 }
             },
             scales: {
@@ -83,12 +87,19 @@ offset_apply_diag,13,24,60
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Lines of code'
+                        text: 'Lines of code',
+                        color: '#434343'
+                    },
+                    ticks: {
+                        color: '#434343'
                     }
                 },
                 y: {
                     grid: {
                         display: false
+                    },
+                    ticks: {
+                        color: '#434343'
                     }
                 }
             }
