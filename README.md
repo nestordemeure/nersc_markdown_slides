@@ -69,9 +69,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
   * mention the embedded html (iframe) pattern
   * embedded HTML is not imported in github pages?
 
-* engine
-  * split engine into several files?
-
 * marpit usage
   * how to center text when it makes sense?
   * how to make texlocally bigger for further emphasis?

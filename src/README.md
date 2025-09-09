@@ -5,13 +5,17 @@ It's configured in `package.json` under the `engine` property.
 
 ## Features
 
-### QR Code Generation
+### QR Code Generation ([qr-code-plugin.js](qr-code-plugin.js))
 
 Automatically generates QR codes from URLs using `![qr](url)` syntax. Supports standard Marpit image sizing and custom alt text.
 
-### Colored Bullets
+### Colored Bullets ([list-marker-plugin.js](list-marker-plugin.js), [list-coalescing-plugin.js](list-coalescing-plugin.js))
 
-Preserves markdown list markers (`*`, `+`, `-`) as `data-marker` attributes for CSS styling - enabling orange (default), green (pros), and red (cons) bullets.
+Preserves markdown list markers (`*`, `+`, `-`) as `data-marker` attributes for CSS styling - enabling orange (default), green (pros), and red (cons) bullets. List coalescing merges adjacent bullet lists to allow mixing different marker types within the same visual list.
+
+### List Item Sub-lines ([list-item-subline-plugin.js](list-item-subline-plugin.js))
+
+Wraps text after soft breaks in list items with sub-line span elements for enhanced styling control.
 
 ### Disabled Fragmented Lists
 
