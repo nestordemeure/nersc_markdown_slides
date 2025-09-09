@@ -9,7 +9,7 @@ function qrCodePlugin(md) {
   md.renderer.rules.image = function (tokens, idx, options, env, renderer) {
     const token = tokens[idx];
     const alt = token.content || '';
-    const src = token.attrGet('src');
+    const src = token.attrGet('src'); // The original URL for the link
     if (alt.toLowerCase().startsWith('qr')) {
       try {
         const qrCode = QRCode.create(src, { errorCorrectionLevel: 'M' });
@@ -44,9 +44,17 @@ function qrCodePlugin(md) {
         if (wMatch) newAlt = `w:${wMatch[1]} ${newAlt}`;
         if (hMatch) newAlt = `h:${hMatch[1]} ${newAlt}`;
         if (percentMatch && !sizeMatch && !wMatch) newAlt = `${percentMatch[1]}% ${newAlt}`;
+
+        // Update the token to render the QR code image
         token.content = newAlt;
         token.attrSet('src', dataUrl);
-        return originalImageRender(tokens, idx, options, env, renderer);
+
+        // Get the generated <img> tag HTML
+        const imgTag = originalImageRender(tokens, idx, options, env, renderer);
+
+        // Wrap the <img> tag in an <a> tag to make it clickable
+        return `<a href="${src}" target="_blank" rel="noopener noreferrer">${imgTag}</a>`;
+
       } catch (error) {
         console.warn(`QR Code generation failed for "${src}":`, error.message);
         return originalImageRender(tokens, idx, options, env, renderer);

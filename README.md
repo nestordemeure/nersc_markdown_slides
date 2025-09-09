@@ -67,7 +67,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * write proper documentation slides
   * clean up format
   * diagram: import my JAX one
-  * QR code should be clickeable links
   * chart HTML is not imported in github pages?
 
 * marpit usage
