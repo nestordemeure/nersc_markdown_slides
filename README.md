@@ -67,7 +67,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * write proper documentation slides
   * finalize
   * mention the embedded html (iframe) pattern
-  * embedded HTML is not imported in github pages?
 
 * marpit usage
   * how to center text when it makes sense?

@@ -40,6 +40,9 @@ jobs:
       - name: Build docs slides
         run: npx marp "slide_decks/docs/slides.md" --output docs/index.html
 
+      - name: Copy images to docs
+        run: cp -r slide_decks/docs/images docs/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
