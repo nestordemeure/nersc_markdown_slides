@@ -222,24 +222,24 @@ Generated from a CSV file, easily updated!
 
 ---
 
-# Diagram?
+# Diagrams
 
-- Mermaid *is* possible, but people report troubles with it,
-* I have used an embedded HTML diagram [in my JAX slides](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/images/jax_xla_schematics.html),
-* SVGs are easily included,
-* etc.
+- Mermaid *is* possible, but people report troubles with it...
++ However, SVG, and embedded HTML work out of the box:  
+
+<iframe style="width:100%; border:none;" src="images/jax_xla_schematics.html"></iframe>
 
 ---
 
 <!-- _class: code -->
 
 ```md
-# Diagram?
+# Diagrams
 
-- Mermaid *is* possible, but people report troubles with it,
-* I have used an embedded HTML diagram [in my JAX slides](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/images/jax_xla_schematics.html),
-* SVGs are easily included,
-* etc.
+- Mermaid *is* possible, but people report troubles with it...
++ However, SVG, and embedded HTML work out of the box:  
+
+<iframe style="width:100%; border:none;" src="images/jax_xla_schematics.html"></iframe>
 ```
 
 ---

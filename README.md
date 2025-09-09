@@ -65,9 +65,12 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 ## TODO
 
 * write proper documentation slides
-  * clean up format
-  * diagram: import my JAX one
-  * chart HTML is not imported in github pages?
+  * finalize
+  * mention the embedded html (iframe) pattern
+  * embedded HTML is not imported in github pages?
+
+* engine
+  * split engine into several files?
 
 * marpit usage
   * how to center text when it makes sense?
