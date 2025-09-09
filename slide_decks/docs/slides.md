@@ -204,7 +204,7 @@ $$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t
 
 # Plots
 
-Generated from a CSV file in the repo, easily updated!
+Generated from a CSV file, easily updated!
 
 <iframe src="images/jax_kernel_sizes.html" width="100%" height="500" frameborder="0"></iframe>
 
@@ -215,9 +215,9 @@ Generated from a CSV file in the repo, easily updated!
 ```md
 # Plots
 
-Generated from a CSV file in the repo, easily updated!
+Generated from a CSV file, easily updated!
 
-**TODO: bar plot here**
+<iframe src="images/jax_kernel_sizes.html" width="100%" height="500" frameborder="0"></iframe>
 ```
 
 ---
@@ -302,7 +302,7 @@ I already added **QR codes** and colored **pro / con bullets**.
 **It works!**
 
 * The current slides are [written with Marp](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md),
-* I ported my (non-trivial) [JAX workshop slides](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax) to it,
+* I ported my (non-trivial) [JAX workshop slides](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/slides.md) to it,
 * I will try and use it for my upcoming slide decks.
 
 ---
@@ -312,7 +312,7 @@ I already added **QR codes** and colored **pro / con bullets**.
 This is very much a **proof of concept**:
 
 * **Porting other people's slides** would be a good exercise in feasibility,
-  My JAX workshop is fully ported [here](https://github.com/nestordemeure/nersc_markdown_slides/tree/main/slide_decks/jax).
+  My JAX workshop is fully ported [here](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/slides.md).
 * We should put together an **official(-looking) theme**,
   The current one mimics my preferred Google Slides theme.
 * Feel free to **play with it**, submit issues and PRs!

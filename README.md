@@ -65,9 +65,10 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 ## TODO
 
 * write proper documentation slides
-  * finalize the plot slide
   * clean up format
-  * double check all links
+  * diagram: import my JAX one
+  * QR code should be clickeable links
+  * chart HTML is not imported in github pages?
 
 * marpit usage
   * how to center text when it makes sense?
