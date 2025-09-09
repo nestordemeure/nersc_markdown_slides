@@ -67,12 +67,15 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 * write proper documentation slides
   * add the plot slide
   * clean up format
+  * double check all links
 
 * marpit usage
   * how to center text when it makes sense?
   * how to make texlocally bigger for further emphasis?
+  * dig into marpit specific CSS
 
 * rename the `style` folder into `themes`
   * move the current content to a `nestor` subfolder (for Nestor's personal NERSC theme),
-  * that way we can add alternative themes, including a proper official one
+  * that way we can add alternative themes, including a proper (`nersc2025`?) official one
 * add a `test` deck used solely for tests (with a readme stating so), demonstrating various feature and edge cases
+* refactor around one repo per slide deck, with a style/engine git-submodule?
