@@ -37,7 +37,7 @@ The following commands will build a given deck to HTML / PDF (picking up on our 
 marp "slide_decks/docs/slides.md"
 
 # Convert to PDF
-marp "slide_decks/docs/slides.md" --pdf
+marp "slide_decks/docs/slides.md" --allow-local-files --pdf
 ```
 
 You might want to use the `--debug` flag when debugging warning and error messages.
@@ -65,7 +65,7 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
 ## TODO
 
 * write proper documentation slides
-  * add the plot slide
+  * finalize the plot slide
   * clean up format
   * double check all links
 

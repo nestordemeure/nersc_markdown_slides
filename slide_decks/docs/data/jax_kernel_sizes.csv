@@ -1,0 +1,11 @@
+Kernel,JAX,OpenMP CPU,OpenMP Target Offload
+scan_map,151,209,284
+pixels_healpix,121,188,309
+build_noise_weighted,126,187,274
+stokes_weights_IQU,84,103,168
+pointing_detector,78,98,160
+offset_project_signal,94,71,137
+offset_add_to_signal,70,49,95
+noise_weight,41,39,86
+stokes_weights_I,6,36,83
+offset_apply_diag,13,24,60
