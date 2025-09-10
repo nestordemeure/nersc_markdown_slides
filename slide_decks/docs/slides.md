@@ -7,7 +7,7 @@ paginate: true
 <!-- _class: title -->
 
 # **Markdown-based Slides**
-## Writing NERSC slide decks in Markdown
+## Writing NERSC Slide Decks in Markdown
 ### Documentation and Tutorial
 
 <div class="authors">
@@ -19,7 +19,9 @@ National Energy Research Scientific Computing Center, Berkeley CA, United-States
 
 <!-- _class: question -->
 
-# **Can we write slides in Markdown? And why bother?**
+# **Can we write slides in Markdown?**
+
+(And why bother?)
 
 ---
 
@@ -29,7 +31,7 @@ These slides are produced with [**Marp**](https://marp.app/)!
 
 * Written in Markdown,
 * Compiled to HTML / PDF / PPTX / etc.,
-* Using a custom CSS style following my NERSC theme.
+* Using a custom CSS style, following my NERSC theme.
 
 Marp is **customizable**, but focuses on **raw Markdown** syntax.
 
@@ -57,7 +59,7 @@ Bringing **version control** to shared slide decks:
 + Issues,
 + Pull requests.
 
-Particularly interesting for *shared, long-lived, decks* (user-training?).
+Particularly interesting for *shared long-lived decks* (user-training?).
 
 ---
 
@@ -83,7 +85,7 @@ Great to write slides while holding a baby in one hand!
 All benefits of dealing with **code** apply:
 
 + Fitting the tool to our specific needs,
-  Code, formulas, plots, etc.
+  Integrate code, formulas, plots, etc.
 + Standardizing style over all slide decks,
   And keep it updated.
 + Testing code blocks at build / push time.
@@ -259,17 +261,17 @@ Generated **from a CSV file**, easily updated!
 # And More!
 
 + **Anything you can do in HTML**, you can embed in an iframe,
-  * diagrams,
-  * plots,
+  * Diagrams,
+  * Plots,
   * etc.
 + The **syntax can be extended** by pluggin-in the compiler.
-  * special QR codes syntax,
-  * colored pro / con bullets,
+  * Colored pro / con bullets,
+  * Special QR codes syntax,
   * etc.
 
 ---
 
-# Check the full code
+# Check the Full Code
 
 ![qr width:400px](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
 
@@ -278,7 +280,7 @@ Generated **from a CSV file**, easily updated!
 <!-- _class: code -->
 
 ```md
-# Check the full code
+# Check the Full Code
 
 ![qr width:400px](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
 ```
@@ -291,19 +293,21 @@ Generated **from a CSV file**, easily updated!
 
 ---
 
+<!-- _class: compact -->
+
 # Shortcomings
 
 - **No real-time interactions**,
   - No Google Slides-style interactions.
 - **Limited control** on item placement,
   - No last minute overlay of a block of text,
-  + Standardized "okay" style out of the box.
+  + Standardized "good" defaults out of the box.
 - **Less approachable** to non-technical people,
   - Compiled,
   - Git versioned,
   + Markdown.
 - Some benefits do not apply to **private decks**.
-  - HTML export requires publicly accessible images,
+  - HTML export expects publicly accessible images,
   - Coding assistant should not be run on non-disclosure-agrement decks,
   + it *does* work fully offline.
 

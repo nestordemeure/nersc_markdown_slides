@@ -69,7 +69,6 @@ However, if we ever find it too limiting for our needs, [sli.dev](https://sli.de
   * finalize
   * mention the embedded html (iframe) pattern
 
-
 * marpit usage
   * how to center text when it makes sense?
   * how to make texlocally bigger for further emphasis?
