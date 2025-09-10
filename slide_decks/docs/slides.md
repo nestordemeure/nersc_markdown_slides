@@ -87,7 +87,7 @@ All benefits of dealing with **code** apply:
 + Fitting the tool to our specific needs,
   Integrate code, formulas, plots, etc.
 + Standardizing style over all slide decks,
-  And keep it updated.
+  And keep it up to date.
 + Testing code blocks at build / push time.
   The Rust documentation does that, do we want to?
 
