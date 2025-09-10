@@ -12,7 +12,7 @@ paginate: true
 
 <div class="authors">
 <strong>Nestor Demeure</strong><br>
-National Energy Research Scientific Computing Center, Berkeley CA, United-States
+National Energy Research Scientific Computing Center, Berkeley CA, United States
 </div>
 
 ---
@@ -59,7 +59,7 @@ Bringing **version control** to shared slide decks:
 + Issues,
 + Pull requests.
 
-Particularly interesting for *shared long-lived decks* (user-training?).
+Particularly interesting for *shared long-lived decks* (user training?).
 
 ---
 
@@ -114,7 +114,7 @@ Marp slides are written as a `---` separated **Markdown file**.
 
 You can define various slide types and **styles in CSS**.
 
-And plug into its **Javascript compiler** to add advanced capabilities.
+And plug into its **JavaScript compiler** to add advanced capabilities.
 
 ---
 
@@ -127,7 +127,7 @@ Marp slides are written as a `---` separated **Markdown file**.
 
 You can define various slide types and **styles in CSS**.
 
-And plug into its **Javascript compiler** to add advanced capabilities.
+And plug into its **JavaScript compiler** to add advanced capabilities.
 ```
 
 ---
@@ -264,7 +264,7 @@ Generated **from a CSV file**, easily updated!
   * Diagrams,
   * Plots,
   * etc.
-+ The **syntax can be extended** by pluggin-in the compiler.
++ The **syntax can be extended** by plugging-in the compiler.
   * Colored pro / con bullets,
   * Special QR codes syntax,
   * etc.
@@ -308,7 +308,7 @@ Generated **from a CSV file**, easily updated!
   + Markdown.
 - Some benefits do not apply to **private decks**.
   - HTML export expects publicly accessible images,
-  - Coding assistant should not be run on non-disclosure-agrement decks,
+  - Coding assistant should not be run on non-disclosure agreement decks,
   + it *does* work fully offline.
 
 ---
