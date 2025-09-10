@@ -7,7 +7,7 @@ paginate: true
 <!-- _class: title -->
 
 # **Markdown-based Slides**
-## Writing slide decks in Markdown
+## Writing NERSC slide decks in Markdown
 ### Documentation and Tutorial
 
 <div class="authors">
@@ -29,10 +29,9 @@ These slides are produced with [**Marp**](https://marp.app/)!
 
 * Written in Markdown,
 * Compiled to HTML / PDF / PPTX / etc.,
-* Using a custom style following my NERSC theme.
+* Using a custom CSS style following my NERSC theme.
 
-Marp is **customizable** and focuses on **raw Markdown** syntax, 
-but there *are* [alternatives](https://sli.dev/).
+Marp is **customizable**, but focuses on **raw Markdown** syntax.
 
 ---
 
@@ -45,7 +44,7 @@ but there *are* [alternatives](https://sli.dev/).
 <!-- _class: section-title -->
 
 # Motivations
-## Why Markdown?
+## Markdown is Code
 
 ---
 
@@ -56,9 +55,9 @@ Bringing **version control** to shared slide decks:
 + Keeping a history of all previous versions,
 + Branches,
 + Issues,
-+ PRs.
++ Pull requests.
 
-Particularly interesting for *shared, long-lived, (user-training?) decks*.
+Particularly interesting for *shared, long-lived, decks* (user-training?).
 
 ---
 
@@ -66,30 +65,37 @@ Particularly interesting for *shared, long-lived, (user-training?) decks*.
 
 Easily modified by **coding assistants** (i.e., Claude Code):
 
-+ **Grammar / spell check**,
++ Grammar / spell check,
   *"Make sure I used the same acronym on all slides."*
-+ **Deck-wide modifications**,
++ Deck-wide modifications,
   *"We reran everything on this new hardware, update the specs slide and all corresponding mentions."*
-+ **Translation**,
++ Complex content,
+  *"Here is a CSV, integrate a violin plot of the data, colored by the Framework column."*
++ Translation.
   *"Translate this workshop from English to French."*
-+ **Great to write slides while holding a baby in one hand!**
+
+Great to write slides while holding a baby in one hand!
 
 ---
 
-# And More!
+# Markdown is Code
 
-* We *could* **test code blocks** at build / push time,
-  The Rust documentation does that, do we want to?
-* Easily **standardize style** over all slide decks,
-  Not sure I like that, given that I use a non-standard style...
-* The tool can be **fitted to our specific needs**:
+All benefits of dealing with **code** apply:
+
++ Fitting the tool to our specific needs,
   Code, formulas, plots, etc.
++ Standardizing style over all slide decks,
+  And keep it updated.
++ Testing code blocks at build / push time.
+  The Rust documentation does that, do we want to?
+
+No limits to our **pre/post-processing** abilities.
 
 ---
 
 <!-- _class: question -->
 
-# **What *can* we do with it?**
+# **What *can* we do?**
 
 ---
 
@@ -100,29 +106,33 @@ Easily modified by **coding assistants** (i.e., Claude Code):
 
 ---
 
-# Slide Types
+# Marp
 
-You can **define various slide types and styles**, as you saw in the previous slides.
+Marp slides are written as a `---` separated **Markdown file**.
 
-Here is one I added for this deck...
+You can define various slide types and **styles in CSS**.
+
+And plug into its **Javascript compiler** to add advanced capabilities.
 
 ---
 
 <!-- _class: code -->
 
 ```md
-# Slide Types
+# Marp
 
-You can **define various slide types and styles**, as you saw in the previous slides.
+Marp slides are written as a `---` separated **Markdown file**.
 
-Here is one I added for this deck...
+You can define various slide types and **styles in CSS**.
+
+And plug into its **Javascript compiler** to add advanced capabilities.
 ```
 
 ---
 
 # Pictures
 
-Some [**Doudna** system advertisement](https://www.nersc.gov/what-we-do/computing-for-science/doudna-system):
+[**The Doudna supercomputer**](https://www.nersc.gov/what-we-do/computing-for-science/doudna-system) is already accelerating innovation:
 
 ![w:550](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
 
@@ -133,7 +143,7 @@ Some [**Doudna** system advertisement](https://www.nersc.gov/what-we-do/computin
 ```md
 # Pictures
 
-Some [**Doudna** system advertisement](https://www.nersc.gov/what-we-do/computing-for-science/doudna-system):
+[**The Doudna supercomputer**](https://www.nersc.gov/what-we-do/computing-for-science/doudna-system) is already accelerating innovation:
 
 ![w:550](https://raw.githubusercontent.com/nestordemeure/nersc_markdown_slides/refs/heads/main/slide_decks/docs/images/doudna.jpg)
 ```
@@ -184,7 +194,7 @@ B = random.normal(key, (1000, 1000))
 
 # Formulas
 
-In [**MathJax**](https://www.mathjax.org/):
+The *time-dependent Schrödinger equation* in [**MathJax**](https://www.mathjax.org/):
 
 $$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t)$$
 
@@ -195,7 +205,7 @@ $$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t
 ```md
 # Formulas
 
-In [**MathJax**](https://www.mathjax.org/):
+The *time-dependent Schrödinger equation* in [**MathJax**](https://www.mathjax.org/):
 
 $$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t)$$
 ```
@@ -204,7 +214,7 @@ $$i\hbar\frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat{H}\Psi(\mathbf{r},t
 
 # Plots
 
-Generated from a CSV file, easily updated!
+Generated **from a CSV file**, easily updated!
 
 <iframe src="images/jax_kernel_sizes.html" width="100%" height="500" frameborder="0"></iframe>
 
@@ -215,7 +225,7 @@ Generated from a CSV file, easily updated!
 ```md
 # Plots
 
-Generated from a CSV file, easily updated!
+Generated **from a CSV file**, easily updated!
 
 <iframe src="images/jax_kernel_sizes.html" width="100%" height="500" frameborder="0"></iframe>
 ```
@@ -224,8 +234,10 @@ Generated from a CSV file, easily updated!
 
 # Diagrams
 
-- Mermaid *is* possible, but people report troubles with it...
-+ However, SVG, and embedded HTML work out of the box:  
+- **Mermaid** *is* possible, but people report troubles with it...
++ **SVG**, and **embedded HTML** work out of the box:  
+
+<br>
 
 <iframe style="width:100%; border:none;" src="images/jax_xla_schematics.html"></iframe>
 
@@ -236,8 +248,8 @@ Generated from a CSV file, easily updated!
 ```md
 # Diagrams
 
-- Mermaid *is* possible, but people report troubles with it...
-+ However, SVG, and embedded HTML work out of the box:  
+- **Mermaid** *is* possible, but people report troubles with it...
++ **SVG**, and **embedded HTML** work out of the box:  
 
 <iframe style="width:100%; border:none;" src="images/jax_xla_schematics.html"></iframe>
 ```
@@ -246,13 +258,18 @@ Generated from a CSV file, easily updated!
 
 # And More!
 
-The **compiler can be modded** fairly easily for our needs.
-
-I already added **QR codes** and colored **pro / con bullets**.
++ **Anything you can do in HTML**, you can embed in an iframe,
+  * diagrams,
+  * plots,
+  * etc.
++ The **syntax can be extended** by pluggin-in the compiler.
+  * special QR codes syntax,
+  * colored pro / con bullets,
+  * etc.
 
 ---
 
-# Go check the full code for yourself
+# Check the full code
 
 ![qr width:400px](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
 
@@ -261,7 +278,7 @@ I already added **QR codes** and colored **pro / con bullets**.
 <!-- _class: code -->
 
 ```md
-# Go check the full code for yourself
+# Check the full code
 
 ![qr width:400px](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md)
 ```
@@ -277,16 +294,18 @@ I already added **QR codes** and colored **pro / con bullets**.
 # Shortcomings
 
 - **No real-time interactions**,
-  - No easy way to replace Google Slides style interactions.
+  - No Google Slides-style interactions.
 - **Limited control** on item placement,
-  + Standardized "no-thinking" style,
-  - No last minute overlay of a block of text.
+  - No last minute overlay of a block of text,
+  + Standardized "okay" style out of the box.
 - **Less approachable** to non-technical people,
-  + It's Markdown,
-  - And Git versioned.
+  - Compiled,
+  - Git versioned,
+  + Markdown.
 - Some benefits do not apply to **private decks**.
-  - HTML export requires publicly accessible images
-  - Coding assistant should not be run on non-disclosure-agrement decks
+  - HTML export requires publicly accessible images,
+  - Coding assistant should not be run on non-disclosure-agrement decks,
+  + it *does* work fully offline.
 
 ---
 
@@ -302,8 +321,8 @@ I already added **QR codes** and colored **pro / con bullets**.
 **It works!**
 
 * The current slides are [written with Marp](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/docs/slides.md),
-* I ported my (non-trivial) [JAX workshop slides](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/slides.md) to it,
-* I will try and use it for my upcoming slide decks.
+* I ported my (non-trivial) [JAX workshop slides](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/slides.md),
+* I will use it for my upcoming slide decks.
 
 ---
 
@@ -312,9 +331,7 @@ I already added **QR codes** and colored **pro / con bullets**.
 This is very much a **proof of concept**:
 
 * **Porting other people's slides** would be a good exercise in feasibility,
-  My JAX workshop is fully ported [here](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/JAX_Workshop/slides.md).
 * We should put together an **official(-looking) theme**,
-  The current one mimics my preferred Google Slides theme.
 * Feel free to **play with it**, submit issues and PRs!
 
 ---
