@@ -8,6 +8,7 @@ paginate: true
 
 # **Rust at NERSC**
 ## Usage and Facilities
+### Internal Discussions
 
 <div class="authors">
 <strong>Nestor Demeure</strong><br>
@@ -16,27 +17,54 @@ National Energy Research Scientific Computing Center, Berkeley CA, United States
 
 ---
 
-TODO: Who am I slide here.
+# Who am I?
+
+I am a member of NERSC's **Programming Environments and Models** group, with a focus on high performance computing, numerical accuracy, and artificial intelligence.
+
+I specialize in helping teams of researchers make use of high performance computing environments.
+
+In particular, I am **in charge of the Rust programming language at NERSC**.
 
 ---
 
-# Rust in HPC
+<!-- _class: question -->
+
+# **Why care about Rust in high-performance computing?**
+
+---
+
+<!-- _class: section-title -->
+
+# The Rust Language
+## HPC-friendly features
+
+---
+
+# Key Features
 
 While relatively new in the HPC world, [Rust](https://www.rust-lang.org/) delivers:
 
-* **C++-like performance**
-* **Strong compile-time checks**:
-  * No segfaults in safe Rust code
-* **First-class CPU parallelism**:
++ **C++-like performance**
++ **First-class CPU parallelism**:
   * [Rayon](https://docs.rs/rayon/latest/rayon/): easy OpenMP-like multi-threading
   * Compiler support, flagging whole classes of concurrency bugs and data races at compile time
-* **First-class tooling**:
++ **First-class tooling**:
   * [Cargo](https://doc.rust-lang.org/cargo/): for easy dependency management, testing, and reproducible builds
   * [Rust-Analyzer](https://rust-analyzer.github.io/): state-of-the-art IDE integration
   * [etc](https://www.rust-lang.org/tools).
-* **Excellent interoperability**:
-  * Seamless integration with C/C++/Fortran (keeping existing HPC libraries available)
-  * Growing, transparent, presence in the Python scientific ecosystem as the language of choice for high-performance kernels
+* **Strong compile-time checks**:
+  * No segfaults in safe Rust code
+
+---
+
+# Interoperability
+
+Rust has excellent interoperability with existing leading HPC languages:
+
++ Seamless integration with **C/C++/Fortran** (keeping existing HPC libraries available)
++ Growing, transparent, presence in the **Python** scientific ecosystem as the language of choice for high-performance kernels
+
+***Most Rust use on the supercomputer is through kernels in Python libraries.***
 
 ---
 
@@ -55,7 +83,7 @@ While relatively new in the HPC world, [Rust](https://www.rust-lang.org/) delive
 
 # Rust Module
 
-NERSC is among the few HPC centers worldwide with dedicated Rust support:
+NERSC is among the few HPC centers worldwide with **dedicated Rust support**:
 
 * **Rust module**:
   * Built-in MPI support
@@ -67,32 +95,44 @@ NERSC is among the few HPC centers worldwide with dedicated Rust support:
   * Focused on HPC use-cases and libraries
   * Keeping track of on-going GPU support
 
-* **Integration with the wider Rust community**:
-  * [Rust userlang forum](https://users.rust-lang.org/t/feedback-on-our-rust-documentation-for-hpc-users/127740)
-  * [Rust reddit](https://www.reddit.com/r/rust/comments/1jp7byz/looking_for_feedback_on_our_rust_documentation/)
-  * [HPC reddit](https://www.reddit.com/r/HPC/comments/1jpc3t5/looking_for_feedback_on_our_rust_documentation/))
+---
 
-* User study on Rust adoption patterns
-  * Rust tickets
-  * Rust module usage
+# User Study
+
+We started keeping track of Rust users:
+
+* **Rust tickets**:
+  Mostly users asking for a Rust module
+* **Rust module usage**:
+  20 module users at the moment.
 
 ---
 
-# Internal Use
+# Module Use
 
-* Internal tools migration
-  * [sshproxy](https://docs.nersc.gov/connect/mfa/#sshproxy),
-  * [auto-consult](https://gitlab.nersc.gov/nersc/nersc-user-env/app/auto-consult)
+![height:530px](images/module_use.png)
 
 ---
 
 # User Use
 
-**TODO**
-* check tickets
-* check internal users
+Beyond dependencies and libraries, I am aware of the following Rust codes running at NERSC:
 
-* David landay's team built a parallel MIP solver in Rust
+* [**RustBCA**](https://github.com/lcpp-org/RustBCA):
+  Binary Collision Approximation (BCA) code for ion-material interaction
+* A **Parallel MIP solver**.
+
+Those are projects that contacted me, *I have yet to contact the module users*.
+
+---
+
+# Internal Use
+
+A lot of Rust use cases are **internal**, building tools for NERSC teams:
+
+* [**sshproxy**](https://docs.nersc.gov/connect/mfa/#sshproxy),
+* [**sfapi jobdb**](https://gitlab.nersc.gov/nersc/superfacility/jobdb),
+* [**auto-consult**](https://gitlab.nersc.gov/nersc/nersc-user-env/app/auto-consult).
 
 ---
 
@@ -105,15 +145,15 @@ NERSC is among the few HPC centers worldwide with dedicated Rust support:
 
 # Overview
 
-* we provide a solide module and documentation
-* growing rust use
+* We provide a **solid module and documentation**,
+* Rust use is **slowly growing**.
 
 ---
 
 # Perspectives
 
-* finalize the CI integration
-* user outreach and education to grow rust use where it is meaningful
+* Finalize the CI integration,
+* User outreach and education to grow Rust use where it is meaningful.
 
 ---
 
@@ -121,6 +161,6 @@ NERSC is among the few HPC centers worldwide with dedicated Rust support:
 
 # **Thank you!**
 
-## [(https://github.com/nestordemeure/nersc_markdown_slides/slide_decks/rust](https://github.com/nestordemeure/nersc_markdown_slides/slide_decks/rust)
+## [https://github.com/nestordemeure/<br>nersc_markdown_slides/slide_decks/rust](https://github.com/nestordemeure/nersc_markdown_slides/slide_decks/rust)
 
 ndemeure@lbl.gov
