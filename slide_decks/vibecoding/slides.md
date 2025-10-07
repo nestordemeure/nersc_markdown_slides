@@ -6,7 +6,7 @@ paginate: true
 
 <!-- _class: title -->
 # **Vibe Coding at NERSC**
-## Introduction and Good Practices
+## Introduction and Best Practices
 
 <div class="authors">
 <strong>Nestor Demeure</strong><br>
@@ -187,7 +187,7 @@ Existing best practices make agents more reliable and independent:
 
 * **Break down** larger tasks into smaller ones,
 * **Use git**: commits between successes, branches for long sessions,
-* **Use checking tools**: linters, compilers (`mypy`, `cargo check`, etc.),
+* **Use code checking tools**: linters, compilers (`mypy`, `cargo check`, etc.),
 * **Write tests** and run them after implementing features (consider TDD).
 
 ***If your model can check the code by itself, it will often be able to fix its bugs without help.***
@@ -240,7 +240,7 @@ Some key security issues are worth keeping in mind:
 * **YOLO mode**
   Avoid letting your model execute any command unless you are in a hardened environment,
 * **Data privacy**
-  Do not use those tools on NDA and other private code,
+  Check [model policies](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/view?gid=0#gid=0) before using on NDA or private code,
 * **Malicious MCPs**
   Risk of MCPs exfiltrating your data or running malicious code.
 
