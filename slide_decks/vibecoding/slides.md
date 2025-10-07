@@ -278,7 +278,7 @@ All coding assistants come with built-in tools to run shell commands, read, and 
 **See the following presentation for details!**
 
 ---
-# Other Useful Tools
+# Other Useful Command Line Tools
 
 Many command line tools are worth integrating with your agents:
 
