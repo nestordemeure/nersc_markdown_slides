@@ -7,6 +7,7 @@ paginate: true
 <!-- _class: title -->
 # **Vibe Coding at NERSC**
 ## Introduction and Best Practices
+### Vibe Coding Hackathon
 
 <div class="authors">
 <strong>Nestor Demeure</strong><br>
@@ -84,7 +85,7 @@ There are various options to get access:
 * **CBORG API key**:
   Free access to most models (quota resets monthly)
 
-**Note:** Cursor *requires* a paid subscription for full agentic capabilities.
+**Note:** Cursor *requires* a personal subscription for full agentic capabilities.
 
 ---
 <!-- _class: question -->
@@ -154,7 +155,7 @@ clorg() {
 ---
 # Test it!
 
-Start a Perlmutter shell in a folder and ask it to do things!
+Start a Perlmutter shell in a folder and ask your agent to do things!
 
 ```md
 nestor@login08:~$ clorg
@@ -186,8 +187,8 @@ nestor@login08:~$ clorg
 Existing best practices make agents more reliable and independent:
 
 * **Break down** larger tasks into smaller ones,
-* **Use git**: commits between successes, branches for long sessions,
-* **Use code checking tools**: linters, compilers (`mypy`, `cargo check`, etc.),
+* **Use git** commits between successes, branches for long sessions,
+* **Use code checking tools** linters, compilers (`mypy`, `cargo check`, etc.),
 * **Write tests** and run them after implementing features (consider TDD).
 
 ***If your model can check the code by itself, it will often be able to fix its bugs without help.***
@@ -215,7 +216,7 @@ For from scratch projects or complex tasks:
 1. Use a **good thinking model** to write a detailed **specification**
   Describe all features you want, and have it highlight ambiguities and ask clarifying questions.
 2. Have it create a **step-by-step implementation plan** based on the spec
-  Let it know that both will be passed to the developer.
+  Let it know that both will be passed to the developer to avoid redundancies.
 3. Pass both to a fresh **coding agent** to implement
 
 This process *is* time-consuming, but yields significantly better outcomes.
@@ -238,7 +239,7 @@ There are good reasons to use *several* agents:
 Some key security issues are worth keeping in mind:
 
 * **YOLO mode**
-  Avoid letting your model execute any command unless you are in a hardened environment,
+  Avoid letting your model execute arbitrary commands unless you are in a hardened environment,
 * **Data privacy**
   Check [model policies](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/view?gid=0#gid=0) before using on NDA or private code,
 * **Malicious MCPs**
@@ -260,7 +261,7 @@ Some key security issues are worth keeping in mind:
 All coding assistants come with built-in tools to run shell commands, read, and edit code:
 
 * **Reading documentation**
-  Point agents at documentation folders - they're excellent at keyword search,
+  Point agents at documentation folders, they're excellent at keyword search,
 * **Command line tools**
   Agents are often better at using known CLI tools (e.g., GitHub CLI) than MCPs,
 * **Direct API calls**
@@ -271,7 +272,7 @@ All coding assistants come with built-in tools to run shell commands, read, and 
 
 [**Model Context Protocols**](https://modelcontextprotocol.io/) (MCPs) are a **standardized way to define and encapsulate tools** that any agent can use:
 
-* The local server (started by you or the agent) exposes functions via JSON API,
+* A local server (started by you or the agent) exposes functions via JSON API,
 * Each function comes with a description for the agent,
 * The agent can call functions as needed.
 
