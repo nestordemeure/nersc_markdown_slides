@@ -53,10 +53,10 @@ There are several ways to code with AI:
 
 * **Chat web interfaces**
   [ChatGPT](https://chatgpt.com/), [Claude](https://claude.ai/), [Gemini](https://gemini.google.com/), etc.
-* **Pull requests to repositories**
+* **Cloud-hosted asynchronous agents**
   [Codex](https://developers.openai.com/codex), [Jules](https://jules.google/), [etc.](https://prarena.ai/)
 * **AI-augmented IDEs**
-  [Cursor](https://cursor.com/), [GitHub Copilot](https://github.com/features/copilot), etc.
+  [Cursor](https://cursor.com/), [GitHub Copilot](https://github.com/features/copilot), [many VS Code plugins](https://marketplace.visualstudio.com/search?target=VSCode&category=Chat&sortBy=Installs), etc.
 * **Command line interfaces**
   [Claude Code](https://docs.claude.com/en/docs/claude-code/overview), [Codex CLI](https://developers.openai.com/codex/cli/), [Gemini CLI](https://google-gemini.github.io/gemini-cli/), etc.
 
