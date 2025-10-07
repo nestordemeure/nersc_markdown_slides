@@ -53,7 +53,7 @@ There are several ways to code with AI:
 
 * **Chat web interfaces**
   [ChatGPT](https://chatgpt.com/), [Claude](https://claude.ai/), [Gemini](https://gemini.google.com/), etc.
-* **Cloud-hosted asynchronous agents**
+* **Cloud-hosted agents**
   [Codex](https://developers.openai.com/codex), [Jules](https://jules.google/), [etc.](https://prarena.ai/)
 * **AI-augmented IDEs**
   [Cursor](https://cursor.com/), [GitHub Copilot](https://github.com/features/copilot), [many VS Code plugins](https://marketplace.visualstudio.com/search?target=VSCode&category=Chat&sortBy=Installs), etc.
@@ -165,7 +165,7 @@ nestor@login08:~$ clorg
   ▘▘ ▝▝    /global/u2/n/nestor/N10-benchmarks/TOAST3
 
 ─────────────────────────────────────────────────────────────────────────────────────
-> Please build this application following the instructions in ./README.md 
+> Build this application following the instructions in ./README.md 
 ─────────────────────────────────────────────────────────────────────────────────────
   ? for shortcuts                                      Thinking off (tab to toggle)
 ```
@@ -187,8 +187,8 @@ nestor@login08:~$ clorg
 Existing best practices make agents more reliable and independent:
 
 * **Break down** larger tasks into smaller ones,
-* **Use git** commits between successes, branches for long sessions,
-* **Use code checking tools** linters, compilers (`mypy`, `cargo check`, etc.),
+* **Use git**, commits between successes, branches for long sessions,
+* **Use code checking tools**, linters, compilers (`mypy`, `cargo check`, etc.),
 * **Write tests** and run them after implementing features (consider TDD).
 
 ***If your model can check the code by itself, it will often be able to fix its bugs without help.***
@@ -241,7 +241,7 @@ Some key security issues are worth keeping in mind:
 * **YOLO mode**
   Avoid letting your model execute arbitrary commands unless you are in a hardened environment,
 * **Data privacy**
-  Check [model policies](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/view?gid=0#gid=0) before using on NDA or private code,
+  Check [model policies](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/view?gid=0#gid=0) before using agents on NDA or private code,
 * **Malicious MCPs**
   Risk of MCPs exfiltrating your data or running malicious code.
 
