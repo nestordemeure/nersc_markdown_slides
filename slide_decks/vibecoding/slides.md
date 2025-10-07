@@ -80,7 +80,7 @@ There are various options to get access:
 * **Personal subscriptions**:
   ChatGPT, Claude, Cursor, etc.
 * **LBL Google Account**:
-  With Gemini CLI (besides their *very* generous free tier)
+  With Gemini CLI (besides its *very* generous free tier)
 * **CBORG API key**:
   Free access to most models (quota resets monthly)
 
@@ -210,7 +210,7 @@ The fewer things in an agent's context, the more it can focus on the task at han
 ---
 # New Projects and Complex Tasks
 
-For from-scratch projects or complex tasks:
+For from scratch projects or complex tasks:
 
 1. Use a **good thinking model** to write a detailed **specification**
   Describe all features you want, and have it highlight ambiguities and ask clarifying questions.
@@ -218,7 +218,7 @@ For from-scratch projects or complex tasks:
   Let it know that both will be passed to the developer.
 3. Pass both to a fresh **coding agent** to implement
 
-This process *is* time consuming, but yields significantly better outcomes.
+This process *is* time-consuming, but yields significantly better outcomes.
 
 ---
 # Multi-Agent Use
