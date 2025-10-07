@@ -95,7 +95,7 @@ There are various options to get access:
 
 <!-- _class: section-title -->
 # Setting Up a Coding Agent
-## In three easy steps
+## In Three Easy Steps
 
 ---
 # Check our Documentation!
@@ -179,7 +179,7 @@ nestor@login08:~$ clorg
 
 <!-- _class: section-title -->
 # Vibe coding Best Practices
-## Getting the most out of your coding agents
+## Getting the Most Out of Your Coding Agents
 
 ---
 # Software Engineering Best Practices
