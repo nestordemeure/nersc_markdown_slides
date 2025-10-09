@@ -33,6 +33,23 @@ I am *really good* at maxing out my CBORG, Anthropics, and OpenAI subscriptions 
 
 ---
 
+# What We'll Cover
+
+* **Vibe Coding**
+  Definition and Coding Agents
+
+* **Setting Up a Coding Agent**
+  In Three Easy Steps
+
+* **Vibe coding Best Practices**
+  Getting the Most Out of Your Coding Agents
+
+* **Tool Use**
+  Model Context Protocols and Other Tools
++ **Get Hacking!**
+
+---
+
 <!-- _class: section-title -->
 # Vibe Coding
 ## Definition and Coding Agents
