@@ -45,11 +45,11 @@ Many **read-focused operations** are moving to file representations.
 
 ---
 
-# Why use files?
+# Why use Files?
 
 **Coding assistants are *really* good at using files.**
 
-+ **Easy to setup**: writing/collecting files is quick and easy,
++ **Easy to set up**: writing/collecting files is quick and easy,
 + **Flexibility**: models can seamlessly adapt their search strategy,
 - **Format**: your file format needs to be easy to understand/search.
 
@@ -112,7 +112,7 @@ Paths give you information on **creation date** and **number**.
 <!-- _class: compact -->
 # Ticket Formatting: message representation
 
-**Minimal self-evident markdown format** to represent the messages:
+**Minimal, self-evident, markdown format** to represent the messages:
 
 ```md
 # INC0000001 - Login failures
