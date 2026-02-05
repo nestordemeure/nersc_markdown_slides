@@ -41,7 +41,7 @@ There has been **a move from deep tooling integration to file-based approaches**
 * [RAG databases](https://en.wikipedia.org/wiki/Retrieval-augmented_generation) → **local documentation folders**,
 * [AGENTS.md](https://agents.md/) files are still the best way to customize your coding agents.
 
-Many **read-focused operations** are moving to file representations.
+Many **read-focused operations** are moving to file-based representations.
 
 ---
 
@@ -72,7 +72,7 @@ You might want to create an `AGENTS.md` / `SKILL.md` file with:
 
 * The path to your folder,
 * A short description of its content,
-* Pointers on when to use it.
+* Pointers on *when* to use it.
 
 --- 
 
