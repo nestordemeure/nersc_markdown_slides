@@ -11,7 +11,7 @@ paginate: true
 
 <div class="authors">
 <strong>Nestor Demeure</strong><br>
-National Energy Research Scientific Computing Center, Berkeley CA, United-States
+National Energy Research Scientific Computing Center, Berkeley, CA, United States
 </div>
 
 ---
@@ -24,7 +24,7 @@ I am a member of NERSC's **Programming Environments and Models** group and a *"f
 * Integrating APIs, local models, and code,
 * Using LLM chats and coding agents.
 
-I am *really good* at maxing out my CBORG, Anthropics, and OpenAI subscriptions...
+I am *really good* at maxing out my CBORG, Anthropic, and OpenAI subscriptions...
 
 ---
 
@@ -37,20 +37,21 @@ I am *really good* at maxing out my CBORG, Anthropics, and OpenAI subscriptions.
 
 There has been **a move from deep tooling integration to file-based approaches**:
 
-* [Model Context Protocol](https://modelcontextprotocol.io) -> [SKILL.md](https://agentskills.io/home),
-* [RAG databases](https://en.wikipedia.org/wiki/Retrieval-augmented_generation) -> **local documentation folders**.
+* [Model Context Protocol](https://modelcontextprotocol.io) → [SKILL.md](https://agentskills.io/home),
+* [RAG databases](https://en.wikipedia.org/wiki/Retrieval-augmented_generation) → **local documentation folders**,
+* [AGENTS.md](https://agents.md/) files are still the best way to customize your coding agents.
 
-Many **read-focussed operations** are moving to file representations.
+Many **read-focused operations** are moving to file representations.
 
 ---
 
 # Why use files?
 
-**Coding Assistants are really good at using files.**
+**Coding assistants are *really* good at using files.**
 
-+ **Ease of set-up**: writing / collecting files is quick and easy,
-+ **Flexibility**: models can seamlessly their search strategy on the fly,
-- **Format**: your file format needs to be easy to understand / search.
++ **Easy to setup**: writing/collecting files is quick and easy,
++ **Flexibility**: models can seamlessly adapt their search strategy,
+- **Format**: your file format needs to be easy to understand/search.
 
 ---
 
@@ -61,7 +62,7 @@ Many **read-focussed operations** are moving to file representations.
 
 # The NERSC Documentation
 
-Creating a documentation chatbot has never been easier:
+**Creating a documentation chatbot has never been easier:**
 
 * Clone [the NERSC documentation](https://gitlab.com/NERSC/nersc.gitlab.io),
 * Point an LLM at the `/docs` folder,
@@ -83,7 +84,7 @@ What about a chatbot that can analyze past tickets?
 * Run it to load *and format* the tickets,
 * You can now explore past tickets!
 
-We have a secret stash of ServiceNow tickets. The endgoal is regular API pulls.
+We have a secret stash of ServiceNow tickets. The end goal is regular API pulls.
 
 ---
 
@@ -92,7 +93,7 @@ We have a secret stash of ServiceNow tickets. The endgoal is regular API pulls.
 
 ---
 
-# Ticket Formating: file organization
+# Ticket Formatting: file organization
 
 Tickets are represented as **markdown files**, organized as follows:
 
@@ -105,13 +106,13 @@ Tickets are represented as **markdown files**, organized as follows:
         <attachment files>
 ```
 
-Paths gives you information on **creation date** and **number**.
+Paths give you information on **creation date** and **number**.
 
 ---
 <!-- _class: compact -->
-# Ticket Formating: message representation
+# Ticket Formatting: message representation
 
-We use a **minimal self-evident markdown format** to represent the messages:
+**Minimal self-evident markdown format** to represent the messages:
 
 ```md
 # INC0000001 - Login failures
@@ -121,7 +122,7 @@ We use a **minimal self-evident markdown format** to represent the messages:
 
 ## Elvis
 
-Users report intermittent login failures after 5pm PT.
+Users report intermittent login failures after 5 p.m. PT.
 
 ## Ops Team (staff work notes)
 
@@ -135,11 +136,11 @@ Identified expired certificate on auth proxy. Rotated cert and restarted.
 
 ---
 
-# Exercice
+# Exercise
 
 Create your own NERSC chatbot:
 
-* Grab a coding assistant (Claude code or Codex),
+* Grab a coding assistant ([Claude Code](https://code.claude.com/docs/en/overview) or [Codex](https://developers.openai.com/codex/cli/)),
 * Put files in a folder:
   * The NERSC documentation,
   * NERSC's tickets,
@@ -147,7 +148,7 @@ Create your own NERSC chatbot:
 * Ask questions!
   * *"Do we have any users using JAX with MPI?"*
   * *"Is there a way to store data on node-local files?"*
-  * etc. 
+  * etc.
 
 ---
 
