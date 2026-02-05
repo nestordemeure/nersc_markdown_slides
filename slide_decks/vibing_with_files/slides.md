@@ -6,7 +6,7 @@ paginate: true
 
 <!-- _class: title -->
 # **Vibing with Files**
-## Serving files to coding assistants
+## Serving Files to Coding Assistants
 ### Vibe Coding Hackathon
 
 <div class="authors">
@@ -35,21 +35,21 @@ I am *really good* at maxing out my CBORG, Anthropics, and OpenAI subscriptions.
 
 # Files are Fashionable
 
-There has been *a move from deep tooling integration to file-based approaches*:
+There has been **a move from deep tooling integration to file-based approaches**:
 
-* MCPs -> SKILL.md,
-* RAG databases -> local documentation folders.
+* [Model Context Protocol](https://modelcontextprotocol.io) -> [SKILL.md](https://agentskills.io/home),
+* [RAG databases](https://en.wikipedia.org/wiki/Retrieval-augmented_generation) -> **local documentation folders**.
 
-Many *read-focussed operations* are moving to file representations.
+Many **read-focussed operations** are moving to file representations.
 
 ---
 
 # Why use files?
 
-Coding Assistants are really good at using files.
+**Coding Assistants are really good at using files.**
 
 + **Ease of set-up**: writing / collecting files is quick and easy,
-+ **Flexibility**: models adjust their search strategy on the fly,
++ **Flexibility**: models can seamlessly their search strategy on the fly,
 - **Format**: your file format needs to be easy to understand / search.
 
 ---
@@ -69,9 +69,9 @@ Creating a documentation chatbot has never been easier:
 
 You might want to create an `AGENTS.md` / `SKILL.md` file with:
 
-* the path to your folder,
-* a short description of its content,
-* pointers on when to use it.
+* The path to your folder,
+* A short description of its content,
+* Pointers on when to use it.
 
 --- 
 
@@ -153,5 +153,5 @@ Create your own NERSC chatbot:
 
 <!-- _class: thanks -->
 # **Thank you!**
-## [https://gitlab.nersc.gov/nersc/das/<br>vibecoding-docs](https://gitlab.nersc.gov/nersc/das/vibecoding-docs)
+## [https://github.com/nestordemeure<br>/nersc_markdown_slides/tree/main<br>/slide_decks/vibing_with_files](https://github.com/nestordemeure/nersc_markdown_slides/blob/main/slide_decks/vibing_with_files/slides.md)
 ndemeure@lbl.gov
